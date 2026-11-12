@@ -49,7 +49,13 @@ az keyvault secret set --vault-name "$(terraform output -raw key_vault_name)" \
 The API read the old value when it started, and Azure keeps a copy. Make it read the new one, then restart it:
 
 ```bash
-terraform apply -replace='azurerm_container_app.api[0]'
+vault=$(terraform output -raw key_vault_name)
+uri=$(az keyvault secret show --vault-name "$vault" --name anthropic-api-key --query id -o tsv | sed 's|/[^/]*$||')
+identity=$(az identity show -g rg-raggalaxy -n id-raggalaxy --query id -o tsv)
+az containerapp secret set -g rg-raggalaxy -n ca-raggalaxy-api \
+  --secrets "anthropic-api-key=keyvaultref:$uri,identityref:$identity" --output none
+az containerapp revision restart -g rg-raggalaxy -n ca-raggalaxy-api \
+  --revision "$(az containerapp revision list -g rg-raggalaxy -n ca-raggalaxy-api --query '[?properties.active].name | [0]' -o tsv)"
 ```
 
 (Changing the key later is the same two steps.) Without the key the site still works: the example
