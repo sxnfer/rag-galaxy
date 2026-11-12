@@ -192,7 +192,7 @@ resource "azurerm_container_app" "api" {
 resource "azurerm_static_web_app" "frontend" {
   name                = "swa-${local.name}"
   resource_group_name = azurerm_resource_group.main.name
-  location            = "westeurope" # Static Web Apps isn't offered in every region
+  location            = "eastus2" # Static Web Apps is offered in a few regions only, and West Europe is closed to new accounts. The files are served worldwide either way.
   sku_tier            = "Free"
   sku_size            = "Free"
   tags                = local.tags

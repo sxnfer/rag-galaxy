@@ -64,14 +64,25 @@ yourself (`az account get-access-token --resource-type oss-rdbms`), and close th
 
 ## Publishing the site files
 
+GitHub does this on every push to main that touches the site (`.github/workflows/site.yml`).
+It needs three settings on the repository, set once after the first `terraform apply`:
+
 ```bash
-cd ../frontend
-VITE_API_URL="$(terraform -chdir=../infra output -raw api_url)" \
-VITE_SITE_URL="$(terraform -chdir=../infra output -raw frontend_url)" \
-VITE_COMMIT="$(git rev-parse HEAD)" npm run build
-npx @azure/static-web-apps-cli deploy ./dist --env production \
-  --deployment-token "$(terraform -chdir=../infra output -raw static_web_app_deploy_token)"
+terraform output -raw static_web_app_deploy_token | gh secret set AZURE_STATIC_WEB_APPS_API_TOKEN
+gh variable set API_URL  --body "$(terraform output -raw api_url)"
+gh variable set SITE_URL --body "$(terraform output -raw frontend_url)"
 ```
+
+## Releasing a new version of the API
+
+A push that changes `backend/` builds a new image (`.github/workflows/api-image.yml`), labelled with its
+commit. Azure keeps running the version it was given until you point it at the new one:
+
+```bash
+terraform apply -var api_image=ghcr.io/<github-user>/rag-galaxy-api:<commit>
+```
+
+(or change `api_image` in `terraform.tfvars`).
 
 ## Tear it all down
 

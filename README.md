@@ -38,7 +38,7 @@ question ─▶ embed ─▶ search (exact or HNSW, 200 candidates) ─▶ rank 
 | `frontend/` | The three films (React + React Three Fiber). `src/Site.jsx` picks the film from the address and fades between them. Main film: `src/App.jsx`, with `src/story.js` (every chapter's words), `src/timeline.js` (the one number that drives a film), `src/layout.js` (where things are and where the camera stands), `src/scene/` (the 3D picture) and `src/ui/` (the words on top). Search film: `src/hnsw/` (`graph.js` the toy graph and the walk, `story.js` the words, `Scene.jsx` the picture). Journey: `src/journey/` (`stops.js` the words and code references, `Look.jsx` what the question looks like at each stop, `Track.jsx` the picture). `code-lines.js` finds each referenced function's line when the site is built |
 | `scripts/` | `dev.sh` / `dev.ps1` (run everything), `build_ev_table.py` (EPA download -> `vehicles.csv`) |
 | `infra/` | Terraform for Azure: database, API, site, secrets, budget alert. `infra/README.md` has the steps |
-| `.github/workflows/` | `api-image.yml` builds the API's container image and puts it on GitHub's registry |
+| `.github/workflows/` | `api-image.yml` builds the API's container image and puts it on GitHub's registry; `site.yml` builds the site and publishes it to Azure |
 | `data/seeds/ev/` | the electric car table (`vehicles.csv`) and where it comes from (`SOURCE.md`) |
 | `docs/` | results, glossary |
 
