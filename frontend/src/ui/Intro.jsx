@@ -38,6 +38,8 @@ export default function Intro({ lib, libraries, library, onLibrary, examples, on
       {lib?.credit && (
         <button type="button" className={`credit ${open ? 'open' : ''}`} onClick={() => setOpen(!open)} aria-expanded={open}>{lib.credit}</button>
       )}
+      {/* Said plainly, because a visitor should know before typing: only typed questions, not the examples. */}
+      <p className="notice">Questions you type are saved, and sent to Anthropic’s Claude to write the answer.</p>
     </>
   )
 }

@@ -123,6 +123,8 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 }
 .credit:hover, .credit.open { color: var(--ink-3); }
 .credit.open { white-space: normal; }
+.notice { margin: 4px 0 0; font-size: 11px; line-height: 1.6; color: var(--ink-4); }
+a.caption-link { text-decoration: none; }
 
 /* ---- Chapters 5 and 6: the label for the dot under the pointer ---- */
 .probe {
