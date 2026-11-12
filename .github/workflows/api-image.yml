@@ -1,0 +1,40 @@
+# Builds the API's container image and puts it on GitHub's registry (ghcr.io),
+# where Azure downloads it from. Runs whenever the backend changes on main,
+# or by hand from the Actions tab.
+#
+# The image takes its visibility from this repository: while the repository is
+# public, the image is public, and Azure needs no password to download it.
+name: API image
+
+on:
+  push:
+    branches: [main]
+    paths: ['backend/**', '.github/workflows/api-image.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write # allowed to upload to this repository's registry, nothing else
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      # Two labels for the same image: the commit it was built from (what Azure is
+      # pointed at, so a deploy is always a known version) and "latest".
+      - uses: docker/build-push-action@v6
+        with:
+          context: backend
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository_owner }}/rag-galaxy-api:${{ github.sha }}
+            ghcr.io/${{ github.repository_owner }}/rag-galaxy-api:latest
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.description=RAG Galaxy API
