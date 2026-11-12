@@ -1,0 +1,3 @@
+# The stat-sheet fingerprint (sha256) must be the same on every machine,
+# so CSVs keep their line endings instead of following the OS.
+*.csv text eol=lf

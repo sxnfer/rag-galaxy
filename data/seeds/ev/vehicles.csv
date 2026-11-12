@@ -1,0 +1,232 @@
+name,make,model,year,class,drive,range_mi,range_city_mi,range_hwy_mi,mpge,kwh_per_100mi,charge_240v_h,annual_cost_usd,epa_id
+Acura ZDX AWD,Acura,ZDX AWD,2026,SUV,AWD,323,351,288,89,37.7,11.2,850,50024
+Acura ZDX AWD Type S,Acura,ZDX AWD Type S,2026,SUV,AWD,296,318,270,83,40.6,11.2,900,50025
+Acura ZDX RWD,Acura,ZDX RWD,2026,SUV,RWD,327,355,293,91,36.9,11.2,850,50023
+Audi Q4 45 e-tron,Audi,Q4 45 e-tron,2026,SUV,RWD,288,311,260,115,29.4,12.0,650,49612
+Audi Q4 55 e-tron quattro,Audi,Q4 55 e-tron quattro,2026,SUV,AWD,251,269,229,97,34.6,9.5,800,50182
+Audi Q4 Sportback 55 e-tron quattro,Audi,Q4 Sportback 55 e-tron quattro,2026,SUV,AWD,251,269,229,97,34.6,9.5,800,50183
+Audi RS e-tron GT Performance,Audi,RS e-tron GT Performance,2026,Small car,AWD,278,283,272,84,40.2,15.5,900,50184
+Audi S e-tron GT,Audi,S e-tron GT,2026,Small car,AWD,300,305,294,90,37.6,15.5,850,50185
+BMW i4 eDrive35 Gran Coupe,BMW,i4 eDrive35 Gran Coupe,2026,Small car,RWD,251,259,241,109,30.8,7.0,700,50187
+BMW i4 eDrive40 Gran Coupe,BMW,i4 eDrive40 Gran Coupe,2026,Small car,RWD,333,341,323,118,28.5,9.0,650,50188
+BMW i4 M60 xDrive Gran Coupe,BMW,i4 M60 xDrive Gran Coupe,2026,Small car,AWD,278,282,273,98,34.4,9.0,750,50190
+BMW i4 xDrive40 Gran Coupe,BMW,i4 xDrive40 Gran Coupe,2026,Small car,AWD,287,282,293,101,33.4,8.0,750,50192
+BMW i5 eDrive40 Sedan,BMW,i5 eDrive40 Sedan,2026,Small car,RWD,310,319,298,110,30.6,8.0,700,49613
+BMW i5 M60 xDrive Sedan,BMW,i5 M60 xDrive Sedan,2026,Small car,AWD,277,279,274,99,34.1,8.0,750,50194
+BMW i5 xDrive40 Sedan,BMW,i5 xDrive40 Sedan,2026,Small car,AWD,278,280,275,98,34.4,8.0,750,49616
+BMW i7 eDrive50 Sedan,BMW,i7 eDrive50 Sedan,2026,Large car,RWD,314,300,331,88,38.2,10.0,850,49940
+BMW i7 M70 xDrive Sedan,BMW,i7 M70 xDrive Sedan,2026,Large car,AWD,285,276,297,79,42.5,10.0,950,49944
+BMW i7 xDrive60 Sedan,BMW,i7 xDrive60 Sedan,2026,Large car,AWD,311,302,321,88,38.4,10.0,850,49945
+BMW iX M70,BMW,iX M70,2026,SUV,AWD,303,297,311,80,42.0,11.0,950,49627
+BMW iX xDrive45,BMW,iX xDrive45,2026,SUV,AWD,312,314,310,94,36.0,10.0,800,49619
+BMW iX xDrive60,BMW,iX xDrive60,2026,SUV,AWD,364,372,354,97,34.7,11.0,800,49623
+Bugatti Rimac Nevera R,Bugatti Rimac,Nevera R,2026,Two-seater,AWD,174,172,176,51,66.5,17.6,1500,49630
+Cadillac CELESTIQ,Cadillac,CELESTIQ,2026,Wagon,AWD,303,316,287,81,41.7,8.0,950,50197
+Cadillac LYRIQ,Cadillac,LYRIQ,2026,Small SUV,RWD,326,353,293,92,36.8,11.2,850,49631
+Cadillac LYRIQ AWD,Cadillac,LYRIQ AWD,2026,Small SUV,AWD,303,328,273,85,39.7,7.0,900,49948
+Cadillac LYRIQ PAWD,Cadillac,LYRIQ PAWD,2026,Small SUV,AWD,319,348,284,89,38.0,11.2,850,49635
+Cadillac LYRIQ PAWD V SERIES,Cadillac,LYRIQ PAWD V SERIES,2026,Small SUV,AWD,285,310,255,80,42.4,11.2,950,49633
+Cadillac OPTIQ AWD,Cadillac,OPTIQ AWD,2026,SUV,AWD,303,333,266,99,34.0,9.5,750,49951
+Cadillac OPTIQ AWD V SERIES,Cadillac,OPTIQ AWD V SERIES,2026,SUV,AWD,278,308,242,92,36.7,9.5,800,50026
+Cadillac OPTIQ RWD,Cadillac,OPTIQ RWD,2026,SUV,RWD,317,350,277,105,32.1,9.5,700,49949
+Cadillac VISTIQ,Cadillac,VISTIQ,2026,SUV,AWD,305,329,275,86,39.3,11.2,900,49636
+Chevrolet Blazer EV AWD,Chevrolet,Blazer EV AWD,2026,Small SUV,AWD,283,304,258,94,35.7,9.5,800,49646
+Chevrolet Blazer EV AWD SS,Chevrolet,Blazer EV AWD SS,2026,Small SUV,AWD,302,326,273,85,39.7,11.2,900,49954
+Chevrolet Blazer EV FWD,Chevrolet,Blazer EV FWD,2026,Small SUV,FWD,312,337,281,104,32.3,9.5,750,49644
+Chevrolet Equinox EV AWD,Chevrolet,Equinox EV AWD,2026,Small SUV,AWD,307,329,280,103,32.6,9.5,750,49955
+Chevrolet Equinox EV FWD,Chevrolet,Equinox EV FWD,2026,Small SUV,FWD,319,342,291,108,31.1,9.5,700,49953
+Chevrolet Silverado EV Ext Range,Chevrolet,Silverado EV Ext Range,2026,Pickup,AWD,410,446,367,68,49.5,18.6,1100,49640
+Chevrolet Silverado EV Ext Range WT,Chevrolet,Silverado EV Ext Range WT,2026,Pickup,AWD,424,464,375,70,47.8,11.5,1100,49638
+Chevrolet Silverado EV Max Range WT,Chevrolet,Silverado EV Max Range WT,2026,Pickup,AWD,493,539,437,68,49.5,13.8,1100,49639
+Chevrolet Silverado EV Std Range,Chevrolet,Silverado EV Std Range,2026,Pickup,AWD,283,311,249,67,50.3,13.3,1150,49643
+Chevrolet Silverado EV Std Range WT,Chevrolet,Silverado EV Std Range WT,2026,Pickup,AWD,286,313,253,68,49.6,13.3,1100,49642
+Dodge Charger Daytona R/T AWD,Dodge,Charger Daytona R/T AWD,2026,Large car,AWD,295,309,278,95,35.6,10.0,800,49958
+Dodge Charger Daytona Scat Pack AWD,Dodge,Charger Daytona Scat Pack AWD,2026,Large car,AWD,267,286,244,86,39.1,10.0,900,49648
+Fiat 500e,Fiat,500e,2026,Small car,FWD,149,162,133,116,29.2,6.2,650,50198
+Ford Mustang Mach-E AWD,Ford,Mustang Mach-E AWD,2026,Small SUV,AWD,240,249,228,100,33.6,7.7,750,50200
+Ford Mustang Mach-E AWD Extended,Ford,Mustang Mach-E AWD Extended,2026,Small SUV,AWD,300,315,281,104,32.3,10.2,750,50201
+Ford Mustang Mach-E GT,Ford,Mustang Mach-E GT,2026,Small SUV,AWD,280,294,263,90,37.4,9.9,850,50202
+Ford Mustang Mach-E Rally,Ford,Mustang Mach-E Rally,2026,Small SUV,AWD,255,270,236,84,40.2,10.0,900,50203
+Ford Mustang Mach-E RWD,Ford,Mustang Mach-E RWD,2026,Small SUV,RWD,260,269,249,107,31.4,7.8,700,50204
+Ford Mustang Mach-E RWD Extended,Ford,Mustang Mach-E RWD Extended,2026,Small SUV,RWD,320,335,302,110,30.7,9.6,700,50205
+Genesis Electrified G80,Genesis,Electrified G80,2026,Midsize car,AWD,300,306,292,96,35.0,10.3,800,49651
+Genesis Electrified GV70 AWD,Genesis,Electrified GV70 AWD,2026,SUV,AWD,263,280,243,96,35.0,8.9,800,49656
+Genesis GV60 AWD,Genesis,GV60 AWD,2026,Small SUV,AWD,282,300,261,100,33.6,9.2,750,49653
+Genesis GV60 AWD Advanced,Genesis,GV60 AWD Advanced,2026,Small SUV,AWD,267,284,247,96,35.2,9.2,800,49654
+Genesis GV60 AWD Performance,Genesis,GV60 AWD Performance,2026,Small SUV,AWD,252,270,230,90,37.0,9.0,850,49655
+Genesis GV60 RWD,Genesis,GV60 RWD,2026,Small SUV,RWD,306,329,278,110,30.6,8.1,700,49652
+GMC SIERRA EV Ext Range,GMC,SIERRA EV Ext Range,2026,Pickup,AWD,410,446,367,68,49.5,18.6,1100,49658
+GMC SIERRA EV Std Range,GMC,SIERRA EV Std Range,2026,Pickup,AWD,283,311,249,67,50.3,13.3,1150,49660
+Honda Prologue AWD Elite,Honda,Prologue AWD Elite,2026,SUV,AWD,283,306,255,95,35.3,9.5,800,50207
+Honda Prologue AWD Touring,Honda,Prologue AWD Touring,2026,SUV,AWD,294,318,265,99,34.1,9.5,750,50206
+Honda Prologue FWD,Honda,Prologue FWD,2026,SUV,FWD,308,333,278,104,32.5,9.5,750,50208
+Hyundai Ioniq 5 AWD,Hyundai,Ioniq 5 AWD,2026,Small SUV,AWD,290,314,261,106,31.7,8.2,700,49962
+Hyundai Ioniq 5 AWD XRT,Hyundai,Ioniq 5 AWD XRT,2026,Small SUV,AWD,259,281,232,94,35.8,8.2,800,49964
+Hyundai Ioniq 5 N,Hyundai,Ioniq 5 N,2026,Small SUV,AWD,221,237,202,78,43.0,8.7,950,49965
+Hyundai Ioniq 5 Robo taxi,Hyundai,Ioniq 5 Robo taxi,2026,Small SUV,RWD,168,172,163,71,47.5,10.3,1050,50028
+Hyundai Ioniq 5 RWD,Hyundai,Ioniq 5 RWD,2026,Small SUV,RWD,318,356,272,114,30.0,9.1,700,49960
+Hyundai Ioniq 5 Standard range,Hyundai,Ioniq 5 Standard range,2026,Small SUV,RWD,245,274,210,115,29.0,6.3,650,49961
+Hyundai Ioniq 9 AWD,Hyundai,Ioniq 9 AWD,2026,SUV,AWD,320,353,279,88,38.0,11.6,850,49662
+Hyundai Ioniq 9 AWD Performance,Hyundai,Ioniq 9 AWD Performance,2026,SUV,AWD,311,332,286,85,40.0,11.5,900,49663
+Hyundai Ioniq 9 RWD,Hyundai,Ioniq 9 RWD,2026,SUV,RWD,335,367,296,92,37.0,11.7,850,49661
+Jeep Recon MOAB 4WD,Jeep,Recon MOAB 4WD,2026,Small SUV,AWD,222,250,196,71,47.6,9.4,1050,50449
+Jeep Wagoneer S AWD,Jeep,Wagoneer S AWD,2026,SUV,AWD,294,315,268,93,36.2,10.0,800,50209
+Kia EV6 AWD GT,Kia,EV6 AWD GT,2026,Small SUV,AWD,231,241,219,83,41.0,8.6,900,50211
+Kia EV6 Long Range AWD,Kia,EV6 Long Range AWD,2026,Small SUV,AWD,295,322,262,106,31.6,8.8,700,50212
+Kia EV6 Long Range RWD,Kia,EV6 Long Range RWD,2026,Small SUV,RWD,319,352,278,114,29.6,9.0,650,50214
+Kia EV6 Standard Range RWD,Kia,EV6 Standard Range RWD,2026,Small SUV,RWD,237,260,209,115,29.2,6.2,650,50215
+Kia EV9 GT,Kia,EV9 GT,2026,SUV,AWD,260,279,237,78,43.0,10.8,950,49669
+Kia EV9 Long Range AWD,Kia,EV9 Long Range AWD,2026,SUV,AWD,283,311,249,84,40.0,10.7,900,49667
+Kia EV9 Long Range AWD GT-Line,Kia,EV9 Long Range AWD GT-Line,2026,SUV,AWD,280,310,244,82,41.0,10.5,900,49668
+Kia EV9 Long Range RWD,Kia,EV9 Long Range RWD,2026,SUV,RWD,305,337,266,89,38.0,10.7,850,49666
+Kia EV9 Standard Range RWD,Kia,EV9 Standard Range RWD,2026,SUV,RWD,230,256,198,88,38.0,8.1,850,49665
+Kia Niro Electric,Kia,Niro Electric,2026,Small SUV,FWD,253,275,226,113,30.0,7.5,700,49664
+Lexus ES 350e,Lexus,ES 350e,2026,Midsize car,FWD,307,331,282,127,27.0,8.0,600,50450
+Lexus ES 500e AWD,Lexus,ES 500e AWD,2026,Midsize car,AWD,276,289,262,114,30.0,8.0,700,50452
+Lexus RZ 350e FWD,Lexus,RZ 350e FWD,2026,Small SUV,FWD,301,324,273,126,26.6,8.0,600,50291
+Lexus RZ 450e AWD,Lexus,RZ 450e AWD,2026,Small SUV,AWD,264,285,238,110,30.5,8.0,700,50217
+Lexus RZ 550e AWD,Lexus,RZ 550e AWD,2026,Small SUV,AWD,229,244,210,95,35.3,8.0,800,50220
+Lucid Air G Touring XR AWD,Lucid,Air G Touring XR AWD,2026,Large car,AWD,512,516,507,128,26.4,13.0,600,49966
+Lucid Air Pure RWD,Lucid,Air Pure RWD,2026,Large car,RWD,420,430,408,146,23.1,10.0,500,49969
+Lucid Air Sapphire AWD,Lucid,Air Sapphire AWD,2026,Large car,AWD,427,439,412,105,32.1,13.0,700,49971
+Lucid Air Touring AWD,Lucid,Air Touring AWD,2026,Large car,AWD,431,437,424,134,25.2,10.0,550,49972
+Lucid Gravity Dream,Lucid,Gravity Dream,2026,SUV,AWD,420,427,412,99,33.9,9.5,750,49675
+Lucid Gravity GT,Lucid,Gravity GT,2026,SUV,AWD,450,469,426,108,31.1,9.5,700,49670
+Lucid Gravity Touring,Lucid,Gravity Touring,2026,SUV,AWD,337,349,322,111,30.3,9.5,700,50221
+Maserati Grancabrio Folgore,Maserati,Grancabrio Folgore,2026,Small car,AWD,231,234,228,83,40.7,9.0,900,50454
+Maserati Granturismo Folgore,Maserati,Granturismo Folgore,2026,Small car,AWD,235,240,229,84,40.1,9.0,900,51100
+Maserati Grecale Folgore,Maserati,Grecale Folgore,2026,Small SUV,AWD,268,276,258,81,41.7,11.0,950,50292
+Mercedes-Benz AMG EQE 4matic Plus,Mercedes-Benz,AMG EQE 4matic Plus,2026,Midsize car,AWD,220,218,222,70,48.0,10.8,1100,49678
+Mercedes-Benz AMG EQE 4matic Plus (SUV),Mercedes-Benz,AMG EQE 4matic Plus (SUV),2026,Wagon,AWD,230,236,223,74,45.5,10.8,1000,49686
+Mercedes-Benz CLA250 Plus with EQ Tech,Mercedes-Benz,CLA250 Plus with EQ Tech,2026,Small car,RWD,374,380,366,126,27.0,8.8,600,50031
+Mercedes-Benz CLA350 4matic with EQ Tech,Mercedes-Benz,CLA350 4matic with EQ Tech,2026,Small car,AWD,312,315,309,118,29.0,8.8,650,50032
+Mercedes-Benz EQE 320 4matic,Mercedes-Benz,EQE 320 4matic,2026,Midsize car,AWD,267,266,269,86,39.0,10.8,900,49680
+Mercedes-Benz EQE 320 4matic (SUV),Mercedes-Benz,EQE 320 4matic (SUV),2026,Wagon,AWD,253,261,243,81,42.0,10.8,950,49685
+Mercedes-Benz EQE 320 Plus,Mercedes-Benz,EQE 320 Plus,2026,Midsize car,RWD,308,308,308,94,35.6,11.5,800,49679
+Mercedes-Benz EQE 320 Plus (SUV),Mercedes-Benz,EQE 320 Plus (SUV),2026,Wagon,RWD,302,320,280,93,36.1,11.5,800,49684
+Mercedes-Benz EQS 400 4matic (SUV),Mercedes-Benz,EQS 400 4matic (SUV),2026,SUV,AWD,312,316,307,79,43.0,14.0,950,49688
+Mercedes-Benz EQS 450 4matic,Mercedes-Benz,EQS 450 4matic,2026,Large car,AWD,367,362,373,92,37.0,12.8,850,49683
+Mercedes-Benz EQS 450 Plus,Mercedes-Benz,EQS 450 Plus,2026,Large car,RWD,390,390,390,98,34.0,14.0,750,49681
+Mercedes-Benz EQS 550 4matic (SUV),Mercedes-Benz,EQS 550 4matic (SUV),2026,SUV,AWD,317,324,309,80,42.0,14.0,950,49689
+Mercedes-Benz EQS 580 4matic,Mercedes-Benz,EQS 580 4matic,2026,Large car,AWD,371,370,372,93,35.6,11.5,800,49682
+Mercedes-Benz EQS 680 4matic Maybach (SUV),Mercedes-Benz,EQS 680 4matic Maybach (SUV),2026,SUV,AWD,300,300,300,84,39.8,14.0,900,49690
+Mercedes-Benz G 580 with EQ Technology,Mercedes-Benz,G 580 with EQ Technology,2026,SUV,AWD,239,258,215,62,54.0,14.0,1200,49687
+MINI Countryman SE ALL4,MINI,Countryman SE ALL4,2026,Small SUV,AWD,212,217,206,96,35.0,8.0,800,50222
+Nissan ARIYA e-4ORCE 63kWh,Nissan,ARIYA e-4ORCE 63kWh,2026,Small SUV,AWD,205,216,191,95,35.3,10.0,800,50224
+Nissan ARIYA e-4ORCE 87kWh,Nissan,ARIYA e-4ORCE 87kWh,2026,Small SUV,AWD,272,286,254,92,36.6,13.0,800,50225
+Nissan ARIYA FWD 63kWh,Nissan,ARIYA FWD 63kWh,2026,Small SUV,FWD,216,230,199,101,33.3,10.0,750,50226
+Nissan ARIYA FWD 87kWh,Nissan,ARIYA FWD 87kWh,2026,Small SUV,FWD,289,308,266,98,34.4,14.0,750,50227
+Nissan ARIYA PLATINUM+ e-4ORCE 87kWh,Nissan,ARIYA PLATINUM+ e-4ORCE 87kWh,2026,Small SUV,AWD,267,276,256,90,37.4,14.0,850,50228
+Nissan LEAF 75kWh,Nissan,LEAF 75kWh,2026,Wagon,FWD,303,325,276,121,27.8,12.0,650,49975
+Polestar 3 Long Range Dual Motor,Polestar,3 Long Range Dual Motor,2026,SUV,AWD,312,329,292,90,37.5,11.0,850,50229
+Polestar 3 Long Range Dual Motor Performance Pack,Polestar,3 Long Range Dual Motor Performance Pack,2026,SUV,AWD,281,295,264,81,41.5,11.0,950,50231
+Polestar 3 Long Range Single Motor,Polestar,3 Long Range Single Motor,2026,SUV,RWD,291,312,266,97,34.7,10.0,800,50233
+Polestar 4 Long Range Dual Motor,Polestar,4 Long Range Dual Motor,2026,SUV,AWD,280,293,265,85,40.0,11.0,900,50034
+Polestar 4 Long Range Dual Motor Performance,Polestar,4 Long Range Dual Motor Performance,2026,SUV,AWD,255,265,242,77,44.0,11.0,1000,50035
+Polestar 4 Long Range Single Motor,Polestar,4 Long Range Single Motor,2026,SUV,RWD,310,322,296,95,35.0,11.0,800,50033
+Porsche Cayenne Coupe Electric,Porsche,Cayenne Coupe Electric,2026,SUV,AWD,326,344,306,92,36.5,13.0,800,51101
+Porsche Cayenne Coupe Electric Range Setup,Porsche,Cayenne Coupe Electric Range Setup,2026,SUV,AWD,339,353,323,96,35.0,13.0,800,51102
+Porsche Cayenne Electric,Porsche,Cayenne Electric,2026,SUV,AWD,317,337,296,90,37.4,13.0,850,51103
+Porsche Cayenne Electric Range Setup,Porsche,Cayenne Electric Range Setup,2026,SUV,AWD,322,339,303,94,35.9,13.0,800,51104
+Porsche Cayenne S Coupe Electric,Porsche,Cayenne S Coupe Electric,2026,SUV,AWD,316,333,297,92,36.8,13.0,850,51105
+Porsche Cayenne S Coupe Electric Range Setup,Porsche,Cayenne S Coupe Electric Range Setup,2026,SUV,AWD,330,344,314,96,35.0,13.0,800,51106
+Porsche Cayenne S Electric,Porsche,Cayenne S Electric,2026,SUV,AWD,299,315,281,86,39.2,13.0,900,51107
+Porsche Cayenne S Electric Range Setup,Porsche,Cayenne S Electric Range Setup,2026,SUV,AWD,325,343,306,93,36.3,13.0,800,51108
+Porsche Cayenne Turbo Coupe Electric,Porsche,Cayenne Turbo Coupe Electric,2026,SUV,AWD,307,328,285,88,38.4,13.0,850,51109
+Porsche Cayenne Turbo Electric,Porsche,Cayenne Turbo Electric,2026,SUV,AWD,303,326,279,86,39.0,13.0,900,51112
+Porsche Macan 4 Electric,Porsche,Macan 4 Electric,2026,Small SUV,AWD,324,351,296,102,33.1,11.5,750,50459
+Porsche Macan 4S Electric,Porsche,Macan 4S Electric,2026,Small SUV,AWD,290,311,265,92,36.8,11.5,850,50295
+Porsche Macan Electric,Porsche,Macan Electric,2026,Small SUV,RWD,332,360,303,105,32.1,11.5,700,50458
+Porsche Macan GTS Electric,Porsche,Macan GTS Electric,2026,Small SUV,AWD,294,315,268,92,36.7,11.5,850,50297
+Porsche Macan Turbo Electric,Porsche,Macan Turbo Electric,2026,Small SUV,AWD,293,314,267,91,36.9,11.5,850,50298
+Porsche Taycan 4 Cross Turismo,Porsche,Taycan 4 Cross Turismo,2026,Midsize car,AWD,277,285,268,81,41.5,13.0,950,50234
+Porsche Taycan 4 Perf Battery Plus,Porsche,Taycan 4 Perf Battery Plus,2026,Small car,AWD,315,319,310,93,36.2,13.0,800,50456
+Porsche Taycan 4 Performance Battery,Porsche,Taycan 4 Performance Battery,2026,Small car,AWD,251,259,242,87,38.6,11.5,850,50457
+Porsche Taycan 4S Cross Turismo,Porsche,Taycan 4S Cross Turismo,2026,Midsize car,AWD,272,279,263,80,42.2,13.0,950,50236
+Porsche Taycan 4S Perf Battery Plus,Porsche,Taycan 4S Perf Battery Plus,2026,Small car,AWD,315,319,310,93,36.2,13.0,800,50238
+Porsche Taycan 4S Performance Battery,Porsche,Taycan 4S Performance Battery,2026,Small car,AWD,252,260,243,88,38.4,11.5,850,50239
+Porsche Taycan GTS,Porsche,Taycan GTS,2026,Small car,AWD,293,298,287,86,39.0,13.0,900,50240
+Porsche Taycan GTS Sport Turismo,Porsche,Taycan GTS Sport Turismo,2026,Midsize car,AWD,279,284,272,82,41.0,13.0,900,50241
+Porsche Taycan Performance Battery,Porsche,Taycan Performance Battery,2026,Small car,RWD,274,282,264,91,37.1,11.5,850,50242
+Porsche Taycan Turbo,Porsche,Taycan Turbo,2026,Small car,AWD,292,299,284,86,39.3,13.0,900,50243
+Porsche Taycan Turbo Cross Turismo,Porsche,Taycan Turbo Cross Turismo,2026,Midsize car,AWD,265,271,258,78,42.9,13.0,950,50244
+Porsche Taycan Turbo GT,Porsche,Taycan Turbo GT,2026,Small car,AWD,276,288,261,82,40.9,13.0,900,50245
+Porsche Taycan Turbo GT with Weissach Package,Porsche,Taycan Turbo GT with Weissach Package,2026,Small car,AWD,269,282,253,81,41.7,13.0,950,50246
+Porsche Taycan Turbo S,Porsche,Taycan Turbo S,2026,Small car,AWD,299,298,300,89,37.8,13.0,850,51113
+Porsche Taycan Turbo S Cross Turismo,Porsche,Taycan Turbo S Cross Turismo,2026,Midsize car,AWD,261,267,254,77,43.6,13.0,1000,50248
+Rivian R1S All-Terrain Dual Large,Rivian,R1S All-Terrain Dual Large,2026,SUV,AWD,289,310,264,76,44.4,12.0,1000,49734
+Rivian R1S All-Terrain Dual Large Plus,Rivian,R1S All-Terrain Dual Large Plus,2026,SUV,AWD,292,308,272,72,46.9,12.0,1050,49725
+Rivian R1S All-Terrain Dual Max,Rivian,R1S All-Terrain Dual Max,2026,SUV,AWD,370,389,347,78,43.2,15.0,950,49720
+Rivian R1S All-Terrain Performance Dual Large,Rivian,R1S All-Terrain Performance Dual Large,2026,SUV,AWD,289,310,264,76,44.4,12.0,1000,49737
+Rivian R1S All-Terrain Performance Dual Large Plus,Rivian,R1S All-Terrain Performance Dual Large Plus,2026,SUV,AWD,292,308,272,72,46.9,12.0,1050,49727
+Rivian R1S All-Terrain Performance Dual Max,Rivian,R1S All-Terrain Performance Dual Max,2026,SUV,AWD,370,389,347,78,43.2,15.0,950,49723
+Rivian R1S All-Terrain Tri Max,Rivian,R1S All-Terrain Tri Max,2026,SUV,AWD,329,348,306,68,49.8,15.0,1100,49731
+Rivian R1S Dual Large,Rivian,R1S Dual Large,2026,SUV,AWD,329,358,293,85,39.5,12.0,900,49732
+Rivian R1S Dual Large Plus,Rivian,R1S Dual Large Plus,2026,SUV,AWD,330,354,300,82,40.9,12.0,900,49724
+Rivian R1S Dual Max,Rivian,R1S Dual Max,2026,SUV,AWD,410,441,373,84,39.9,15.0,900,49719
+Rivian R1S Dual Standard,Rivian,R1S Dual Standard,2026,SUV,AWD,270,291,244,85,39.9,9.5,900,49716
+Rivian R1S Performance Dual Large,Rivian,R1S Performance Dual Large,2026,SUV,AWD,329,358,293,85,39.5,12.0,900,49735
+Rivian R1S Performance Dual Large Plus,Rivian,R1S Performance Dual Large Plus,2026,SUV,AWD,330,354,300,82,40.9,12.0,900,49726
+Rivian R1S Performance Dual Max,Rivian,R1S Performance Dual Max,2026,SUV,AWD,410,441,373,84,39.9,15.0,900,49722
+Rivian R1S Quad Max,Rivian,R1S Quad Max,2026,SUV,AWD,374,394,349,76,44.4,14.0,1000,49740
+Rivian R1S Tri Max,Rivian,R1S Tri Max,2026,SUV,AWD,371,395,341,76,44.6,15.0,1000,49730
+Rivian R1T All-Terrain Dual Large,Rivian,R1T All-Terrain Dual Large,2026,Pickup,AWD,289,310,264,76,44.4,12.0,1000,49709
+Rivian R1T All-Terrain Dual Large Plus,Rivian,R1T All-Terrain Dual Large Plus,2026,Pickup,AWD,292,308,272,72,46.9,12.0,1050,49700
+Rivian R1T All-Terrain Dual Max,Rivian,R1T All-Terrain Dual Max,2026,Pickup,AWD,370,389,347,78,43.2,15.0,950,49695
+Rivian R1T All-Terrain Performance Dual Large,Rivian,R1T All-Terrain Performance Dual Large,2026,Pickup,AWD,289,310,264,76,44.4,12.0,1000,49712
+Rivian R1T All-Terrain Performance Dual Large Plus,Rivian,R1T All-Terrain Performance Dual Large Plus,2026,Pickup,AWD,292,308,272,72,46.9,12.0,1050,49702
+Rivian R1T All-Terrain Performance Dual Max,Rivian,R1T All-Terrain Performance Dual Max,2026,Pickup,AWD,370,389,347,78,43.2,15.0,950,49698
+Rivian R1T All-Terrain Tri Max,Rivian,R1T All-Terrain Tri Max,2026,Pickup,AWD,329,348,306,68,49.8,15.0,1100,49706
+Rivian R1T Dual Large,Rivian,R1T Dual Large,2026,Pickup,AWD,329,358,293,85,39.5,12.0,900,49707
+Rivian R1T Dual Large Plus,Rivian,R1T Dual Large Plus,2026,Pickup,AWD,330,354,300,82,40.9,12.0,900,49699
+Rivian R1T Dual Max,Rivian,R1T Dual Max,2026,Pickup,AWD,420,448,386,87,38.8,15.0,850,49694
+Rivian R1T Dual Standard,Rivian,R1T Dual Standard,2026,Pickup,AWD,270,291,244,85,39.9,9.5,900,49691
+Rivian R1T Performance Dual Large,Rivian,R1T Performance Dual Large,2026,Pickup,AWD,329,358,293,85,39.5,12.0,900,49710
+Rivian R1T Performance Dual Large Plus,Rivian,R1T Performance Dual Large Plus,2026,Pickup,AWD,330,354,300,82,40.9,12.0,900,49701
+Rivian R1T Performance Dual Max,Rivian,R1T Performance Dual Max,2026,Pickup,AWD,420,448,386,87,38.8,15.0,850,49697
+Rivian R1T Quad Max,Rivian,R1T Quad Max,2026,Pickup,AWD,374,394,349,76,44.4,14.0,1000,49715
+Rivian R1T Tri Max,Rivian,R1T Tri Max,2026,Pickup,AWD,371,395,341,76,44.6,15.0,1000,49705
+Rolls-Royce Spectre,Rolls-Royce,Spectre,2026,Small car,AWD,277,263,294,77,43.6,10.0,1000,49979
+Rolls-Royce Spectre Black Badge,Rolls-Royce,Spectre Black Badge,2026,Small car,AWD,266,251,285,74,45.4,10.0,1000,49977
+Subaru Solterra 20 AWD,Subaru,Solterra 20 AWD,2026,Small SUV,AWD,278,302,249,117,28.9,8.0,650,49981
+Subaru Solterra AWD,Subaru,Solterra AWD,2026,Small SUV,AWD,288,312,259,120,28.0,8.0,650,49982
+Subaru Trailseeker AWD,Subaru,Trailseeker AWD,2026,Small SUV,AWD,281,298,261,117,29.0,8.0,650,50300
+Subaru Uncharted,Subaru,Uncharted,2026,Small SUV,FWD,308,336,274,129,25.7,8.0,600,50301
+Subaru Uncharted AWD,Subaru,Uncharted AWD,2026,Small SUV,AWD,287,313,255,117,29.0,8.0,650,50303
+Tesla Cybertruck AWD,Tesla,Cybertruck AWD,2026,Pickup,AWD,325,348,297,79,42.9,11.7,950,50039
+Tesla Cybertruck Dual Motor AWD,Tesla,Cybertruck Dual Motor AWD,2026,Pickup,AWD,325,359,292,78,42.9,12.0,950,50460
+Tesla Cybertruck Long Range,Tesla,Cybertruck Long Range,2026,Pickup,RWD,335,377,283,78,43.4,12.0,1000,50249
+Tesla Model 3 Performance,Tesla,Model 3 Performance,2026,Midsize car,AWD,309,325,290,114,29.6,12.0,650,50036
+Tesla Model 3 Performance AWD,Tesla,Model 3 Performance AWD,2026,Midsize car,AWD,314,328,297,111,30.2,12.0,700,50250
+Tesla Model 3 Premium AWD,Tesla,Model 3 Premium AWD,2026,Midsize car,AWD,346,360,329,128,26.4,11.7,600,50037
+Tesla Model 3 Premium RWD,Tesla,Model 3 Premium RWD,2026,Midsize car,RWD,363,383,339,137,24.6,11.7,550,50038
+Tesla Model 3 Standard RWD,Tesla,Model 3 Standard RWD,2026,Midsize car,RWD,321,339,299,139,24.3,12.1,550,50251
+Tesla Model S,Tesla,Model S,2026,Large car,AWD,410,432,383,124,27.1,9.7,600,49741
+Tesla Model S Plaid,Tesla,Model S Plaid,2026,Large car,AWD,368,382,351,110,30.6,12.0,700,49742
+Tesla Model X,Tesla,Model X,2026,SUV,AWD,352,369,332,105,32.2,14.0,700,49745
+Tesla Model X Plaid,Tesla,Model X Plaid,2026,SUV,AWD,335,352,315,100,33.7,12.0,750,49746
+Tesla Model Y Long Range AWD,Tesla,Model Y Long Range AWD,2026,Small SUV,AWD,327,345,305,123,27.5,8.0,600,49744
+Tesla Model Y Long Range RWD,Tesla,Model Y Long Range RWD,2026,Small SUV,RWD,357,382,327,134,25.2,10.0,550,49743
+Tesla Model Y Performance AWD,Tesla,Model Y Performance AWD,2026,Small SUV,AWD,306,320,289,105,32.0,12.2,700,50253
+Tesla Model Y Standard AWD,Tesla,Model Y Standard AWD,2026,Small SUV,AWD,294,308,277,127,26.5,8.0,600,50304
+Tesla Model Y Standard RWD,Tesla,Model Y Standard RWD,2026,Small SUV,RWD,321,341,297,138,24.3,10.0,550,50040
+Toyota bZ (energy capacity 191 Ah),Toyota,bZ (energy capacity 191 Ah),2026,Small SUV,FWD,314,336,287,131,25.5,8.0,550,50042
+Toyota bZ (energy capacity 200 Ah),Toyota,bZ (energy capacity 200 Ah),2026,Small SUV,FWD,236,257,210,130,25.8,6.0,600,49983
+Toyota bZ AWD,Toyota,bZ AWD,2026,Small SUV,AWD,288,311,259,120,28.0,8.0,650,49985
+Toyota bZ AWD LIMITED,Toyota,bZ AWD LIMITED,2026,Small SUV,AWD,278,302,249,117,28.9,8.0,650,49986
+Toyota bZ LIMITED (energy capacity 191 Ah),Toyota,bZ LIMITED (energy capacity 191 Ah),2026,Small SUV,FWD,299,325,267,125,26.9,8.0,600,50043
+Toyota bZ LIMITED (energy capacity 200 Ah),Toyota,bZ LIMITED (energy capacity 200 Ah),2026,Small SUV,FWD,296,321,266,123,27.5,8.0,600,49984
+Toyota bZ Woodland AWD,Toyota,bZ Woodland AWD,2026,Small SUV,AWD,281,298,260,117,29.0,8.0,650,50305
+Toyota C-HR AWD,Toyota,C-HR AWD,2026,Small SUV,AWD,287,309,260,117,29.0,8.0,650,50307
+Volkswagen ID.4,Volkswagen,ID.4,2026,Small SUV,RWD,291,313,264,113,29.8,8.0,650,49987
+Volkswagen ID.4 AWD,Volkswagen,ID.4 AWD,2026,Small SUV,AWD,263,277,245,102,33.0,8.0,750,49988
+Volvo EC40,Volvo,EC40,2026,Small SUV,RWD,298,326,264,106,31.7,8.0,700,49748
+Volvo EC40 Twin,Volvo,EC40 Twin,2026,Small SUV,AWD,268,289,242,97,34.8,8.0,800,49750
+Volvo EX30 Cross Country,Volvo,EX30 Cross Country,2026,Small SUV,AWD,227,242,209,99,34.1,8.0,750,49991
+Volvo EX30 Single motor extended range,Volvo,EX30 Single motor extended range,2026,Small SUV,RWD,261,284,233,116,29.2,8.0,650,49989
+Volvo EX30 Twin Performance,Volvo,EX30 Twin Performance,2026,Small SUV,AWD,253,270,233,109,31.1,8.0,700,49992
+Volvo EX40,Volvo,EX40,2026,Small SUV,RWD,296,326,260,106,31.7,8.0,700,49747
+Volvo EX40 Twin,Volvo,EX40 Twin,2026,Small SUV,AWD,260,283,232,94,36.0,8.0,800,49749
+Volvo EX90,Volvo,EX90,2026,SUV,RWD,291,309,270,98,34.5,10.0,800,50255
+Volvo EX90 Twin Motor,Volvo,EX90 Twin Motor,2026,SUV,AWD,305,318,289,88,38.3,11.0,850,50257
+Volvo EX90 Twin Motor Performance,Volvo,EX90 Twin Motor Performance,2026,SUV,AWD,305,318,289,88,38.3,11.0,850,50259

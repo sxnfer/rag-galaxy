@@ -1,0 +1,4 @@
+# Everything for local work: the run-time packages plus the test runner.
+-r requirements.txt
+pytest>=8
+httpx>=0.27  # FastAPI's TestClient

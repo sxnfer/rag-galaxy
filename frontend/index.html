@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAG Galaxy · follow a question to its answer</title>
+    <meta name="description" content="A short interactive film about how an AI looks things up before it speaks. Ask a question about 2026 electric cars and follow it: words become numbers, numbers become a place, the nearest passages become evidence, and the evidence becomes an answer you can check." />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Link previews (LinkedIn, Slack, X). Set VITE_SITE_URL when building, e.g. https://rag-galaxy.example.com -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RAG Galaxy" />
+    <meta property="og:description" content="A short interactive film about retrieval-augmented generation: follow your question from words, to numbers, to evidence, to an answer you can check." />
+    <meta property="og:image" content="%VITE_SITE_URL%/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <noscript>RAG Galaxy needs JavaScript and WebGL to draw its 3D scene.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.venv*/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.DS_Store
+# data: raw files and eval outputs stay local (seed CSV is committed)
+data/raw/
+data/eval/
+# terraform
+infra/.terraform/
+infra/*.tfstate*
+infra/*.tfvars
+infra/tfplan
+# private planning notes: kept on this computer, not published
+docs/plan*.md

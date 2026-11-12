@@ -1,0 +1,71 @@
+# Glossary
+
+Plain-English definitions, added as each term comes up.
+
+- **RAG (retrieval-augmented generation):** find the relevant passages first, then have the model answer only from them.
+- **Embedding:** a list of numbers (here 384) that captures what a piece of text means.
+- **Cosine similarity:** compares the mix of two lists of numbers, not their size. 1 means the same mix, 0 nothing in common.
+- **PCA / projection:** squeezing 384 numbers down to 3 so they can be drawn. Loses detail; display only.
+- **Scraper:** a program that reads web pages and saves what it needs.
+- **robots.txt:** a site's public note saying which paths robots may visit and how often.
+- **Crawl delay:** the pause a site asks for between requests (CDM asks for 60 s).
+- **Exponential backoff:** after a failure, wait longer each time before retrying (5 s, 10 s, 20 s...).
+- **Idempotent:** running it twice leaves the same result as running it once.
+- **Hash (sha256):** a fingerprint of a file's bytes. Same bytes, same fingerprint.
+- **Manifest:** the table listing every document: where it came from, its fingerprint, when we got it.
+- **PDD (project design document):** the document describing a carbon project and how its reductions are measured.
+- **Monitoring report:** the periodic report of what a project actually reduced.
+- **Chunk:** a short passage cut from a document, small enough to be about one thing.
+- **pgvector:** a Postgres extension that stores embeddings and searches them.
+- **HNSW:** an index that finds near neighbours by walking a graph instead of checking everything. Fast, but can miss some.
+- **Recall@k:** of the passages that answer a question, the share found in the top k results.
+- **MRR (mean reciprocal rank):** how high the first right passage ranks, averaged: 1 for first, 1/2 for second...
+- **Card:** a short passage written from one row of a table, e.g. one car's range figures put into words.
+- **Semantic breakdown:** turning numbers into words before embedding ("512 miles, longest range of 231 cars"), so search by meaning can find them.
+- **Percentile bucket:** where a number sits among all the others, in fifths: very low, low, average, high, very high.
+- **Rank stage:** after search, sort the candidates by the number the question asks for. Vectors find similar things; they can't sort.
+- **Candidates:** the shortlist search hands to the rank stage (200 cards here). Rank can only sort what is on it, so too short a list misses the true winner.
+- **Superlative:** a word that asks for the top or bottom of a ranking: highest, longest, cheapest, fastest.
+- **Intent:** what a question is asking for, read with simple rules: which stat, best or worst end, and any class, make or drive named.
+- **Golden set:** questions with known answer locations, used to measure retrieval.
+- **Managed identity:** an Azure-issued identity for an app, so it signs in without stored passwords or keys.
+- **Frontend:** the part of an app that runs inside your browser.
+- **JSON:** a plain-text way to write labelled data that almost every program can read.
+- **Port:** a numbered door on a computer. Each running program listens at its own door.
+- **API:** the set of doors one program offers to other programs, each with an address and rules.
+- **API key:** a secret password that lets a program use a paid online service. Here, it lets the app ask Claude to write the answer.
+- **Docker:** a tool that runs a program in a sealed box with everything it needs, so it behaves the same on any computer.
+- **Top-k:** the k best results from a search.
+- **Context:** the text handed to the AI along with the question. It's all the AI gets to read.
+- **LLM (large language model):** an AI model trained on huge amounts of text that writes by predicting what comes next.
+- **Citation:** a label in an answer pointing to its source, such as [S2].
+- **Trace:** a step-by-step record of what happened to one request.
+- **HTTP response:** the reply to a web request, with a status code such as 200 for OK or 503 for not ready.
+- **Branch (git):** a parallel copy of the project where changes are made without touching the main version, then merged back when ready.
+- **Token:** the small piece of text an AI model reads and writes, about three-quarters of a word on average. AI services charge per token.
+- **Public domain:** free for anyone to copy and reuse, with no copyright. Work made by the US government is public domain by law.
+- **kWh (kilowatt-hour):** a unit of electrical energy: using 1,000 watts for one hour. An electric car's efficiency is often given as kWh per 100 miles.
+- **MPGe (miles per gallon-equivalent):** how far an electric car goes on the energy in one gallon of petrol (33.7 kWh), so it can be compared with petrol cars. Higher is more efficient.
+- **IP address:** the number that identifies a computer on a network, like a postal address for messages. The server uses it to tell visitors apart.
+- **Rate limit:** a cap on how many requests one visitor can make in a period of time.
+- **Frame:** one still picture. The screen is redrawn about 60 times a second, and showing many frames quickly looks like motion, as in a flip-book.
+- **Story position (p):** the one number that drives the film: 3 means chapter 3, 3.4 means 40% of the way from chapter 3 to 4. Every frame is drawn from it alone.
+- **Easing:** changing a value gradually, slow at the start and the end and quicker in the middle, so a move looks natural instead of mechanical.
+- **Shader:** a small program that runs on the graphics card (the chip that draws the picture) once for every dot, every frame. It is why a thousand moving dots stay smooth.
+- **Depth of field:** how a camera lens keeps one distance sharp and blurs what is nearer or farther. The film imitates it so the eye goes to the sharp part.
+- **Glow (bloom):** an effect that lets very bright things bleed light into what is around them. Here only the question and the passages it found are bright enough to glow.
+- **Proxy:** a computer that stands between visitors and the server and passes messages on. The server sees the proxy's address, so the proxy writes the visitor's real address in a note on each message.
+- **Server:** the computer that does the work behind a site. Your browser sends it a message and it sends back a reply.
+- **Database:** a program that stores information in an organised way so it can be found again quickly. Here it holds every passage and its numbers.
+- **Exact search:** compare the question with every single passage and keep the closest. Always right, but slower the bigger the library.
+- **Approximate search:** find the closest passages without checking them all. Much faster, but now and then it misses the true nearest.
+- **Graph:** a set of points with links between some of them, like towns joined by roads.
+- **Neighbour (in a graph):** a point that another point is linked to directly. In HNSW each passage is linked to the few passages closest to it in meaning.
+- **Greedy walk:** moving through a graph by always stepping to the neighbour closest to where you want to be, and stopping when no neighbour is closer.
+- **Layer (floor):** in HNSW, a copy of the graph that keeps only some of the passages. The fewer it keeps, the further its links reach.
+- **Small world:** a graph where a few steps reach anywhere, because some links are long. The same idea as "six degrees of separation".
+- **Registry:** a shelf on the internet where a program's sealed box (see Docker) is stored under a name and version, so any computer that needs to run it can download it. Like an app store: the developer uploads once, and every phone fetches from the store, not from the developer's laptop.
+- **Subscription (Azure):** the container that everything you create in Azure lives in, and the thing the bill is sent to. Like a phone contract in your name: you are the account, the contract is what gets charged. One account can hold several.
+- **Azure CLI (`az`):** a program for controlling Azure by typing commands in the terminal instead of clicking through its website. CLI stands for command-line interface. Typed commands can be saved, repeated and run by other programs; clicks cannot.
+- **Terraform:** a tool that reads a written description of the cloud resources you want (a database, a server, a secrets store) and creates, changes or removes them to match. The description lives in files, so the whole setup can be reviewed, repeated and torn down with one command.
+- **Resource group (Azure):** a named folder inside a subscription that holds related resources. Deleting the folder deletes everything in it.

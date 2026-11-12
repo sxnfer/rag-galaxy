@@ -1,0 +1,155 @@
+# The golden set: questions whose right answers we know, used to score retrieval (M4).
+#
+# Each entry:
+#   id:          short unique name
+#   library:     ev (the only library today)
+#   question:    asked exactly as a user would
+#   items:       the cars that should come back, as named in data/seeds/ev/vehicles.csv
+#                (the top two or three for the stat asked about; where the 3rd and 4th
+#                tie, only the top two, so the right answer is never a coin toss).
+#                A test checks every name against the CSV and every stat question
+#                against the table itself.
+#   answerable:  false for questions the table can't answer
+#
+# Scored twice by `python -m pipeline eval`: "cards" (search alone) and
+# "cards + rank" (search, then sorted by the stat).
+- id: e01
+  library: ev
+  question: longest range electric SUV
+  items:
+  - Lucid Gravity GT
+  - Lucid Gravity Dream
+- id: e02
+  library: ev
+  question: most efficient small car
+  items:
+  - Mercedes-Benz CLA250 Plus with EQ Tech
+  - BMW i4 eDrive40 Gran Coupe
+  - Mercedes-Benz CLA350 4matic with EQ Tech
+- id: e03
+  library: ev
+  question: cheapest electric pickup to run
+  items:
+  - Rivian R1T Dual Max
+  - Rivian R1T Performance Dual Max
+- id: e04
+  library: ev
+  question: which electric car has the longest range?
+  items:
+  - Lucid Air G Touring XR AWD
+  - Chevrolet Silverado EV Max Range WT
+  - Lucid Gravity GT
+- id: e05
+  library: ev
+  question: shortest range EV
+  items:
+  - Fiat 500e
+  - Hyundai Ioniq 5 Robo taxi
+  - Bugatti Rimac Nevera R
+- id: e06
+  library: ev
+  question: most efficient electric car overall
+  items:
+  - Lucid Air Pure RWD
+  - Tesla Model 3 Standard RWD
+  - Tesla Model Y Standard RWD
+- id: e07
+  library: ev
+  question: least efficient SUV
+  items:
+  - Mercedes-Benz G 580 with EQ Technology
+  - Rivian R1S All-Terrain Tri Max
+- id: e08
+  library: ev
+  question: fastest charging small SUV
+  items:
+  - Toyota bZ (energy capacity 200 Ah)
+  - Kia EV6 Standard Range RWD
+  - Hyundai Ioniq 5 Standard range
+- id: e09
+  library: ev
+  question: which pickup truck takes longest to charge?
+  items:
+  - Chevrolet Silverado EV Ext Range
+  - GMC SIERRA EV Ext Range
+- id: e10
+  library: ev
+  question: longest range Tesla
+  items:
+  - Tesla Model S
+  - Tesla Model S Plaid
+  - Tesla Model 3 Premium RWD
+- id: e11
+  library: ev
+  question: most efficient AWD SUV
+  items:
+  - Tesla Model Y Standard AWD
+  - Tesla Model Y Long Range AWD
+- id: e12
+  library: ev
+  question: cheapest large car to run
+  items:
+  - Lucid Air Pure RWD
+  - Lucid Air Touring AWD
+- id: e13
+  library: ev
+  question: most expensive electric car to run
+  items:
+  - Bugatti Rimac Nevera R
+  - Mercedes-Benz G 580 with EQ Technology
+- id: e14
+  library: ev
+  question: longest range midsize car
+  items:
+  - Tesla Model 3 Premium RWD
+  - Tesla Model 3 Premium AWD
+  - Tesla Model 3 Standard RWD
+- id: e15
+  library: ev
+  question: best range pickup truck
+  items:
+  - Chevrolet Silverado EV Max Range WT
+  - Chevrolet Silverado EV Ext Range WT
+- id: e16
+  library: ev
+  question: most efficient Hyundai
+  items:
+  - Hyundai Ioniq 5 Standard range
+  - Hyundai Ioniq 5 RWD
+  - Hyundai Ioniq 5 AWD
+- id: e17
+  library: ev
+  question: most efficient sedan
+  items:
+  - Lucid Air Pure RWD
+  - Tesla Model 3 Standard RWD
+  - Tesla Model 3 Premium RWD
+- id: e18
+  library: ev
+  question: which Rivian goes the furthest on a charge?
+  items:
+  - Rivian R1T Dual Max
+  - Rivian R1T Performance Dual Max
+- id: e19
+  library: ev
+  question: most efficient Mercedes
+  items:
+  - Mercedes-Benz CLA250 Plus with EQ Tech
+  - Mercedes-Benz CLA350 4matic with EQ Tech
+  - Mercedes-Benz EQS 450 Plus
+- id: e20
+  library: ev
+  question: fastest charging electric car
+  items:
+  - Toyota bZ (energy capacity 200 Ah)
+  - Fiat 500e
+  - Kia EV6 Standard Range RWD
+# The table can't answer these two: it has no safety ratings or top speeds.
+- id: e21
+  library: ev
+  question: which electric car has the best safety rating?
+  answerable: false
+- id: e22
+  library: ev
+  question: what is the top speed of the Porsche Taycan Turbo GT?
+  answerable: false

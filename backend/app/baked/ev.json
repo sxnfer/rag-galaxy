@@ -1,0 +1,7493 @@
+{
+ "created_at": "2026-11-12T12:35:14+00:00",
+ "run": [
+  "ev",
+  "cards",
+  0,
+  "BAAI/bge-small-en-v1.5"
+ ],
+ "traces": [
+  {
+   "trace_id": "a809166d-426a-4189-a78d-e9486e7de5ea",
+   "question": "longest range electric SUV",
+   "library": "ev",
+   "stages": [
+    {
+     "id": "query",
+     "label": "Turn it into numbers",
+     "duration_ms": 3,
+     "detail": "384 numbers from BAAI/bge-small-en-v1.5"
+    },
+    {
+     "id": "retrieve",
+     "label": "Find the closest",
+     "duration_ms": 13,
+     "detail": "top 200 from the ev library (cards/0)"
+    },
+    {
+     "id": "rank",
+     "label": "Sort by the stat asked for",
+     "duration_ms": 1,
+     "detail": "SUV \u00b7 range \u00b7 longest"
+    },
+    {
+     "id": "assemble",
+     "label": "Pick what the AI reads",
+     "duration_ms": 1,
+     "detail": "5 kept, 0 dropped"
+    },
+    {
+     "id": "generate",
+     "label": "Write the answer",
+     "duration_ms": 2202,
+     "detail": "136 tokens from claude-haiku-5-5"
+    },
+    {
+     "id": "check",
+     "label": "Check the citations",
+     "duration_ms": 1,
+     "detail": "passed"
+    },
+    {
+     "id": "log",
+     "label": "Log the trace",
+     "duration_ms": 9,
+     "detail": "saved"
+    }
+   ],
+   "retrieval": {
+    "query_vector": [
+     0.0251,
+     -0.0285,
+     0.0537,
+     0.007,
+     0.006,
+     0.0522,
+     -0.0096,
+     0.0823,
+     0.0294,
+     -0.0003,
+     0.0524,
+     -0.0273,
+     -0.0089,
+     0.0118,
+     0.032,
+     0.0183,
+     0.0575,
+     -0.0146,
+     0.011,
+     -0.0012,
+     0.0758,
+     -0.0574,
+     0.0531,
+     -0.034,
+     0.0233,
+     0.0342,
+     0.0245,
+     -0.0066,
+     -0.0469,
+     -0.1811,
+     0.0022,
+     -0.0397,
+     0.0322,
+     0.0613,
+     -0.0735,
+     0.0124,
+     -0.0722,
+     -0.0321,
+     0.0202,
+     -0.0332,
+     -0.0211,
+     0.0491,
+     -0.0154,
+     -0.03,
+     -0.0672,
+     -0.0011,
+     -0.0058,
+     0.0201,
+     0.111,
+     -0.042,
+     -0.0213,
+     0.0162,
+     0.0105,
+     -0.0022,
+     0.0588,
+     0.0519,
+     -0.0059,
+     -0.0158,
+     0.0381,
+     -0.019,
+     -0.0077,
+     0.0488,
+     -0.1597,
+     0.0251,
+     0.0391,
+     -0.0213,
+     -0.0095,
+     -0.0444,
+     -0.0016,
+     -0.0298,
+     0.0753,
+     -0.0158,
+     -0.0541,
+     0.0082,
+     -0.0386,
+     0.0665,
+     -0.034,
+     0.0195,
+     -0.0335,
+     -0.0166,
+     0.0268,
+     -0.0751,
+     -0.0914,
+     0.006,
+     -0.0185,
+     -0.031,
+     0.038,
+     -0.0232,
+     0.0446,
+     0.0524,
+     -0.0336,
+     0.0139,
+     0.0403,
+     -0.0613,
+     -0.0509,
+     -0.0509,
+     0.0134,
+     -0.0467,
+     0.0234,
+     0.2813,
+     0.0203,
+     0.0526,
+     -0.0108,
+     -0.0485,
+     -0.0372,
+     0.0432,
+     -0.0156,
+     0.0065,
+     0.0002,
+     0.0126,
+     0.0359,
+     -0.0155,
+     0.0111,
+     -0.0058,
+     -0.0351,
+     0.0186,
+     0.0518,
+     0.042,
+     -0.0079,
+     0.0547,
+     -0.1051,
+     -0.0093,
+     0.0299,
+     0.006,
+     0.0253,
+     -0.0317,
+     0.0553,
+     0.0595,
+     -0.0636,
+     0.0647,
+     0.002,
+     -0.0234,
+     -0.026,
+     -0.0231,
+     -0.0198,
+     -0.013,
+     0.0121,
+     0.0644,
+     -0.0065,
+     0.0165,
+     -0.0322,
+     -0.0595,
+     0.061,
+     -0.0651,
+     0.0147,
+     -0.0034,
+     -0.0662,
+     -0.0126,
+     -0.0189,
+     -0.0188,
+     0.0436,
+     0.0221,
+     0.0941,
+     -0.082,
+     0.0213,
+     0.0665,
+     -0.0055,
+     0.0142,
+     -0.0522,
+     -0.0137,
+     0.0241,
+     0.0402,
+     0.0311,
+     0.015,
+     0.0198,
+     -0.1949,
+     -0.0174,
+     0.0345,
+     0.0334,
+     0.0252,
+     -0.0157,
+     0.0269,
+     -0.0012,
+     0.0654,
+     0.0333,
+     0.057,
+     -0.0505,
+     0.0398,
+     -0.0254,
+     0.0498,
+     -0.0593,
+     -0.0181,
+     -0.0517,
+     -0.0223,
+     0.0822,
+     0.0373,
+     0.0138,
+     -0.0144,
+     0.0455,
+     0.038,
+     -0.0161,
+     0.0052,
+     -0.0005,
+     0.0447,
+     -0.0259,
+     -0.0389,
+     -0.0358,
+     0.0312,
+     0.0883,
+     -0.057,
+     0.0184,
+     -0.0106,
+     -0.025,
+     0.0138,
+     -0.0039,
+     -0.0226,
+     0.0068,
+     -0.0037,
+     0.0243,
+     0.0594,
+     -0.0256,
+     -0.0143,
+     0.1083,
+     -0.0941,
+     -0.025,
+     -0.0482,
+     -0.0854,
+     0.0168,
+     -0.0041,
+     0.062,
+     0.0306,
+     0.0402,
+     -0.0439,
+     -0.3054,
+     0.0147,
+     -0.0651,
+     0.0126,
+     0.019,
+     -0.0649,
+     0.055,
+     -0.0234,
+     0.0665,
+     0.0029,
+     0.0292,
+     0.0112,
+     -0.0035,
+     0.0465,
+     -0.0072,
+     0.1181,
+     -0.0158,
+     0.0435,
+     -0.0559,
+     0.0149,
+     0.0144,
+     0.0416,
+     -0.0743,
+     0.0512,
+     0.0545,
+     -0.0134,
+     0.1357,
+     -0.0597,
+     0.0307,
+     -0.0503,
+     0.0227,
+     -0.0176,
+     -0.0061,
+     0.0637,
+     0.0031,
+     -0.0389,
+     0.0321,
+     -0.0324,
+     -0.0113,
+     -0.0053,
+     -0.0477,
+     -0.0228,
+     -0.0284,
+     -0.0585,
+     0.0086,
+     -0.0638,
+     -0.0118,
+     -0.0147,
+     -0.0101,
+     0.0519,
+     0.0459,
+     -0.0161,
+     0.0121,
+     -0.0665,
+     0.0602,
+     -0.0122,
+     -0.0576,
+     0.0476,
+     -0.0049,
+     -0.0516,
+     -0.0102,
+     -0.015,
+     -0.0329,
+     -0.0269,
+     0.038,
+     -0.0266,
+     0.0201,
+     0.0215,
+     0.0131,
+     -0.0299,
+     -0.0124,
+     0.025,
+     -0.0278,
+     0.054,
+     0.0474,
+     -0.0771,
+     0.0506,
+     0.0438,
+     0.0243,
+     -0.0047,
+     -0.0008,
+     0.0086,
+     0.048,
+     -0.0417,
+     0.0365,
+     0.0166,
+     0.0007,
+     -0.035,
+     -0.0207,
+     0.0239,
+     0.0768,
+     -0.0355,
+     -0.0163,
+     -0.1278,
+     0.0626,
+     -0.0008,
+     -0.2101,
+     0.0072,
+     -0.0013,
+     -0.0333,
+     -0.0874,
+     0.0312,
+     -0.0495,
+     -0.0018,
+     -0.0671,
+     -0.032,
+     -0.0582,
+     0.1213,
+     -0.0489,
+     0.0735,
+     0.0188,
+     -0.0198,
+     -0.0049,
+     -0.025,
+     0.033,
+     -0.0237,
+     0.0032,
+     -0.0075,
+     0.1084,
+     -0.0055,
+     0.0214,
+     0.0322,
+     -0.0353,
+     -0.0013,
+     -0.0291,
+     -0.0423,
+     -0.0211,
+     0.0324,
+     0.0192,
+     -0.0445,
+     0.0156,
+     0.0892,
+     0.0132,
+     0.045,
+     0.041,
+     -0.0014,
+     -0.0413,
+     0.1066,
+     0.0217,
+     -0.0526,
+     0.1271,
+     -0.054,
+     -0.0225,
+     -0.0485,
+     -0.0143,
+     -0.0393,
+     0.0212,
+     -0.005,
+     -0.0749,
+     -0.0009,
+     0.0569,
+     0.0096,
+     0.0135,
+     -0.0071,
+     0.0016,
+     -0.0937,
+     0.0165,
+     -0.0178,
+     -0.0029,
+     0.003,
+     0.0735
+    ],
+    "hits": [
+     {
+      "chunk_id": 7717,
+      "score": 0.7913,
+      "breadcrumb": "Electric cars \u203a SUV \u203a Lucid Gravity GT \u203a Range",
+      "page_start": 94,
+      "page_end": 94,
+      "text": "Lucid Gravity GT (SUV) range: 450 miles on a full charge (very long), 3rd longest range of 231 cars and longest range among SUVs. About 469 miles in the city and 426 on the highway.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 94,
+       "item": "Lucid Gravity GT",
+       "make": "Lucid",
+       "class": "SUV",
+       "drive": "AWD",
+       "facet": "range",
+       "stats": {
+        "mpge": 108,
+        "range_mi": 450,
+        "range_hwy_mi": 426,
+        "charge_240v_h": 9.5,
+        "kwh_per_100mi": 31.1,
+        "range_city_mi": 469,
+        "annual_cost_usd": 700
+       }
+      }
+     },
+     {
+      "chunk_id": 7712,
+      "score": 0.7573,
+      "breadcrumb": "Electric cars \u203a SUV \u203a Lucid Gravity Dream \u203a Range",
+      "page_start": 93,
+      "page_end": 93,
+      "text": "Lucid Gravity Dream (SUV) range: 420 miles on a full charge (very long), joint 7th longest range of 231 cars. About 427 miles in the city and 412 on the highway.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 93,
+       "item": "Lucid Gravity Dream",
+       "make": "Lucid",
+       "class": "SUV",
+       "drive": "AWD",
+       "facet": "range",
+       "stats": {
+        "mpge": 99,
+        "range_mi": 420,
+        "range_hwy_mi": 412,
+        "charge_240v_h": 9.5,
+        "kwh_per_100mi": 33.9,
+        "range_city_mi": 427,
+        "annual_cost_usd": 750
+       }
+      }
+     },
+     {
+      "chunk_id": 8077,
+      "score": 0.8017,
+      "breadcrumb": "Electric cars \u203a SUV \u203a Rivian R1S Dual Max \u203a Range",
+      "page_start": 166,
+      "page_end": 166,
+      "text": "Rivian R1S Dual Max (SUV) range: 410 miles on a full charge (very long), joint 11th longest range of 231 cars. About 441 miles in the city and 373 on the highway.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 166,
+       "item": "Rivian R1S Dual Max",
+       "make": "Rivian",
+       "class": "SUV",
+       "drive": "AWD",
+       "facet": "range",
+       "stats": {
+        "mpge": 84,
+        "range_mi": 410,
+        "range_hwy_mi": 373,
+        "charge_240v_h": 15.0,
+        "kwh_per_100mi": 39.9,
+        "range_city_mi": 441,
+        "annual_cost_usd": 900
+       }
+      }
+     },
+     {
+      "chunk_id": 8097,
+      "score": 0.801,
+      "breadcrumb": "Electric cars \u203a SUV \u203a Rivian R1S Performance Dual Max \u203a Range",
+      "page_start": 170,
+      "page_end": 170,
+      "text": "Rivian R1S Performance Dual Max (SUV) range: 410 miles on a full charge (very long), joint 11th longest range of 231 cars. About 441 miles in the city and 373 on the highway.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 170,
+       "item": "Rivian R1S Performance Dual Max",
+       "make": "Rivian",
+       "class": "SUV",
+       "drive": "AWD",
+       "facet": "range",
+       "stats": {
+        "mpge": 84,
+        "range_mi": 410,
+        "range_hwy_mi": 373,
+        "charge_240v_h": 15.0,
+        "kwh_per_100mi": 39.9,
+        "range_city_mi": 441,
+        "annual_cost_usd": 900
+       }
+      }
+     },
+     {
+      "chunk_id": 8102,
+      "score": 0.8049,
+      "breadcrumb": "Electric cars \u203a SUV \u203a Rivian R1S Quad Max \u203a Range",
+      "page_start": 171,
+      "page_end": 171,
+      "text": "Rivian R1S Quad Max (SUV) range: 374 miles on a full charge (very long), joint 17th longest range of 231 cars. About 394 miles in the city and 349 on the highway.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 171,
+       "item": "Rivian R1S Quad Max",
+       "make": "Rivian",
+       "class": "SUV",
+       "drive": "AWD",
+       "facet": "range",
+       "stats": {
+        "mpge": 76,
+        "range_mi": 374,
+        "range_hwy_mi": 349,
+        "charge_240v_h": 14.0,
+        "kwh_per_100mi": 44.4,
+        "range_city_mi": 394,
+        "annual_cost_usd": 1000
+       }
+      }
+     }
+    ]
+   },
+   "rank": {
+    "understood": "SUV \u00b7 range \u00b7 longest",
+    "applied": true,
+    "candidates": 200,
+    "stat": "range",
+    "item_class": "SUV",
+    "make": null,
+    "drive": null,
+    "direction": "longest",
+    "column": "range_mi",
+    "items": [
+     {
+      "item": "Lucid Gravity GT",
+      "value": 450,
+      "unit": "miles",
+      "chunk_id": 7717
+     },
+     {
+      "item": "Lucid Gravity Dream",
+      "value": 420,
+      "unit": "miles",
+      "chunk_id": 7712
+     },
+     {
+      "item": "Rivian R1S Dual Max",
+      "value": 410,
+      "unit": "miles",
+      "chunk_id": 8077
+     },
+     {
+      "item": "Rivian R1S Performance Dual Max",
+      "value": 410,
+      "unit": "miles",
+      "chunk_id": 8097
+     },
+     {
+      "item": "Rivian R1S Quad Max",
+      "value": 374,
+      "unit": "miles",
+      "chunk_id": 8102
+     }
+    ],
+    "before": [
+     {
+      "chunk_id": 7907,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "range",
+      "score": 0.8463
+     },
+     {
+      "chunk_id": 7917,
+      "item": "Porsche Cayenne S Electric Range Setup",
+      "facet": "range",
+      "score": 0.8417
+     },
+     {
+      "chunk_id": 7887,
+      "item": "Porsche Cayenne Coupe Electric Range Setup",
+      "facet": "range",
+      "score": 0.8404
+     },
+     {
+      "chunk_id": 7897,
+      "item": "Porsche Cayenne Electric Range Setup",
+      "facet": "range",
+      "score": 0.8377
+     },
+     {
+      "chunk_id": 7892,
+      "item": "Porsche Cayenne Electric",
+      "facet": "range",
+      "score": 0.8324
+     },
+     {
+      "chunk_id": 7912,
+      "item": "Porsche Cayenne S Electric",
+      "facet": "range",
+      "score": 0.8277
+     },
+     {
+      "chunk_id": 7902,
+      "item": "Porsche Cayenne S Coupe Electric",
+      "facet": "range",
+      "score": 0.8271
+     },
+     {
+      "chunk_id": 7882,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "range",
+      "score": 0.8245
+     },
+     {
+      "chunk_id": 7432,
+      "item": "Chevrolet Equinox EV FWD",
+      "facet": "range",
+      "score": 0.8199
+     },
+     {
+      "chunk_id": 8292,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "range",
+      "score": 0.8165
+     },
+     {
+      "chunk_id": 7922,
+      "item": "Porsche Cayenne Turbo Coupe Electric",
+      "facet": "range",
+      "score": 0.8148
+     },
+     {
+      "chunk_id": 7797,
+      "item": "Mercedes-Benz EQS 550 4matic (SUV)",
+      "facet": "range",
+      "score": 0.8138
+     },
+     {
+      "chunk_id": 7927,
+      "item": "Porsche Cayenne Turbo Electric",
+      "facet": "range",
+      "score": 0.8128
+     },
+     {
+      "chunk_id": 7627,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "range",
+      "score": 0.8124
+     },
+     {
+      "chunk_id": 7427,
+      "item": "Chevrolet Equinox EV AWD",
+      "facet": "range",
+      "score": 0.8123
+     },
+     {
+      "chunk_id": 7942,
+      "item": "Porsche Macan Electric",
+      "facet": "range",
+      "score": 0.8078
+     },
+     {
+      "chunk_id": 7422,
+      "item": "Chevrolet Blazer EV FWD",
+      "facet": "range",
+      "score": 0.8076
+     },
+     {
+      "chunk_id": 8107,
+      "item": "Rivian R1S Tri Max",
+      "facet": "range",
+      "score": 0.8072
+     },
+     {
+      "chunk_id": 7652,
+      "item": "Kia EV9 Long Range RWD",
+      "facet": "range",
+      "score": 0.8069
+     },
+     {
+      "chunk_id": 8062,
+      "item": "Rivian R1S All-Terrain Tri Max",
+      "facet": "range",
+      "score": 0.8057
+     },
+     {
+      "chunk_id": 7877,
+      "item": "Polestar 4 Long Range Single Motor",
+      "facet": "range",
+      "score": 0.8054
+     },
+     {
+      "chunk_id": 8102,
+      "item": "Rivian R1S Quad Max",
+      "facet": "range",
+      "score": 0.8049
+     },
+     {
+      "chunk_id": 7417,
+      "item": "Chevrolet Blazer EV AWD SS",
+      "facet": "range",
+      "score": 0.803
+     },
+     {
+      "chunk_id": 7932,
+      "item": "Porsche Macan 4 Electric",
+      "facet": "range",
+      "score": 0.8022
+     },
+     {
+      "chunk_id": 8077,
+      "item": "Rivian R1S Dual Max",
+      "facet": "range",
+      "score": 0.8017
+     },
+     {
+      "chunk_id": 8072,
+      "item": "Rivian R1S Dual Large Plus",
+      "facet": "range",
+      "score": 0.8016
+     },
+     {
+      "chunk_id": 8092,
+      "item": "Rivian R1S Performance Dual Large Plus",
+      "facet": "range",
+      "score": 0.8013
+     },
+     {
+      "chunk_id": 8067,
+      "item": "Rivian R1S Dual Large",
+      "facet": "range",
+      "score": 0.8012
+     },
+     {
+      "chunk_id": 8087,
+      "item": "Rivian R1S Performance Dual Large",
+      "facet": "range",
+      "score": 0.8011
+     },
+     {
+      "chunk_id": 8097,
+      "item": "Rivian R1S Performance Dual Max",
+      "facet": "range",
+      "score": 0.801
+     },
+     {
+      "chunk_id": 7852,
+      "item": "Polestar 3 Long Range Dual Motor",
+      "facet": "range",
+      "score": 0.8003
+     },
+     {
+      "chunk_id": 7782,
+      "item": "Mercedes-Benz EQS 400 4matic (SUV)",
+      "facet": "range",
+      "score": 0.7994
+     },
+     {
+      "chunk_id": 7532,
+      "item": "Genesis GV60 RWD",
+      "facet": "range",
+      "score": 0.7988
+     },
+     {
+      "chunk_id": 8057,
+      "item": "Rivian R1S All-Terrain Performance Dual Max",
+      "facet": "range",
+      "score": 0.7979
+     },
+     {
+      "chunk_id": 8307,
+      "item": "Tesla Model Y Standard RWD",
+      "facet": "range",
+      "score": 0.7977
+     },
+     {
+      "chunk_id": 8042,
+      "item": "Rivian R1S All-Terrain Dual Max",
+      "facet": "range",
+      "score": 0.7977
+     },
+     {
+      "chunk_id": 8287,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "range",
+      "score": 0.7954
+     },
+     {
+      "chunk_id": 7717,
+      "item": "Lucid Gravity GT",
+      "facet": "range",
+      "score": 0.7913
+     },
+     {
+      "chunk_id": 7402,
+      "item": "Cadillac OPTIQ RWD",
+      "facet": "range",
+      "score": 0.7882
+     },
+     {
+      "chunk_id": 7602,
+      "item": "Hyundai Ioniq 9 RWD",
+      "facet": "range",
+      "score": 0.7882
+     },
+     {
+      "chunk_id": 8282,
+      "item": "Tesla Model X Plaid",
+      "facet": "range",
+      "score": 0.7865
+     },
+     {
+      "chunk_id": 7537,
+      "item": "GMC SIERRA EV Ext Range",
+      "facet": "range",
+      "score": 0.7859
+     },
+     {
+      "chunk_id": 7886,
+      "item": "Porsche Cayenne Coupe Electric Range Setup",
+      "facet": "overview",
+      "score": 0.7842
+     },
+     {
+      "chunk_id": 8402,
+      "item": "Volvo EX90 Twin Motor",
+      "facet": "range",
+      "score": 0.7838
+     },
+     {
+      "chunk_id": 8232,
+      "item": "Tesla Cybertruck Dual Motor AWD",
+      "facet": "range",
+      "score": 0.7835
+     },
+     {
+      "chunk_id": 7582,
+      "item": "Hyundai Ioniq 5 RWD",
+      "facet": "range",
+      "score": 0.7832
+     },
+     {
+      "chunk_id": 8237,
+      "item": "Tesla Cybertruck Long Range",
+      "facet": "range",
+      "score": 0.7817
+     },
+     {
+      "chunk_id": 7502,
+      "item": "Ford Mustang Mach-E RWD Extended",
+      "facet": "range",
+      "score": 0.7813
+     },
+     {
+      "chunk_id": 7906,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "overview",
+      "score": 0.7811
+     },
+     {
+      "chunk_id": 7626,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "overview",
+      "score": 0.7808
+     },
+     {
+      "chunk_id": 7352,
+      "item": "BMW iX xDrive45",
+      "facet": "range",
+      "score": 0.7803
+     },
+     {
+      "chunk_id": 7592,
+      "item": "Hyundai Ioniq 9 AWD",
+      "facet": "range",
+      "score": 0.78
+     },
+     {
+      "chunk_id": 7357,
+      "item": "BMW iX xDrive60",
+      "facet": "range",
+      "score": 0.7796
+     },
+     {
+      "chunk_id": 7777,
+      "item": "Mercedes-Benz EQE 320 Plus (SUV)",
+      "facet": "range",
+      "score": 0.7785
+     },
+     {
+      "chunk_id": 8407,
+      "item": "Volvo EX90 Twin Motor Performance",
+      "facet": "range",
+      "score": 0.7779
+     },
+     {
+      "chunk_id": 8297,
+      "item": "Tesla Model Y Performance AWD",
+      "facet": "range",
+      "score": 0.7778
+     },
+     {
+      "chunk_id": 7437,
+      "item": "Chevrolet Silverado EV Ext Range",
+      "facet": "range",
+      "score": 0.7774
+     },
+     {
+      "chunk_id": 7597,
+      "item": "Hyundai Ioniq 9 AWD Performance",
+      "facet": "range",
+      "score": 0.777
+     },
+     {
+      "chunk_id": 8291,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "overview",
+      "score": 0.7767
+     },
+     {
+      "chunk_id": 7916,
+      "item": "Porsche Cayenne S Electric Range Setup",
+      "facet": "overview",
+      "score": 0.7764
+     },
+     {
+      "chunk_id": 8277,
+      "item": "Tesla Model X",
+      "facet": "range",
+      "score": 0.7758
+     },
+     {
+      "chunk_id": 7896,
+      "item": "Porsche Cayenne Electric Range Setup",
+      "facet": "overview",
+      "score": 0.7748
+     },
+     {
+      "chunk_id": 8236,
+      "item": "Tesla Cybertruck Long Range",
+      "facet": "overview",
+      "score": 0.7742
+     },
+     {
+      "chunk_id": 7807,
+      "item": "Mercedes-Benz EQS 680 4matic Maybach (SUV)",
+      "facet": "range",
+      "score": 0.7741
+     },
+     {
+      "chunk_id": 8227,
+      "item": "Tesla Cybertruck AWD",
+      "facet": "range",
+      "score": 0.7739
+     },
+     {
+      "chunk_id": 7947,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "range",
+      "score": 0.7736
+     },
+     {
+      "chunk_id": 8332,
+      "item": "Toyota bZ LIMITED (energy capacity 191 Ah)",
+      "facet": "range",
+      "score": 0.7733
+     },
+     {
+      "chunk_id": 8312,
+      "item": "Toyota bZ (energy capacity 191 Ah)",
+      "facet": "range",
+      "score": 0.7728
+     },
+     {
+      "chunk_id": 8182,
+      "item": "Rivian R1T Quad Max",
+      "facet": "range",
+      "score": 0.7725
+     },
+     {
+      "chunk_id": 8217,
+      "item": "Subaru Uncharted",
+      "facet": "range",
+      "score": 0.7725
+     },
+     {
+      "chunk_id": 8172,
+      "item": "Rivian R1T Performance Dual Large Plus",
+      "facet": "range",
+      "score": 0.772
+     },
+     {
+      "chunk_id": 8286,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "overview",
+      "score": 0.7715
+     },
+     {
+      "chunk_id": 8152,
+      "item": "Rivian R1T Dual Large Plus",
+      "facet": "range",
+      "score": 0.7711
+     },
+     {
+      "chunk_id": 7407,
+      "item": "Cadillac VISTIQ",
+      "facet": "range",
+      "score": 0.771
+     },
+     {
+      "chunk_id": 7482,
+      "item": "Ford Mustang Mach-E AWD Extended",
+      "facet": "range",
+      "score": 0.771
+     },
+     {
+      "chunk_id": 8187,
+      "item": "Rivian R1T Tri Max",
+      "facet": "range",
+      "score": 0.7705
+     },
+     {
+      "chunk_id": 7647,
+      "item": "Kia EV9 Long Range AWD GT-Line",
+      "facet": "range",
+      "score": 0.7692
+     },
+     {
+      "chunk_id": 7876,
+      "item": "Polestar 4 Long Range Single Motor",
+      "facet": "overview",
+      "score": 0.7691
+     },
+     {
+      "chunk_id": 8142,
+      "item": "Rivian R1T All-Terrain Tri Max",
+      "facet": "range",
+      "score": 0.7682
+     },
+     {
+      "chunk_id": 7392,
+      "item": "Cadillac OPTIQ AWD",
+      "facet": "range",
+      "score": 0.7671
+     },
+     {
+      "chunk_id": 7557,
+      "item": "Honda Prologue FWD",
+      "facet": "range",
+      "score": 0.767
+     },
+     {
+      "chunk_id": 7642,
+      "item": "Kia EV9 Long Range AWD",
+      "facet": "range",
+      "score": 0.7664
+     },
+     {
+      "chunk_id": 7641,
+      "item": "Kia EV9 Long Range AWD",
+      "facet": "overview",
+      "score": 0.7661
+     },
+     {
+      "chunk_id": 8177,
+      "item": "Rivian R1T Performance Dual Max",
+      "facet": "range",
+      "score": 0.7657
+     },
+     {
+      "chunk_id": 7643,
+      "item": "Kia EV9 Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7654
+     },
+     {
+      "chunk_id": 7622,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "range",
+      "score": 0.7653
+     },
+     {
+      "chunk_id": 7722,
+      "item": "Lucid Gravity Touring",
+      "facet": "range",
+      "score": 0.7652
+     },
+     {
+      "chunk_id": 7292,
+      "item": "Audi S e-tron GT",
+      "facet": "range",
+      "score": 0.7651
+     },
+     {
+      "chunk_id": 7382,
+      "item": "Cadillac LYRIQ PAWD",
+      "facet": "range",
+      "score": 0.7649
+     },
+     {
+      "chunk_id": 7752,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "range",
+      "score": 0.7649
+     },
+     {
+      "chunk_id": 7861,
+      "item": "Polestar 3 Long Range Single Motor",
+      "facet": "overview",
+      "score": 0.7648
+     },
+     {
+      "chunk_id": 7372,
+      "item": "Cadillac LYRIQ",
+      "facet": "range",
+      "score": 0.7647
+     },
+     {
+      "chunk_id": 8167,
+      "item": "Rivian R1T Performance Dual Large",
+      "facet": "range",
+      "score": 0.7645
+     },
+     {
+      "chunk_id": 7651,
+      "item": "Kia EV9 Long Range RWD",
+      "facet": "overview",
+      "score": 0.7644
+     },
+     {
+      "chunk_id": 7757,
+      "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+      "facet": "range",
+      "score": 0.7642
+     },
+     {
+      "chunk_id": 7377,
+      "item": "Cadillac LYRIQ AWD",
+      "facet": "range",
+      "score": 0.7641
+     },
+     {
+      "chunk_id": 8157,
+      "item": "Rivian R1T Dual Max",
+      "facet": "range",
+      "score": 0.7641
+     },
+     {
+      "chunk_id": 7851,
+      "item": "Polestar 3 Long Range Dual Motor",
+      "facet": "overview",
+      "score": 0.764
+     },
+     {
+      "chunk_id": 7512,
+      "item": "Genesis Electrified GV70 AWD",
+      "facet": "range",
+      "score": 0.7639
+     },
+     {
+      "chunk_id": 7862,
+      "item": "Polestar 3 Long Range Single Motor",
+      "facet": "range",
+      "score": 0.7638
+     },
+     {
+      "chunk_id": 7863,
+      "item": "Polestar 3 Long Range Single Motor",
+      "facet": "efficiency",
+      "score": 0.7636
+     },
+     {
+      "chunk_id": 8262,
+      "item": "Tesla Model 3 Standard RWD",
+      "facet": "range",
+      "score": 0.7636
+     },
+     {
+      "chunk_id": 8257,
+      "item": "Tesla Model 3 Premium RWD",
+      "facet": "range",
+      "score": 0.7632
+     },
+     {
+      "chunk_id": 7878,
+      "item": "Polestar 4 Long Range Single Motor",
+      "facet": "efficiency",
+      "score": 0.7629
+     },
+     {
+      "chunk_id": 8147,
+      "item": "Rivian R1T Dual Large",
+      "facet": "range",
+      "score": 0.7628
+     },
+     {
+      "chunk_id": 7653,
+      "item": "Kia EV9 Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.7628
+     },
+     {
+      "chunk_id": 7937,
+      "item": "Porsche Macan 4S Electric",
+      "facet": "range",
+      "score": 0.7622
+     },
+     {
+      "chunk_id": 7657,
+      "item": "Kia EV9 Standard Range RWD",
+      "facet": "range",
+      "score": 0.7616
+     },
+     {
+      "chunk_id": 7677,
+      "item": "Lexus RZ 350e FWD",
+      "facet": "range",
+      "score": 0.7612
+     },
+     {
+      "chunk_id": 8137,
+      "item": "Rivian R1T All-Terrain Performance Dual Max",
+      "facet": "range",
+      "score": 0.761
+     },
+     {
+      "chunk_id": 7447,
+      "item": "Chevrolet Silverado EV Max Range WT",
+      "facet": "range",
+      "score": 0.7608
+     },
+     {
+      "chunk_id": 7747,
+      "item": "Mercedes-Benz AMG EQE 4matic Plus (SUV)",
+      "facet": "range",
+      "score": 0.7606
+     },
+     {
+      "chunk_id": 7952,
+      "item": "Porsche Macan Turbo Electric",
+      "facet": "range",
+      "score": 0.7606
+     },
+     {
+      "chunk_id": 8122,
+      "item": "Rivian R1T All-Terrain Dual Max",
+      "facet": "range",
+      "score": 0.7596
+     },
+     {
+      "chunk_id": 7442,
+      "item": "Chevrolet Silverado EV Ext Range WT",
+      "facet": "range",
+      "score": 0.7594
+     },
+     {
+      "chunk_id": 7908,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7593
+     },
+     {
+      "chunk_id": 7692,
+      "item": "Lucid Air G Touring XR AWD",
+      "facet": "range",
+      "score": 0.759
+     },
+     {
+      "chunk_id": 7888,
+      "item": "Porsche Cayenne Coupe Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7585
+     },
+     {
+      "chunk_id": 7367,
+      "item": "Cadillac CELESTIQ",
+      "facet": "range",
+      "score": 0.7583
+     },
+     {
+      "chunk_id": 7267,
+      "item": "Acura ZDX RWD",
+      "facet": "range",
+      "score": 0.7579
+     },
+     {
+      "chunk_id": 7507,
+      "item": "Genesis Electrified G80",
+      "facet": "range",
+      "score": 0.7574
+     },
+     {
+      "chunk_id": 7648,
+      "item": "Kia EV9 Long Range AWD GT-Line",
+      "facet": "efficiency",
+      "score": 0.7573
+     },
+     {
+      "chunk_id": 7347,
+      "item": "BMW iX M70",
+      "facet": "range",
+      "score": 0.7573
+     },
+     {
+      "chunk_id": 7712,
+      "item": "Lucid Gravity Dream",
+      "facet": "range",
+      "score": 0.7573
+     },
+     {
+      "chunk_id": 7662,
+      "item": "Kia Niro Electric",
+      "facet": "range",
+      "score": 0.7573
+     },
+     {
+      "chunk_id": 7853,
+      "item": "Polestar 3 Long Range Dual Motor",
+      "facet": "efficiency",
+      "score": 0.7573
+     },
+     {
+      "chunk_id": 7588,
+      "item": "Hyundai Ioniq 5 Standard range",
+      "facet": "efficiency",
+      "score": 0.757
+     },
+     {
+      "chunk_id": 7628,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.7564
+     },
+     {
+      "chunk_id": 7867,
+      "item": "Polestar 4 Long Range Dual Motor",
+      "facet": "range",
+      "score": 0.7561
+     },
+     {
+      "chunk_id": 7621,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "overview",
+      "score": 0.756
+     },
+     {
+      "chunk_id": 7623,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7559
+     },
+     {
+      "chunk_id": 7787,
+      "item": "Mercedes-Benz EQS 450 4matic",
+      "facet": "range",
+      "score": 0.7559
+     },
+     {
+      "chunk_id": 7632,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "range",
+      "score": 0.7552
+     },
+     {
+      "chunk_id": 7658,
+      "item": "Kia EV9 Standard Range RWD",
+      "facet": "efficiency",
+      "score": 0.7549
+     },
+     {
+      "chunk_id": 7847,
+      "item": "Nissan LEAF 75kWh",
+      "facet": "range",
+      "score": 0.7547
+     },
+     {
+      "chunk_id": 7868,
+      "item": "Polestar 4 Long Range Dual Motor",
+      "facet": "efficiency",
+      "score": 0.7546
+     },
+     {
+      "chunk_id": 8052,
+      "item": "Rivian R1S All-Terrain Performance Dual Large Plus",
+      "facet": "range",
+      "score": 0.7538
+     },
+     {
+      "chunk_id": 7977,
+      "item": "Porsche Taycan 4S Perf Battery Plus",
+      "facet": "range",
+      "score": 0.7533
+     },
+     {
+      "chunk_id": 8063,
+      "item": "Rivian R1S All-Terrain Tri Max",
+      "facet": "efficiency",
+      "score": 0.7532
+     },
+     {
+      "chunk_id": 7317,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "range",
+      "score": 0.7531
+     },
+     {
+      "chunk_id": 7542,
+      "item": "GMC SIERRA EV Std Range",
+      "facet": "range",
+      "score": 0.753
+     },
+     {
+      "chunk_id": 7918,
+      "item": "Porsche Cayenne S Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7527
+     },
+     {
+      "chunk_id": 7697,
+      "item": "Lucid Air Pure RWD",
+      "facet": "range",
+      "score": 0.7523
+     },
+     {
+      "chunk_id": 7302,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "range",
+      "score": 0.7519
+     },
+     {
+      "chunk_id": 7522,
+      "item": "Genesis GV60 AWD Advanced",
+      "facet": "range",
+      "score": 0.7516
+     },
+     {
+      "chunk_id": 7802,
+      "item": "Mercedes-Benz EQS 580 4matic",
+      "facet": "range",
+      "score": 0.7515
+     },
+     {
+      "chunk_id": 7517,
+      "item": "Genesis GV60 AWD",
+      "facet": "range",
+      "score": 0.7514
+     },
+     {
+      "chunk_id": 7412,
+      "item": "Chevrolet Blazer EV AWD",
+      "facet": "range",
+      "score": 0.7512
+     },
+     {
+      "chunk_id": 7872,
+      "item": "Polestar 4 Long Range Dual Motor Performance",
+      "facet": "range",
+      "score": 0.7508
+     },
+     {
+      "chunk_id": 8037,
+      "item": "Rivian R1S All-Terrain Dual Large Plus",
+      "facet": "range",
+      "score": 0.7506
+     },
+     {
+      "chunk_id": 7633,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "efficiency",
+      "score": 0.7504
+     },
+     {
+      "chunk_id": 7332,
+      "item": "BMW i7 eDrive50 Sedan",
+      "facet": "range",
+      "score": 0.7504
+     },
+     {
+      "chunk_id": 8293,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.7501
+     },
+     {
+      "chunk_id": 8078,
+      "item": "Rivian R1S Dual Max",
+      "facet": "efficiency",
+      "score": 0.7499
+     },
+     {
+      "chunk_id": 8288,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7495
+     },
+     {
+      "chunk_id": 7962,
+      "item": "Porsche Taycan 4 Perf Battery Plus",
+      "facet": "range",
+      "score": 0.7493
+     },
+     {
+      "chunk_id": 7866,
+      "item": "Polestar 4 Long Range Dual Motor",
+      "facet": "overview",
+      "score": 0.7489
+     },
+     {
+      "chunk_id": 7272,
+      "item": "Audi Q4 45 e-tron",
+      "facet": "range",
+      "score": 0.7486
+     },
+     {
+      "chunk_id": 8058,
+      "item": "Rivian R1S All-Terrain Performance Dual Max",
+      "facet": "efficiency",
+      "score": 0.7486
+     },
+     {
+      "chunk_id": 8043,
+      "item": "Rivian R1S All-Terrain Dual Max",
+      "facet": "efficiency",
+      "score": 0.7484
+     },
+     {
+      "chunk_id": 7767,
+      "item": "Mercedes-Benz EQE 320 4matic (SUV)",
+      "facet": "range",
+      "score": 0.7477
+     },
+     {
+      "chunk_id": 8047,
+      "item": "Rivian R1S All-Terrain Performance Dual Large",
+      "facet": "range",
+      "score": 0.7476
+     },
+     {
+      "chunk_id": 8108,
+      "item": "Rivian R1S Tri Max",
+      "facet": "efficiency",
+      "score": 0.7474
+     },
+     {
+      "chunk_id": 8098,
+      "item": "Rivian R1S Performance Dual Max",
+      "facet": "efficiency",
+      "score": 0.7471
+     },
+     {
+      "chunk_id": 7911,
+      "item": "Porsche Cayenne S Electric",
+      "facet": "overview",
+      "score": 0.7471
+     },
+     {
+      "chunk_id": 8272,
+      "item": "Tesla Model S Plaid",
+      "facet": "range",
+      "score": 0.747
+     },
+     {
+      "chunk_id": 7646,
+      "item": "Kia EV9 Long Range AWD GT-Line",
+      "facet": "overview",
+      "score": 0.747
+     },
+     {
+      "chunk_id": 8302,
+      "item": "Tesla Model Y Standard AWD",
+      "facet": "range",
+      "score": 0.7467
+     },
+     {
+      "chunk_id": 8032,
+      "item": "Rivian R1S All-Terrain Dual Large",
+      "facet": "range",
+      "score": 0.7463
+     },
+     {
+      "chunk_id": 7898,
+      "item": "Porsche Cayenne Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7459
+     },
+     {
+      "chunk_id": 7881,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "overview",
+      "score": 0.7454
+     },
+     {
+      "chunk_id": 7792,
+      "item": "Mercedes-Benz EQS 450 Plus",
+      "facet": "range",
+      "score": 0.7454
+     },
+     {
+      "chunk_id": 7656,
+      "item": "Kia EV9 Standard Range RWD",
+      "facet": "overview",
+      "score": 0.7447
+     },
+     {
+      "chunk_id": 8038,
+      "item": "Rivian R1S All-Terrain Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.7446
+     },
+     {
+      "chunk_id": 8103,
+      "item": "Rivian R1S Quad Max",
+      "facet": "efficiency",
+      "score": 0.7446
+     },
+     {
+      "chunk_id": 8082,
+      "item": "Rivian R1S Dual Standard",
+      "facet": "range",
+      "score": 0.7444
+     },
+     {
+      "chunk_id": 7891,
+      "item": "Porsche Cayenne Electric",
+      "facet": "overview",
+      "score": 0.7444
+     },
+     {
+      "chunk_id": 8053,
+      "item": "Rivian R1S All-Terrain Performance Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.7443
+     },
+     {
+      "chunk_id": 7637,
+      "item": "Kia EV9 GT",
+      "facet": "range",
+      "score": 0.7439
+     },
+     {
+      "chunk_id": 7901,
+      "item": "Porsche Cayenne S Coupe Electric",
+      "facet": "overview",
+      "score": 0.7438
+     },
+     {
+      "chunk_id": 7857,
+      "item": "Polestar 3 Long Range Dual Motor Performance Pack",
+      "facet": "range",
+      "score": 0.7437
+     },
+     {
+      "chunk_id": 8378,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "efficiency",
+      "score": 0.7428
+     },
+     {
+      "chunk_id": 7257,
+      "item": "Acura ZDX AWD",
+      "facet": "range",
+      "score": 0.7426
+     },
+     {
+      "chunk_id": 7617,
+      "item": "Kia EV6 AWD GT",
+      "facet": "range",
+      "score": 0.7414
+     },
+     {
+      "chunk_id": 7827,
+      "item": "Nissan ARIYA e-4ORCE 87kWh",
+      "facet": "range",
+      "score": 0.7413
+     },
+     {
+      "chunk_id": 7873,
+      "item": "Polestar 4 Long Range Dual Motor Performance",
+      "facet": "efficiency",
+      "score": 0.741
+     },
+     {
+      "chunk_id": 8073,
+      "item": "Rivian R1S Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.7407
+     },
+     {
+      "chunk_id": 8093,
+      "item": "Rivian R1S Performance Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.7406
+     },
+     {
+      "chunk_id": 7446,
+      "item": "Chevrolet Silverado EV Max Range WT",
+      "facet": "overview",
+      "score": 0.7406
+     },
+     {
+      "chunk_id": 7547,
+      "item": "Honda Prologue AWD Elite",
+      "facet": "range",
+      "score": 0.7403
+     },
+     {
+      "chunk_id": 8267,
+      "item": "Tesla Model S",
+      "facet": "range",
+      "score": 0.7403
+     },
+     {
+      "chunk_id": 8247,
+      "item": "Tesla Model 3 Performance AWD",
+      "facet": "range",
+      "score": 0.74
+     },
+     {
+      "chunk_id": 7707,
+      "item": "Lucid Air Touring AWD",
+      "facet": "range",
+      "score": 0.7399
+     },
+     {
+      "chunk_id": 7612,
+      "item": "Jeep Wagoneer S AWD",
+      "facet": "range",
+      "score": 0.7394
+     },
+     {
+      "chunk_id": 8377,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "range",
+      "score": 0.7393
+     },
+     {
+      "chunk_id": 7631,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "overview",
+      "score": 0.7391
+     },
+     {
+      "chunk_id": 8376,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "overview",
+      "score": 0.7391
+     },
+     {
+      "chunk_id": 7342,
+      "item": "BMW i7 xDrive60 Sedan",
+      "facet": "range",
+      "score": 0.7387
+     },
+     {
+      "chunk_id": 8068,
+      "item": "Rivian R1S Dual Large",
+      "facet": "efficiency",
+      "score": 0.7385
+     },
+     {
+      "chunk_id": 7921,
+      "item": "Porsche Cayenne Turbo Coupe Electric",
+      "facet": "overview",
+      "score": 0.7381
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "S1",
+     "chunk_id": 7717,
+     "breadcrumb": "Electric cars \u203a SUV \u203a Lucid Gravity GT \u203a Range",
+     "pages": "row 94",
+     "text": "Lucid Gravity GT (SUV) range: 450 miles on a full charge (very long), 3rd longest range of 231 cars and longest range among SUVs. About 469 miles in the city and 426 on the highway.",
+     "score": 0.7913
+    },
+    {
+     "label": "S2",
+     "chunk_id": 7712,
+     "breadcrumb": "Electric cars \u203a SUV \u203a Lucid Gravity Dream \u203a Range",
+     "pages": "row 93",
+     "text": "Lucid Gravity Dream (SUV) range: 420 miles on a full charge (very long), joint 7th longest range of 231 cars. About 427 miles in the city and 412 on the highway.",
+     "score": 0.7573
+    },
+    {
+     "label": "S3",
+     "chunk_id": 8077,
+     "breadcrumb": "Electric cars \u203a SUV \u203a Rivian R1S Dual Max \u203a Range",
+     "pages": "row 166",
+     "text": "Rivian R1S Dual Max (SUV) range: 410 miles on a full charge (very long), joint 11th longest range of 231 cars. About 441 miles in the city and 373 on the highway.",
+     "score": 0.8017
+    },
+    {
+     "label": "S4",
+     "chunk_id": 8097,
+     "breadcrumb": "Electric cars \u203a SUV \u203a Rivian R1S Performance Dual Max \u203a Range",
+     "pages": "row 170",
+     "text": "Rivian R1S Performance Dual Max (SUV) range: 410 miles on a full charge (very long), joint 11th longest range of 231 cars. About 441 miles in the city and 373 on the highway.",
+     "score": 0.801
+    },
+    {
+     "label": "S5",
+     "chunk_id": 8102,
+     "breadcrumb": "Electric cars \u203a SUV \u203a Rivian R1S Quad Max \u203a Range",
+     "pages": "row 171",
+     "text": "Rivian R1S Quad Max (SUV) range: 374 miles on a full charge (very long), joint 17th longest range of 231 cars. About 394 miles in the city and 349 on the highway.",
+     "score": 0.8049
+    }
+   ],
+   "dropped": [],
+   "answer": "1. Lucid Gravity GT: 450 miles of range [S1]\n2. Lucid Gravity Dream: 420 miles of range [S2]\n3. Rivian R1S Dual Max: 410 miles of range [S3]\n4. Rivian R1S Performance Dual Max: 410 miles of range [S4]\n5. Rivian R1S Quad Max: 374 miles of range [S5]",
+   "generation": {
+    "answer": "1. Lucid Gravity GT: 450 miles of range [S1]\n2. Lucid Gravity Dream: 420 miles of range [S2]\n3. Rivian R1S Dual Max: 410 miles of range [S3]\n4. Rivian R1S Performance Dual Max: 410 miles of range [S4]\n5. Rivian R1S Quad Max: 374 miles of range [S5]",
+    "model": "claude-haiku-5-5",
+    "input_tokens": 906,
+    "output_tokens": 136
+   },
+   "check": {
+    "passed": true,
+    "problems": [],
+    "cited": [
+     "S1",
+     "S2",
+     "S3",
+     "S4",
+     "S5"
+    ]
+   }
+  },
+  {
+   "trace_id": "ce81e826-e7b1-4d4d-afef-cd3a97acf831",
+   "question": "most efficient small car",
+   "library": "ev",
+   "stages": [
+    {
+     "id": "query",
+     "label": "Turn it into numbers",
+     "duration_ms": 8,
+     "detail": "384 numbers from BAAI/bge-small-en-v1.5"
+    },
+    {
+     "id": "retrieve",
+     "label": "Find the closest",
+     "duration_ms": 14,
+     "detail": "top 200 from the ev library (cards/0)"
+    },
+    {
+     "id": "rank",
+     "label": "Sort by the stat asked for",
+     "duration_ms": 1,
+     "detail": "small car \u00b7 efficiency \u00b7 most efficient"
+    },
+    {
+     "id": "assemble",
+     "label": "Pick what the AI reads",
+     "duration_ms": 1,
+     "detail": "5 kept, 0 dropped"
+    },
+    {
+     "id": "generate",
+     "label": "Write the answer",
+     "duration_ms": 2165,
+     "detail": "279 tokens from claude-haiku-5-5"
+    },
+    {
+     "id": "check",
+     "label": "Check the citations",
+     "duration_ms": 1,
+     "detail": "passed"
+    },
+    {
+     "id": "log",
+     "label": "Log the trace",
+     "duration_ms": 7,
+     "detail": "saved"
+    }
+   ],
+   "retrieval": {
+    "query_vector": [
+     -0.0079,
+     0.0067,
+     0.0479,
+     0.0028,
+     -0.0101,
+     0.05,
+     0.0041,
+     0.0568,
+     -0.0091,
+     0.0168,
+     -0.0026,
+     -0.0306,
+     0.0209,
+     0.0391,
+     0.0161,
+     -0.0263,
+     0.0731,
+     0.0266,
+     -0.0305,
+     -0.0724,
+     0.0487,
+     -0.0751,
+     -0.041,
+     -0.0404,
+     -0.0132,
+     0.0249,
+     0.0057,
+     0.0026,
+     -0.0864,
+     -0.1384,
+     0.0009,
+     -0.0278,
+     0.0696,
+     0.0302,
+     -0.0472,
+     0.0193,
+     -0.01,
+     0.0088,
+     -0.0277,
+     -0.0885,
+     0.0318,
+     0.0645,
+     -0.0434,
+     0.0255,
+     0.0014,
+     -0.0248,
+     0.0248,
+     0.042,
+     0.0692,
+     -0.0544,
+     -0.0273,
+     0.0287,
+     0.0095,
+     -0.0182,
+     0.0107,
+     -0.005,
+     0.0309,
+     0.0072,
+     0.0243,
+     -0.055,
+     0.007,
+     0.097,
+     -0.1083,
+     -0.0141,
+     0.0381,
+     -0.0576,
+     0.0022,
+     -0.0481,
+     -0.0309,
+     0.0328,
+     0.0473,
+     -0.0228,
+     0.0021,
+     0.0501,
+     -0.0364,
+     -0.0133,
+     -0.0354,
+     0.0109,
+     -0.0194,
+     0.0306,
+     -0.0006,
+     -0.067,
+     -0.1076,
+     0.0014,
+     -0.0127,
+     -0.0703,
+     -0.0101,
+     0.0032,
+     0.0503,
+     -0.0179,
+     -0.0428,
+     0.0193,
+     0.0417,
+     -0.0143,
+     0.0335,
+     0.0068,
+     0.0065,
+     -0.0501,
+     -0.0345,
+     0.3169,
+     0.006,
+     0.0616,
+     0.034,
+     -0.066,
+     -0.0047,
+     0.0535,
+     0.0156,
+     0.0055,
+     -0.0301,
+     0.0087,
+     0.0325,
+     -0.0304,
+     0.0295,
+     -0.0146,
+     0.0155,
+     -0.0185,
+     0.012,
+     0.0571,
+     0.0259,
+     0.1025,
+     -0.0677,
+     -0.0352,
+     0.0298,
+     -0.0344,
+     0.0507,
+     -0.1121,
+     0.0476,
+     0.0395,
+     -0.007,
+     0.0637,
+     0.0349,
+     0.0259,
+     0.011,
+     -0.0314,
+     0.0255,
+     -0.0605,
+     0.0232,
+     0.0654,
+     0.0208,
+     -0.0326,
+     -0.024,
+     -0.0253,
+     0.0143,
+     -0.1048,
+     -0.0427,
+     0.0353,
+     0.0307,
+     0.0272,
+     0.0118,
+     -0.0355,
+     -0.0097,
+     0.0354,
+     0.0524,
+     -0.0759,
+     0.0312,
+     0.0101,
+     0.0176,
+     0.0207,
+     -0.0222,
+     0.0006,
+     -0.0347,
+     0.057,
+     -0.0557,
+     -0.001,
+     -0.0243,
+     -0.181,
+     0.006,
+     0.057,
+     -0.0146,
+     0.0056,
+     -0.011,
+     0.0693,
+     -0.0751,
+     0.0222,
+     0.0716,
+     -0.0217,
+     -0.0469,
+     0.028,
+     -0.0277,
+     0.0541,
+     -0.0268,
+     0.0208,
+     -0.0195,
+     0.0105,
+     0.0155,
+     0.0669,
+     0.0098,
+     -0.0041,
+     0.0047,
+     0.0189,
+     -0.0271,
+     0.046,
+     -0.0045,
+     0.0614,
+     -0.0579,
+     0.0081,
+     -0.0084,
+     0.0022,
+     -0.0245,
+     0.007,
+     0.0339,
+     -0.0741,
+     0.0166,
+     0.0635,
+     0.0356,
+     -0.0742,
+     -0.0173,
+     -0.0087,
+     0.0602,
+     0.0651,
+     -0.0269,
+     -0.0376,
+     0.0635,
+     -0.0259,
+     -0.0558,
+     -0.0048,
+     -0.0607,
+     0.0422,
+     0.0156,
+     0.0093,
+     0.037,
+     -0.0033,
+     -0.023,
+     -0.2826,
+     -0.009,
+     -0.0694,
+     -0.0135,
+     0.0681,
+     -0.0895,
+     0.0583,
+     -0.0393,
+     0.0296,
+     -0.0116,
+     0.0181,
+     -0.0875,
+     0.018,
+     0.1121,
+     -0.0224,
+     0.0696,
+     -0.024,
+     -0.0039,
+     -0.0368,
+     -0.0122,
+     0.0656,
+     0.028,
+     0.0149,
+     -0.0284,
+     0.0301,
+     -0.0461,
+     0.1585,
+     -0.0833,
+     0.085,
+     0.0181,
+     0.0223,
+     0.0064,
+     -0.0082,
+     0.0621,
+     -0.0215,
+     -0.0359,
+     0.0337,
+     -0.061,
+     -0.0433,
+     -0.0332,
+     0.0223,
+     -0.0112,
+     -0.0139,
+     -0.1081,
+     -0.0157,
+     -0.0218,
+     -0.0366,
+     -0.046,
+     -0.0099,
+     -0.0076,
+     0.0416,
+     0.0251,
+     0.0069,
+     -0.0475,
+     0.052,
+     -0.0211,
+     -0.0584,
+     0.0444,
+     -0.0054,
+     -0.0272,
+     -0.0213,
+     -0.0137,
+     -0.0257,
+     -0.0396,
+     -0.0267,
+     -0.0443,
+     -0.0871,
+     -0.0434,
+     -0.0289,
+     -0.0264,
+     -0.0138,
+     0.0188,
+     -0.0326,
+     -0.0095,
+     0.0403,
+     -0.043,
+     0.0661,
+     0.0539,
+     0.0343,
+     -0.0598,
+     0.0609,
+     0.0144,
+     0.0657,
+     0.0656,
+     -0.0041,
+     0.0275,
+     0.0674,
+     -0.0036,
+     -0.0572,
+     -0.0147,
+     0.0438,
+     0.0456,
+     0.022,
+     -0.0051,
+     0.05,
+     -0.0435,
+     -0.2311,
+     -0.0147,
+     -0.0752,
+     0.0132,
+     -0.037,
+     -0.0394,
+     -0.0386,
+     -0.0539,
+     0.0131,
+     0.0157,
+     -0.0063,
+     0.0575,
+     0.0239,
+     0.0624,
+     0.0858,
+     -0.0261,
+     0.027,
+     -0.0272,
+     -0.0277,
+     0.0221,
+     0.061,
+     0.0239,
+     0.1448,
+     -0.0028,
+     0.0559,
+     0.0719,
+     -0.0315,
+     0.0225,
+     -0.0085,
+     0.0142,
+     0.023,
+     0.0024,
+     0.0306,
+     -0.0621,
+     0.0228,
+     0.0105,
+     -0.0648,
+     0.0113,
+     0.049,
+     0.0197,
+     -0.0187,
+     0.085,
+     -0.0045,
+     -0.0446,
+     0.0825,
+     -0.099,
+     -0.0248,
+     -0.0821,
+     -0.02,
+     0.0107,
+     0.0267,
+     0.0056,
+     -0.0398,
+     -0.0147,
+     0.0772,
+     0.0151,
+     -0.0475,
+     0.0141,
+     0.0368,
+     -0.0521,
+     0.0471,
+     0.0071,
+     0.0618,
+     0.0574,
+     0.0389
+    ],
+    "hits": [
+     {
+      "chunk_id": 7753,
+      "score": 0.7892,
+      "breadcrumb": "Electric cars \u203a Small car \u203a Mercedes-Benz CLA250 Plus with EQ Tech \u203a Efficiency",
+      "page_start": 101,
+      "page_end": 101,
+      "text": "Mercedes-Benz CLA250 Plus with EQ Tech (small car) efficiency: 126 MPGe, using 27 kWh of electricity per 100 miles (very efficient), joint 14th most efficient of 231 cars and most efficient among small cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 101,
+       "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+       "make": "Mercedes-Benz",
+       "class": "Small car",
+       "drive": "RWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 126,
+        "range_mi": 374,
+        "range_hwy_mi": 366,
+        "charge_240v_h": 8.8,
+        "kwh_per_100mi": 27.0,
+        "range_city_mi": 380,
+        "annual_cost_usd": 600
+       }
+      }
+     },
+     {
+      "chunk_id": 7303,
+      "score": 0.802,
+      "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 eDrive40 Gran Coupe \u203a Efficiency",
+      "page_start": 11,
+      "page_end": 11,
+      "text": "BMW i4 eDrive40 Gran Coupe (small car) efficiency: 118 MPGe, using 28.5 kWh of electricity per 100 miles (very efficient), joint 23rd most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 11,
+       "item": "BMW i4 eDrive40 Gran Coupe",
+       "make": "BMW",
+       "class": "Small car",
+       "drive": "RWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 118,
+        "range_mi": 333,
+        "range_hwy_mi": 323,
+        "charge_240v_h": 9.0,
+        "kwh_per_100mi": 28.5,
+        "range_city_mi": 341,
+        "annual_cost_usd": 650
+       }
+      }
+     },
+     {
+      "chunk_id": 7758,
+      "score": 0.7715,
+      "breadcrumb": "Electric cars \u203a Small car \u203a Mercedes-Benz CLA350 4matic with EQ Tech \u203a Efficiency",
+      "page_start": 102,
+      "page_end": 102,
+      "text": "Mercedes-Benz CLA350 4matic with EQ Tech (small car) efficiency: 118 MPGe, using 29 kWh of electricity per 100 miles (very efficient), joint 23rd most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 102,
+       "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+       "make": "Mercedes-Benz",
+       "class": "Small car",
+       "drive": "AWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 118,
+        "range_mi": 312,
+        "range_hwy_mi": 309,
+        "charge_240v_h": 8.8,
+        "kwh_per_100mi": 29.0,
+        "range_city_mi": 315,
+        "annual_cost_usd": 650
+       }
+      }
+     },
+     {
+      "chunk_id": 7473,
+      "score": 0.7673,
+      "breadcrumb": "Electric cars \u203a Small car \u203a Fiat 500e \u203a Efficiency",
+      "page_start": 45,
+      "page_end": 45,
+      "text": "Fiat 500e (small car) efficiency: 116 MPGe, using 29.2 kWh of electricity per 100 miles (very efficient), joint 31st most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 45,
+       "item": "Fiat 500e",
+       "make": "Fiat",
+       "class": "Small car",
+       "drive": "FWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 116,
+        "range_mi": 149,
+        "range_hwy_mi": 133,
+        "charge_240v_h": 6.2,
+        "kwh_per_100mi": 29.2,
+        "range_city_mi": 162,
+        "annual_cost_usd": 650
+       }
+      }
+     },
+     {
+      "chunk_id": 7318,
+      "score": 0.7813,
+      "breadcrumb": "Electric cars \u203a Small car \u203a BMW i5 eDrive40 Sedan \u203a Efficiency",
+      "page_start": 14,
+      "page_end": 14,
+      "text": "BMW i5 eDrive40 Sedan (small car) efficiency: 110 MPGe, using 30.6 kWh of electricity per 100 miles (very efficient), joint 44th most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 14,
+       "item": "BMW i5 eDrive40 Sedan",
+       "make": "BMW",
+       "class": "Small car",
+       "drive": "RWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 110,
+        "range_mi": 310,
+        "range_hwy_mi": 298,
+        "charge_240v_h": 8.0,
+        "kwh_per_100mi": 30.6,
+        "range_city_mi": 319,
+        "annual_cost_usd": 700
+       }
+      }
+     }
+    ]
+   },
+   "rank": {
+    "understood": "small car \u00b7 efficiency \u00b7 most efficient",
+    "applied": true,
+    "candidates": 200,
+    "stat": "efficiency",
+    "item_class": "small car",
+    "make": null,
+    "drive": null,
+    "direction": "most efficient",
+    "column": "mpge",
+    "items": [
+     {
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "value": 126,
+      "unit": "MPGe",
+      "chunk_id": 7753
+     },
+     {
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "value": 118,
+      "unit": "MPGe",
+      "chunk_id": 7303
+     },
+     {
+      "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+      "value": 118,
+      "unit": "MPGe",
+      "chunk_id": 7758
+     },
+     {
+      "item": "Fiat 500e",
+      "value": 116,
+      "unit": "MPGe",
+      "chunk_id": 7473
+     },
+     {
+      "item": "BMW i5 eDrive40 Sedan",
+      "value": 110,
+      "unit": "MPGe",
+      "chunk_id": 7318
+     }
+    ],
+    "before": [
+     {
+      "chunk_id": 7313,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.8114
+     },
+     {
+      "chunk_id": 7298,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.8069
+     },
+     {
+      "chunk_id": 7308,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.8062
+     },
+     {
+      "chunk_id": 7303,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.802
+     },
+     {
+      "chunk_id": 7733,
+      "item": "Maserati Granturismo Folgore",
+      "facet": "efficiency",
+      "score": 0.7904
+     },
+     {
+      "chunk_id": 7818,
+      "item": "MINI Countryman SE ALL4",
+      "facet": "efficiency",
+      "score": 0.7902
+     },
+     {
+      "chunk_id": 7753,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "efficiency",
+      "score": 0.7892
+     },
+     {
+      "chunk_id": 7728,
+      "item": "Maserati Grancabrio Folgore",
+      "facet": "efficiency",
+      "score": 0.7887
+     },
+     {
+      "chunk_id": 7738,
+      "item": "Maserati Grecale Folgore",
+      "facet": "efficiency",
+      "score": 0.7875
+     },
+     {
+      "chunk_id": 7328,
+      "item": "BMW i5 xDrive40 Sedan",
+      "facet": "efficiency",
+      "score": 0.7828
+     },
+     {
+      "chunk_id": 7988,
+      "item": "Porsche Taycan GTS",
+      "facet": "efficiency",
+      "score": 0.7824
+     },
+     {
+      "chunk_id": 7318,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "efficiency",
+      "score": 0.7813
+     },
+     {
+      "chunk_id": 7323,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "efficiency",
+      "score": 0.7812
+     },
+     {
+      "chunk_id": 7518,
+      "item": "Genesis GV60 AWD",
+      "facet": "efficiency",
+      "score": 0.7799
+     },
+     {
+      "chunk_id": 7523,
+      "item": "Genesis GV60 AWD Advanced",
+      "facet": "efficiency",
+      "score": 0.7785
+     },
+     {
+      "chunk_id": 7943,
+      "item": "Porsche Macan Electric",
+      "facet": "efficiency",
+      "score": 0.7769
+     },
+     {
+      "chunk_id": 7563,
+      "item": "Hyundai Ioniq 5 AWD",
+      "facet": "efficiency",
+      "score": 0.7768
+     },
+     {
+      "chunk_id": 8013,
+      "item": "Porsche Taycan Turbo GT",
+      "facet": "efficiency",
+      "score": 0.7756
+     },
+     {
+      "chunk_id": 7933,
+      "item": "Porsche Macan 4 Electric",
+      "facet": "efficiency",
+      "score": 0.7752
+     },
+     {
+      "chunk_id": 7583,
+      "item": "Hyundai Ioniq 5 RWD",
+      "facet": "efficiency",
+      "score": 0.7751
+     },
+     {
+      "chunk_id": 8003,
+      "item": "Porsche Taycan Turbo",
+      "facet": "efficiency",
+      "score": 0.7746
+     },
+     {
+      "chunk_id": 7288,
+      "item": "Audi RS e-tron GT Performance",
+      "facet": "efficiency",
+      "score": 0.7737
+     },
+     {
+      "chunk_id": 7963,
+      "item": "Porsche Taycan 4 Perf Battery Plus",
+      "facet": "efficiency",
+      "score": 0.7737
+     },
+     {
+      "chunk_id": 8203,
+      "item": "Subaru Solterra 20 AWD",
+      "facet": "efficiency",
+      "score": 0.7717
+     },
+     {
+      "chunk_id": 7758,
+      "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+      "facet": "efficiency",
+      "score": 0.7715
+     },
+     {
+      "chunk_id": 8348,
+      "item": "Toyota C-HR AWD",
+      "facet": "efficiency",
+      "score": 0.7706
+     },
+     {
+      "chunk_id": 8328,
+      "item": "Toyota bZ AWD LIMITED",
+      "facet": "efficiency",
+      "score": 0.7704
+     },
+     {
+      "chunk_id": 7573,
+      "item": "Hyundai Ioniq 5 N",
+      "facet": "efficiency",
+      "score": 0.77
+     },
+     {
+      "chunk_id": 7968,
+      "item": "Porsche Taycan 4 Performance Battery",
+      "facet": "efficiency",
+      "score": 0.7697
+     },
+     {
+      "chunk_id": 7533,
+      "item": "Genesis GV60 RWD",
+      "facet": "efficiency",
+      "score": 0.7679
+     },
+     {
+      "chunk_id": 7978,
+      "item": "Porsche Taycan 4S Perf Battery Plus",
+      "facet": "efficiency",
+      "score": 0.7673
+     },
+     {
+      "chunk_id": 7473,
+      "item": "Fiat 500e",
+      "facet": "efficiency",
+      "score": 0.7673
+     },
+     {
+      "chunk_id": 8313,
+      "item": "Toyota bZ (energy capacity 191 Ah)",
+      "facet": "efficiency",
+      "score": 0.7667
+     },
+     {
+      "chunk_id": 8193,
+      "item": "Rolls-Royce Spectre",
+      "facet": "efficiency",
+      "score": 0.7663
+     },
+     {
+      "chunk_id": 7293,
+      "item": "Audi S e-tron GT",
+      "facet": "efficiency",
+      "score": 0.7658
+     },
+     {
+      "chunk_id": 7378,
+      "item": "Cadillac LYRIQ AWD",
+      "facet": "efficiency",
+      "score": 0.7658
+     },
+     {
+      "chunk_id": 8023,
+      "item": "Porsche Taycan Turbo S",
+      "facet": "efficiency",
+      "score": 0.7653
+     },
+     {
+      "chunk_id": 8323,
+      "item": "Toyota bZ AWD",
+      "facet": "efficiency",
+      "score": 0.7646
+     },
+     {
+      "chunk_id": 8338,
+      "item": "Toyota bZ LIMITED (energy capacity 200 Ah)",
+      "facet": "efficiency",
+      "score": 0.7644
+     },
+     {
+      "chunk_id": 7588,
+      "item": "Hyundai Ioniq 5 Standard range",
+      "facet": "efficiency",
+      "score": 0.7643
+     },
+     {
+      "chunk_id": 7578,
+      "item": "Hyundai Ioniq 5 Robo taxi",
+      "facet": "efficiency",
+      "score": 0.7639
+     },
+     {
+      "chunk_id": 8333,
+      "item": "Toyota bZ LIMITED (energy capacity 191 Ah)",
+      "facet": "efficiency",
+      "score": 0.7639
+     },
+     {
+      "chunk_id": 8363,
+      "item": "Volvo EC40",
+      "facet": "efficiency",
+      "score": 0.7633
+     },
+     {
+      "chunk_id": 7808,
+      "item": "Mercedes-Benz EQS 680 4matic Maybach (SUV)",
+      "facet": "efficiency",
+      "score": 0.7623
+     },
+     {
+      "chunk_id": 8208,
+      "item": "Subaru Solterra AWD",
+      "facet": "efficiency",
+      "score": 0.7622
+     },
+     {
+      "chunk_id": 7528,
+      "item": "Genesis GV60 AWD Performance",
+      "facet": "efficiency",
+      "score": 0.7621
+     },
+     {
+      "chunk_id": 8388,
+      "item": "Volvo EX40",
+      "facet": "efficiency",
+      "score": 0.7613
+     },
+     {
+      "chunk_id": 7383,
+      "item": "Cadillac LYRIQ PAWD",
+      "facet": "efficiency",
+      "score": 0.761
+     },
+     {
+      "chunk_id": 7938,
+      "item": "Porsche Macan 4S Electric",
+      "facet": "efficiency",
+      "score": 0.7608
+     },
+     {
+      "chunk_id": 7388,
+      "item": "Cadillac LYRIQ PAWD V SERIES",
+      "facet": "efficiency",
+      "score": 0.7607
+     },
+     {
+      "chunk_id": 7983,
+      "item": "Porsche Taycan 4S Performance Battery",
+      "facet": "efficiency",
+      "score": 0.7602
+     },
+     {
+      "chunk_id": 7373,
+      "item": "Cadillac LYRIQ",
+      "facet": "efficiency",
+      "score": 0.76
+     },
+     {
+      "chunk_id": 8343,
+      "item": "Toyota bZ Woodland AWD",
+      "facet": "efficiency",
+      "score": 0.76
+     },
+     {
+      "chunk_id": 8318,
+      "item": "Toyota bZ (energy capacity 200 Ah)",
+      "facet": "efficiency",
+      "score": 0.7598
+     },
+     {
+      "chunk_id": 8018,
+      "item": "Porsche Taycan Turbo GT with Weissach Package",
+      "facet": "efficiency",
+      "score": 0.7598
+     },
+     {
+      "chunk_id": 7948,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "efficiency",
+      "score": 0.7598
+     },
+     {
+      "chunk_id": 7998,
+      "item": "Porsche Taycan Performance Battery",
+      "facet": "efficiency",
+      "score": 0.7595
+     },
+     {
+      "chunk_id": 8308,
+      "item": "Tesla Model Y Standard RWD",
+      "facet": "efficiency",
+      "score": 0.7592
+     },
+     {
+      "chunk_id": 7428,
+      "item": "Chevrolet Equinox EV AWD",
+      "facet": "efficiency",
+      "score": 0.7575
+     },
+     {
+      "chunk_id": 7683,
+      "item": "Lexus RZ 450e AWD",
+      "facet": "efficiency",
+      "score": 0.7574
+     },
+     {
+      "chunk_id": 7618,
+      "item": "Kia EV6 AWD GT",
+      "facet": "efficiency",
+      "score": 0.7572
+     },
+     {
+      "chunk_id": 7678,
+      "item": "Lexus RZ 350e FWD",
+      "facet": "efficiency",
+      "score": 0.7571
+     },
+     {
+      "chunk_id": 8223,
+      "item": "Subaru Uncharted AWD",
+      "facet": "efficiency",
+      "score": 0.7568
+     },
+     {
+      "chunk_id": 8358,
+      "item": "Volkswagen ID.4 AWD",
+      "facet": "efficiency",
+      "score": 0.7557
+     },
+     {
+      "chunk_id": 7953,
+      "item": "Porsche Macan Turbo Electric",
+      "facet": "efficiency",
+      "score": 0.7544
+     },
+     {
+      "chunk_id": 8213,
+      "item": "Subaru Trailseeker AWD",
+      "facet": "efficiency",
+      "score": 0.7538
+     },
+     {
+      "chunk_id": 7688,
+      "item": "Lexus RZ 550e AWD",
+      "facet": "efficiency",
+      "score": 0.7534
+     },
+     {
+      "chunk_id": 8303,
+      "item": "Tesla Model Y Standard AWD",
+      "facet": "efficiency",
+      "score": 0.7534
+     },
+     {
+      "chunk_id": 8198,
+      "item": "Rolls-Royce Spectre Black Badge",
+      "facet": "efficiency",
+      "score": 0.7532
+     },
+     {
+      "chunk_id": 7433,
+      "item": "Chevrolet Equinox EV FWD",
+      "facet": "efficiency",
+      "score": 0.7528
+     },
+     {
+      "chunk_id": 8368,
+      "item": "Volvo EC40 Twin",
+      "facet": "efficiency",
+      "score": 0.7525
+     },
+     {
+      "chunk_id": 7568,
+      "item": "Hyundai Ioniq 5 AWD XRT",
+      "facet": "efficiency",
+      "score": 0.7518
+     },
+     {
+      "chunk_id": 7418,
+      "item": "Chevrolet Blazer EV AWD SS",
+      "facet": "efficiency",
+      "score": 0.7507
+     },
+     {
+      "chunk_id": 7768,
+      "item": "Mercedes-Benz EQE 320 4matic (SUV)",
+      "facet": "efficiency",
+      "score": 0.7501
+     },
+     {
+      "chunk_id": 7368,
+      "item": "Cadillac CELESTIQ",
+      "facet": "efficiency",
+      "score": 0.7497
+     },
+     {
+      "chunk_id": 8298,
+      "item": "Tesla Model Y Performance AWD",
+      "facet": "efficiency",
+      "score": 0.7489
+     },
+     {
+      "chunk_id": 7663,
+      "item": "Kia Niro Electric",
+      "facet": "efficiency",
+      "score": 0.7483
+     },
+     {
+      "chunk_id": 8353,
+      "item": "Volkswagen ID.4",
+      "facet": "efficiency",
+      "score": 0.7475
+     },
+     {
+      "chunk_id": 7478,
+      "item": "Ford Mustang Mach-E AWD",
+      "facet": "efficiency",
+      "score": 0.7472
+     },
+     {
+      "chunk_id": 7798,
+      "item": "Mercedes-Benz EQS 550 4matic (SUV)",
+      "facet": "efficiency",
+      "score": 0.7471
+     },
+     {
+      "chunk_id": 8288,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7471
+     },
+     {
+      "chunk_id": 8378,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "efficiency",
+      "score": 0.747
+     },
+     {
+      "chunk_id": 8108,
+      "item": "Rivian R1S Tri Max",
+      "facet": "efficiency",
+      "score": 0.746
+     },
+     {
+      "chunk_id": 7958,
+      "item": "Porsche Taycan 4 Cross Turismo",
+      "facet": "efficiency",
+      "score": 0.7453
+     },
+     {
+      "chunk_id": 8218,
+      "item": "Subaru Uncharted",
+      "facet": "efficiency",
+      "score": 0.7448
+     },
+     {
+      "chunk_id": 7423,
+      "item": "Chevrolet Blazer EV FWD",
+      "facet": "efficiency",
+      "score": 0.7445
+     },
+     {
+      "chunk_id": 7973,
+      "item": "Porsche Taycan 4S Cross Turismo",
+      "facet": "efficiency",
+      "score": 0.7444
+     },
+     {
+      "chunk_id": 7363,
+      "item": "Bugatti Rimac Nevera R",
+      "facet": "efficiency",
+      "score": 0.7442
+     },
+     {
+      "chunk_id": 7783,
+      "item": "Mercedes-Benz EQS 400 4matic (SUV)",
+      "facet": "efficiency",
+      "score": 0.7434
+     },
+     {
+      "chunk_id": 8028,
+      "item": "Porsche Taycan Turbo S Cross Turismo",
+      "facet": "efficiency",
+      "score": 0.7432
+     },
+     {
+      "chunk_id": 7358,
+      "item": "BMW iX xDrive60",
+      "facet": "efficiency",
+      "score": 0.7432
+     },
+     {
+      "chunk_id": 8383,
+      "item": "Volvo EX30 Twin Performance",
+      "facet": "efficiency",
+      "score": 0.7427
+     },
+     {
+      "chunk_id": 7348,
+      "item": "BMW iX M70",
+      "facet": "efficiency",
+      "score": 0.7425
+     },
+     {
+      "chunk_id": 8008,
+      "item": "Porsche Taycan Turbo Cross Turismo",
+      "facet": "efficiency",
+      "score": 0.7422
+     },
+     {
+      "chunk_id": 8373,
+      "item": "Volvo EX30 Cross Country",
+      "facet": "efficiency",
+      "score": 0.7421
+     },
+     {
+      "chunk_id": 7903,
+      "item": "Porsche Cayenne S Coupe Electric",
+      "facet": "efficiency",
+      "score": 0.742
+     },
+     {
+      "chunk_id": 8083,
+      "item": "Rivian R1S Dual Standard",
+      "facet": "efficiency",
+      "score": 0.7419
+     },
+     {
+      "chunk_id": 8078,
+      "item": "Rivian R1S Dual Max",
+      "facet": "efficiency",
+      "score": 0.7414
+     },
+     {
+      "chunk_id": 7623,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7411
+     },
+     {
+      "chunk_id": 7413,
+      "item": "Chevrolet Blazer EV AWD",
+      "facet": "efficiency",
+      "score": 0.7406
+     },
+     {
+      "chunk_id": 8393,
+      "item": "Volvo EX40 Twin",
+      "facet": "efficiency",
+      "score": 0.7402
+     },
+     {
+      "chunk_id": 7993,
+      "item": "Porsche Taycan GTS Sport Turismo",
+      "facet": "efficiency",
+      "score": 0.7402
+     },
+     {
+      "chunk_id": 7498,
+      "item": "Ford Mustang Mach-E RWD",
+      "facet": "efficiency",
+      "score": 0.74
+     },
+     {
+      "chunk_id": 8293,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.74
+     },
+     {
+      "chunk_id": 7778,
+      "item": "Mercedes-Benz EQE 320 Plus (SUV)",
+      "facet": "efficiency",
+      "score": 0.7398
+     },
+     {
+      "chunk_id": 7913,
+      "item": "Porsche Cayenne S Electric",
+      "facet": "efficiency",
+      "score": 0.7397
+     },
+     {
+      "chunk_id": 7483,
+      "item": "Ford Mustang Mach-E AWD Extended",
+      "facet": "efficiency",
+      "score": 0.7394
+     },
+     {
+      "chunk_id": 7608,
+      "item": "Jeep Recon MOAB 4WD",
+      "facet": "efficiency",
+      "score": 0.7387
+     },
+     {
+      "chunk_id": 7748,
+      "item": "Mercedes-Benz AMG EQE 4matic Plus (SUV)",
+      "facet": "efficiency",
+      "score": 0.7387
+     },
+     {
+      "chunk_id": 7813,
+      "item": "Mercedes-Benz G 580 with EQ Technology",
+      "facet": "efficiency",
+      "score": 0.7386
+     },
+     {
+      "chunk_id": 7513,
+      "item": "Genesis Electrified GV70 AWD",
+      "facet": "efficiency",
+      "score": 0.7386
+     },
+     {
+      "chunk_id": 8098,
+      "item": "Rivian R1S Performance Dual Max",
+      "facet": "efficiency",
+      "score": 0.7385
+     },
+     {
+      "chunk_id": 7488,
+      "item": "Ford Mustang Mach-E GT",
+      "facet": "efficiency",
+      "score": 0.7384
+     },
+     {
+      "chunk_id": 7393,
+      "item": "Cadillac OPTIQ AWD",
+      "facet": "efficiency",
+      "score": 0.7382
+     },
+     {
+      "chunk_id": 7763,
+      "item": "Mercedes-Benz EQE 320 4matic",
+      "facet": "efficiency",
+      "score": 0.7381
+     },
+     {
+      "chunk_id": 7883,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "efficiency",
+      "score": 0.7378
+     },
+     {
+      "chunk_id": 7863,
+      "item": "Polestar 3 Long Range Single Motor",
+      "facet": "efficiency",
+      "score": 0.7374
+     },
+     {
+      "chunk_id": 8103,
+      "item": "Rivian R1S Quad Max",
+      "facet": "efficiency",
+      "score": 0.7374
+     },
+     {
+      "chunk_id": 7343,
+      "item": "BMW i7 xDrive60 Sedan",
+      "facet": "efficiency",
+      "score": 0.7372
+     },
+     {
+      "chunk_id": 7598,
+      "item": "Hyundai Ioniq 9 AWD Performance",
+      "facet": "efficiency",
+      "score": 0.7371
+     },
+     {
+      "chunk_id": 8068,
+      "item": "Rivian R1S Dual Large",
+      "facet": "efficiency",
+      "score": 0.7371
+     },
+     {
+      "chunk_id": 7928,
+      "item": "Porsche Cayenne Turbo Electric",
+      "facet": "efficiency",
+      "score": 0.737
+     },
+     {
+      "chunk_id": 7503,
+      "item": "Ford Mustang Mach-E RWD Extended",
+      "facet": "efficiency",
+      "score": 0.7368
+     },
+     {
+      "chunk_id": 8063,
+      "item": "Rivian R1S All-Terrain Tri Max",
+      "facet": "efficiency",
+      "score": 0.7367
+     },
+     {
+      "chunk_id": 7628,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.7361
+     },
+     {
+      "chunk_id": 7823,
+      "item": "Nissan ARIYA e-4ORCE 63kWh",
+      "facet": "efficiency",
+      "score": 0.7361
+     },
+     {
+      "chunk_id": 7403,
+      "item": "Cadillac OPTIQ RWD",
+      "facet": "efficiency",
+      "score": 0.7361
+     },
+     {
+      "chunk_id": 7633,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "efficiency",
+      "score": 0.7356
+     },
+     {
+      "chunk_id": 7493,
+      "item": "Ford Mustang Mach-E Rally",
+      "facet": "efficiency",
+      "score": 0.7354
+     },
+     {
+      "chunk_id": 8073,
+      "item": "Rivian R1S Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.735
+     },
+     {
+      "chunk_id": 7408,
+      "item": "Cadillac VISTIQ",
+      "facet": "efficiency",
+      "score": 0.735
+     },
+     {
+      "chunk_id": 7878,
+      "item": "Polestar 4 Long Range Single Motor",
+      "facet": "efficiency",
+      "score": 0.7346
+     },
+     {
+      "chunk_id": 7923,
+      "item": "Porsche Cayenne Turbo Coupe Electric",
+      "facet": "efficiency",
+      "score": 0.7345
+     },
+     {
+      "chunk_id": 8088,
+      "item": "Rivian R1S Performance Dual Large",
+      "facet": "efficiency",
+      "score": 0.7344
+     },
+     {
+      "chunk_id": 7828,
+      "item": "Nissan ARIYA e-4ORCE 87kWh",
+      "facet": "efficiency",
+      "score": 0.7343
+     },
+     {
+      "chunk_id": 7833,
+      "item": "Nissan ARIYA FWD 63kWh",
+      "facet": "efficiency",
+      "score": 0.7339
+     },
+     {
+      "chunk_id": 7908,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7338
+     },
+     {
+      "chunk_id": 7338,
+      "item": "BMW i7 M70 xDrive Sedan",
+      "facet": "efficiency",
+      "score": 0.7336
+     },
+     {
+      "chunk_id": 7893,
+      "item": "Porsche Cayenne Electric",
+      "facet": "efficiency",
+      "score": 0.7319
+     },
+     {
+      "chunk_id": 7843,
+      "item": "Nissan ARIYA PLATINUM+ e-4ORCE 87kWh",
+      "facet": "efficiency",
+      "score": 0.7316
+     },
+     {
+      "chunk_id": 7868,
+      "item": "Polestar 4 Long Range Dual Motor",
+      "facet": "efficiency",
+      "score": 0.731
+     },
+     {
+      "chunk_id": 8043,
+      "item": "Rivian R1S All-Terrain Dual Max",
+      "facet": "efficiency",
+      "score": 0.7304
+     },
+     {
+      "chunk_id": 7508,
+      "item": "Genesis Electrified G80",
+      "facet": "efficiency",
+      "score": 0.7301
+     },
+     {
+      "chunk_id": 8093,
+      "item": "Rivian R1S Performance Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.7294
+     },
+     {
+      "chunk_id": 7353,
+      "item": "BMW iX xDrive45",
+      "facet": "efficiency",
+      "score": 0.7292
+     },
+     {
+      "chunk_id": 8033,
+      "item": "Rivian R1S All-Terrain Dual Large",
+      "facet": "efficiency",
+      "score": 0.7291
+     },
+     {
+      "chunk_id": 7803,
+      "item": "Mercedes-Benz EQS 580 4matic",
+      "facet": "efficiency",
+      "score": 0.7291
+     },
+     {
+      "chunk_id": 7333,
+      "item": "BMW i7 eDrive50 Sedan",
+      "facet": "efficiency",
+      "score": 0.7284
+     },
+     {
+      "chunk_id": 8058,
+      "item": "Rivian R1S All-Terrain Performance Dual Max",
+      "facet": "efficiency",
+      "score": 0.728
+     },
+     {
+      "chunk_id": 7888,
+      "item": "Porsche Cayenne Coupe Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7277
+     },
+     {
+      "chunk_id": 7838,
+      "item": "Nissan ARIYA FWD 87kWh",
+      "facet": "efficiency",
+      "score": 0.7277
+     },
+     {
+      "chunk_id": 7873,
+      "item": "Polestar 4 Long Range Dual Motor Performance",
+      "facet": "efficiency",
+      "score": 0.7277
+     },
+     {
+      "chunk_id": 8038,
+      "item": "Rivian R1S All-Terrain Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.7277
+     },
+     {
+      "chunk_id": 8048,
+      "item": "Rivian R1S All-Terrain Performance Dual Large",
+      "facet": "efficiency",
+      "score": 0.7275
+     },
+     {
+      "chunk_id": 7593,
+      "item": "Hyundai Ioniq 9 AWD",
+      "facet": "efficiency",
+      "score": 0.7274
+     },
+     {
+      "chunk_id": 7263,
+      "item": "Acura ZDX AWD Type S",
+      "facet": "efficiency",
+      "score": 0.7274
+     },
+     {
+      "chunk_id": 7743,
+      "item": "Mercedes-Benz AMG EQE 4matic Plus",
+      "facet": "efficiency",
+      "score": 0.727
+     },
+     {
+      "chunk_id": 7304,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "cost",
+      "score": 0.727
+     },
+     {
+      "chunk_id": 7314,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "cost",
+      "score": 0.726
+     },
+     {
+      "chunk_id": 7853,
+      "item": "Polestar 3 Long Range Dual Motor",
+      "facet": "efficiency",
+      "score": 0.7259
+     },
+     {
+      "chunk_id": 7718,
+      "item": "Lucid Gravity GT",
+      "facet": "efficiency",
+      "score": 0.7258
+     },
+     {
+      "chunk_id": 7309,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "cost",
+      "score": 0.7256
+     },
+     {
+      "chunk_id": 7603,
+      "item": "Hyundai Ioniq 9 RWD",
+      "facet": "efficiency",
+      "score": 0.7256
+     },
+     {
+      "chunk_id": 7643,
+      "item": "Kia EV9 Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7253
+     },
+     {
+      "chunk_id": 7693,
+      "item": "Lucid Air G Touring XR AWD",
+      "facet": "efficiency",
+      "score": 0.7253
+     },
+     {
+      "chunk_id": 7788,
+      "item": "Mercedes-Benz EQS 450 4matic",
+      "facet": "efficiency",
+      "score": 0.7251
+     },
+     {
+      "chunk_id": 7773,
+      "item": "Mercedes-Benz EQE 320 Plus",
+      "facet": "efficiency",
+      "score": 0.725
+     },
+     {
+      "chunk_id": 7299,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "cost",
+      "score": 0.7249
+     },
+     {
+      "chunk_id": 7273,
+      "item": "Audi Q4 45 e-tron",
+      "facet": "efficiency",
+      "score": 0.7245
+     },
+     {
+      "chunk_id": 7668,
+      "item": "Lexus ES 350e",
+      "facet": "efficiency",
+      "score": 0.7242
+     },
+     {
+      "chunk_id": 8053,
+      "item": "Rivian R1S All-Terrain Performance Dual Large Plus",
+      "facet": "efficiency",
+      "score": 0.724
+     },
+     {
+      "chunk_id": 7673,
+      "item": "Lexus ES 500e AWD",
+      "facet": "efficiency",
+      "score": 0.7235
+     },
+     {
+      "chunk_id": 7713,
+      "item": "Lucid Gravity Dream",
+      "facet": "efficiency",
+      "score": 0.7234
+     },
+     {
+      "chunk_id": 8398,
+      "item": "Volvo EX90",
+      "facet": "efficiency",
+      "score": 0.7226
+     },
+     {
+      "chunk_id": 7703,
+      "item": "Lucid Air Sapphire AWD",
+      "facet": "efficiency",
+      "score": 0.7221
+     },
+     {
+      "chunk_id": 7278,
+      "item": "Audi Q4 55 e-tron quattro",
+      "facet": "efficiency",
+      "score": 0.7221
+     },
+     {
+      "chunk_id": 7754,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "cost",
+      "score": 0.7217
+     },
+     {
+      "chunk_id": 7398,
+      "item": "Cadillac OPTIQ AWD V SERIES",
+      "facet": "efficiency",
+      "score": 0.7212
+     },
+     {
+      "chunk_id": 7918,
+      "item": "Porsche Cayenne S Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.7208
+     },
+     {
+      "chunk_id": 7698,
+      "item": "Lucid Air Pure RWD",
+      "facet": "efficiency",
+      "score": 0.7208
+     },
+     {
+      "chunk_id": 7793,
+      "item": "Mercedes-Benz EQS 450 Plus",
+      "facet": "efficiency",
+      "score": 0.7208
+     },
+     {
+      "chunk_id": 7558,
+      "item": "Honda Prologue FWD",
+      "facet": "efficiency",
+      "score": 0.7203
+     },
+     {
+      "chunk_id": 7297,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "range",
+      "score": 0.7201
+     },
+     {
+      "chunk_id": 7708,
+      "item": "Lucid Air Touring AWD",
+      "facet": "efficiency",
+      "score": 0.7198
+     },
+     {
+      "chunk_id": 7858,
+      "item": "Polestar 3 Long Range Dual Motor Performance Pack",
+      "facet": "efficiency",
+      "score": 0.7195
+     },
+     {
+      "chunk_id": 7312,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "range",
+      "score": 0.7185
+     },
+     {
+      "chunk_id": 7553,
+      "item": "Honda Prologue AWD Touring",
+      "facet": "efficiency",
+      "score": 0.7181
+     },
+     {
+      "chunk_id": 7548,
+      "item": "Honda Prologue AWD Elite",
+      "facet": "efficiency",
+      "score": 0.7181
+     },
+     {
+      "chunk_id": 7723,
+      "item": "Lucid Gravity Touring",
+      "facet": "efficiency",
+      "score": 0.7181
+     },
+     {
+      "chunk_id": 7648,
+      "item": "Kia EV9 Long Range AWD GT-Line",
+      "facet": "efficiency",
+      "score": 0.7177
+     },
+     {
+      "chunk_id": 7307,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "range",
+      "score": 0.7167
+     },
+     {
+      "chunk_id": 8283,
+      "item": "Tesla Model X Plaid",
+      "facet": "efficiency",
+      "score": 0.7161
+     },
+     {
+      "chunk_id": 7638,
+      "item": "Kia EV9 GT",
+      "facet": "efficiency",
+      "score": 0.7159
+     },
+     {
+      "chunk_id": 7258,
+      "item": "Acura ZDX AWD",
+      "facet": "efficiency",
+      "score": 0.7156
+     },
+     {
+      "chunk_id": 8273,
+      "item": "Tesla Model S Plaid",
+      "facet": "efficiency",
+      "score": 0.7155
+     },
+     {
+      "chunk_id": 7319,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "cost",
+      "score": 0.7135
+     },
+     {
+      "chunk_id": 8268,
+      "item": "Tesla Model S",
+      "facet": "efficiency",
+      "score": 0.7131
+     },
+     {
+      "chunk_id": 7819,
+      "item": "MINI Countryman SE ALL4",
+      "facet": "cost",
+      "score": 0.7131
+     },
+     {
+      "chunk_id": 8263,
+      "item": "Tesla Model 3 Standard RWD",
+      "facet": "efficiency",
+      "score": 0.7126
+     },
+     {
+      "chunk_id": 7324,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "cost",
+      "score": 0.7125
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "S1",
+     "chunk_id": 7753,
+     "breadcrumb": "Electric cars \u203a Small car \u203a Mercedes-Benz CLA250 Plus with EQ Tech \u203a Efficiency",
+     "pages": "row 101",
+     "text": "Mercedes-Benz CLA250 Plus with EQ Tech (small car) efficiency: 126 MPGe, using 27 kWh of electricity per 100 miles (very efficient), joint 14th most efficient of 231 cars and most efficient among small cars.",
+     "score": 0.7892
+    },
+    {
+     "label": "S2",
+     "chunk_id": 7303,
+     "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 eDrive40 Gran Coupe \u203a Efficiency",
+     "pages": "row 11",
+     "text": "BMW i4 eDrive40 Gran Coupe (small car) efficiency: 118 MPGe, using 28.5 kWh of electricity per 100 miles (very efficient), joint 23rd most efficient of 231 cars.",
+     "score": 0.802
+    },
+    {
+     "label": "S3",
+     "chunk_id": 7758,
+     "breadcrumb": "Electric cars \u203a Small car \u203a Mercedes-Benz CLA350 4matic with EQ Tech \u203a Efficiency",
+     "pages": "row 102",
+     "text": "Mercedes-Benz CLA350 4matic with EQ Tech (small car) efficiency: 118 MPGe, using 29 kWh of electricity per 100 miles (very efficient), joint 23rd most efficient of 231 cars.",
+     "score": 0.7715
+    },
+    {
+     "label": "S4",
+     "chunk_id": 7473,
+     "breadcrumb": "Electric cars \u203a Small car \u203a Fiat 500e \u203a Efficiency",
+     "pages": "row 45",
+     "text": "Fiat 500e (small car) efficiency: 116 MPGe, using 29.2 kWh of electricity per 100 miles (very efficient), joint 31st most efficient of 231 cars.",
+     "score": 0.7673
+    },
+    {
+     "label": "S5",
+     "chunk_id": 7318,
+     "breadcrumb": "Electric cars \u203a Small car \u203a BMW i5 eDrive40 Sedan \u203a Efficiency",
+     "pages": "row 14",
+     "text": "BMW i5 eDrive40 Sedan (small car) efficiency: 110 MPGe, using 30.6 kWh of electricity per 100 miles (very efficient), joint 44th most efficient of 231 cars.",
+     "score": 0.7813
+    }
+   ],
+   "dropped": [],
+   "answer": "1. Mercedes-Benz CLA250 Plus with EQ Tech: 126 MPGe, using 27 kWh per 100 miles [S1]\n\nIt is the most efficient small car in these sources and is joint 14th of 231 cars overall [S1].",
+   "generation": {
+    "answer": "1. Mercedes-Benz CLA250 Plus with EQ Tech: 126 MPGe, using 27 kWh per 100 miles [S1]\n\nIt is the most efficient small car in these sources and is joint 14th of 231 cars overall [S1].",
+    "model": "claude-haiku-5-5",
+    "input_tokens": 1002,
+    "output_tokens": 279
+   },
+   "check": {
+    "passed": true,
+    "problems": [],
+    "cited": [
+     "S1"
+    ]
+   }
+  },
+  {
+   "trace_id": "f42fa1ba-466e-4a4a-96b9-38ef8c441092",
+   "question": "cheapest electric pickup to run",
+   "library": "ev",
+   "stages": [
+    {
+     "id": "query",
+     "label": "Turn it into numbers",
+     "duration_ms": 11,
+     "detail": "384 numbers from BAAI/bge-small-en-v1.5"
+    },
+    {
+     "id": "retrieve",
+     "label": "Find the closest",
+     "duration_ms": 13,
+     "detail": "top 200 from the ev library (cards/0)"
+    },
+    {
+     "id": "rank",
+     "label": "Sort by the stat asked for",
+     "duration_ms": 1,
+     "detail": "pickup \u00b7 running cost \u00b7 cheapest"
+    },
+    {
+     "id": "assemble",
+     "label": "Pick what the AI reads",
+     "duration_ms": 1,
+     "detail": "5 kept, 0 dropped"
+    },
+    {
+     "id": "generate",
+     "label": "Write the answer",
+     "duration_ms": 1927,
+     "detail": "376 tokens from claude-haiku-5-5"
+    },
+    {
+     "id": "check",
+     "label": "Check the citations",
+     "duration_ms": 1,
+     "detail": "passed"
+    },
+    {
+     "id": "log",
+     "label": "Log the trace",
+     "duration_ms": 4,
+     "detail": "saved"
+    }
+   ],
+   "retrieval": {
+    "query_vector": [
+     0.002,
+     -0.0111,
+     0.0543,
+     -0.0092,
+     0.0098,
+     0.0431,
+     -0.0651,
+     0.0401,
+     -0.0303,
+     -0.0417,
+     0.0335,
+     0.0042,
+     -0.0238,
+     -0.0426,
+     0.0652,
+     0.0443,
+     0.0698,
+     -0.0009,
+     0.0194,
+     0.0526,
+     0.0274,
+     -0.0299,
+     -0.0107,
+     -0.0588,
+     0.012,
+     -0.0058,
+     -0.0179,
+     0.0204,
+     -0.0964,
+     -0.1,
+     0.0213,
+     -0.0143,
+     0.0082,
+     0.0211,
+     -0.0057,
+     0.0034,
+     0.0067,
+     -0.0202,
+     -0.0267,
+     -0.044,
+     0.0214,
+     0.0032,
+     -0.0048,
+     -0.0403,
+     0.0154,
+     -0.0014,
+     0.0148,
+     -0.0104,
+     0.1409,
+     -0.0271,
+     -0.0442,
+     -0.0062,
+     0.0111,
+     -0.0627,
+     -0.0084,
+     0.0178,
+     0.0179,
+     -0.0083,
+     0.0386,
+     -0.03,
+     -0.0674,
+     0.0251,
+     -0.1193,
+     0.0006,
+     0.0404,
+     -0.0509,
+     0.0232,
+     -0.0288,
+     -0.0367,
+     -0.0162,
+     0.0158,
+     0.0147,
+     0.0071,
+     0.0465,
+     -0.0326,
+     0.0058,
+     -0.0189,
+     -0.0025,
+     -0.0598,
+     0.0171,
+     -0.024,
+     -0.0316,
+     -0.102,
+     0.032,
+     -0.0326,
+     -0.008,
+     0.0427,
+     0.0287,
+     0.0037,
+     0.0332,
+     -0.0066,
+     0.0535,
+     -0.0157,
+     -0.0246,
+     -0.0235,
+     0.0063,
+     0.031,
+     -0.0269,
+     -0.0402,
+     0.3108,
+     0.0334,
+     0.0515,
+     0.0063,
+     -0.0465,
+     -0.028,
+     -0.0387,
+     -0.0538,
+     0.0126,
+     -0.0568,
+     0.0283,
+     0.0702,
+     -0.0346,
+     0.0164,
+     -0.0213,
+     0.0175,
+     0.0318,
+     -0.0033,
+     0.0372,
+     -0.0197,
+     0.0383,
+     -0.0689,
+     0.0133,
+     0.0564,
+     0.0204,
+     0.0167,
+     -0.1098,
+     0.0076,
+     0.1044,
+     -0.0101,
+     0.0856,
+     -0.0157,
+     -0.0916,
+     -0.04,
+     -0.0059,
+     -0.0143,
+     -0.016,
+     0.0378,
+     0.067,
+     -0.0005,
+     0.0028,
+     -0.0326,
+     -0.0429,
+     -0.0032,
+     -0.1004,
+     0.0054,
+     -0.0523,
+     -0.0542,
+     -0.0472,
+     -0.0331,
+     -0.0605,
+     0.0027,
+     -0.004,
+     0.0554,
+     -0.0568,
+     0.0151,
+     0.0385,
+     0.0629,
+     0.0032,
+     0.0112,
+     0.0707,
+     -0.034,
+     0.0084,
+     -0.011,
+     0.0093,
+     0.024,
+     -0.1692,
+     -0.0786,
+     -0.0182,
+     -0.0161,
+     -0.0251,
+     -0.0512,
+     0.0188,
+     -0.0252,
+     0.033,
+     0.0835,
+     0.0587,
+     -0.0184,
+     0.032,
+     -0.032,
+     0.0616,
+     0.0,
+     -0.0014,
+     -0.0468,
+     -0.0218,
+     0.0299,
+     0.0215,
+     -0.0428,
+     -0.0053,
+     -0.0076,
+     0.0764,
+     -0.0417,
+     -0.0169,
+     -0.0091,
+     0.0326,
+     -0.0275,
+     0.0117,
+     -0.0739,
+     -0.0092,
+     0.0645,
+     -0.0097,
+     0.0132,
+     -0.009,
+     0.0248,
+     0.0559,
+     -0.0106,
+     0.0145,
+     -0.0208,
+     0.0017,
+     0.0386,
+     0.0034,
+     0.0311,
+     -0.0476,
+     0.1633,
+     -0.0209,
+     -0.092,
+     -0.0528,
+     -0.0533,
+     0.0247,
+     0.0633,
+     -0.0044,
+     -0.0329,
+     -0.0136,
+     0.0151,
+     -0.311,
+     0.0029,
+     -0.0112,
+     0.0566,
+     0.077,
+     -0.0622,
+     0.0288,
+     -0.0704,
+     0.0037,
+     0.0925,
+     0.038,
+     -0.0738,
+     0.0489,
+     0.0431,
+     0.0313,
+     0.1451,
+     -0.0157,
+     -0.0643,
+     -0.046,
+     0.0587,
+     0.0284,
+     0.0238,
+     -0.0332,
+     0.0211,
+     0.1306,
+     0.0272,
+     0.1222,
+     -0.0802,
+     0.1219,
+     -0.0491,
+     -0.0062,
+     -0.0213,
+     0.0082,
+     0.0631,
+     -0.0601,
+     0.0221,
+     0.0436,
+     -0.0249,
+     -0.0328,
+     -0.038,
+     -0.0639,
+     -0.0116,
+     -0.0303,
+     -0.0914,
+     0.0047,
+     -0.0056,
+     -0.0214,
+     0.0412,
+     -0.0476,
+     0.0168,
+     0.0551,
+     -0.0274,
+     0.0441,
+     -0.0405,
+     0.0639,
+     0.0064,
+     -0.0256,
+     0.0933,
+     -0.0095,
+     -0.0427,
+     0.0296,
+     0.0008,
+     0.0085,
+     -0.0533,
+     0.0156,
+     0.0184,
+     0.0007,
+     0.0189,
+     0.0168,
+     -0.02,
+     0.0489,
+     -0.0401,
+     0.0267,
+     0.0588,
+     -0.0041,
+     -0.0468,
+     -0.0241,
+     -0.0288,
+     -0.0095,
+     -0.0095,
+     -0.0044,
+     0.0612,
+     0.0134,
+     0.0215,
+     0.0008,
+     0.0808,
+     0.0399,
+     0.0157,
+     0.0021,
+     -0.0162,
+     0.0244,
+     0.0003,
+     -0.0219,
+     0.0234,
+     0.0454,
+     -0.0064,
+     -0.2239,
+     0.0047,
+     0.0118,
+     0.0157,
+     -0.0115,
+     0.0306,
+     -0.0248,
+     -0.0145,
+     0.0406,
+     0.0221,
+     -0.0101,
+     0.0522,
+     -0.0523,
+     0.0437,
+     0.0651,
+     -0.0295,
+     -0.0095,
+     -0.0454,
+     -0.0384,
+     -0.0418,
+     0.0376,
+     0.0068,
+     0.0888,
+     -0.0339,
+     0.0319,
+     0.0823,
+     0.0089,
+     0.0069,
+     0.0482,
+     -0.0757,
+     -0.0255,
+     0.0306,
+     0.0745,
+     -0.051,
+     0.0684,
+     0.006,
+     -0.0768,
+     0.0312,
+     0.0177,
+     -0.0185,
+     -0.0599,
+     0.0636,
+     -0.0496,
+     -0.0556,
+     0.0305,
+     -0.0764,
+     -0.0295,
+     -0.0785,
+     -0.0085,
+     0.054,
+     0.0146,
+     -0.0087,
+     -0.0024,
+     -0.0171,
+     0.0221,
+     0.0746,
+     -0.0169,
+     0.0432,
+     0.0379,
+     -0.0407,
+     0.0285,
+     0.0112,
+     -0.0075,
+     -0.0119,
+     0.0541
+    ],
+    "hits": [
+     {
+      "chunk_id": 8179,
+      "score": 0.7738,
+      "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Performance Dual Max \u203a Running cost",
+      "page_start": 186,
+      "page_end": 186,
+      "text": "Rivian R1T Performance Dual Max (pickup truck) running cost: about $850 a year for electricity, the EPA's estimate for 15,000 miles (average), joint 88th most expensive to run of 231 cars and joint cheapest to run among pickup trucks.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 186,
+       "item": "Rivian R1T Performance Dual Max",
+       "make": "Rivian",
+       "class": "Pickup",
+       "drive": "AWD",
+       "facet": "cost",
+       "stats": {
+        "mpge": 87,
+        "range_mi": 420,
+        "range_hwy_mi": 386,
+        "charge_240v_h": 15.0,
+        "kwh_per_100mi": 38.8,
+        "range_city_mi": 448,
+        "annual_cost_usd": 850
+       }
+      }
+     },
+     {
+      "chunk_id": 8159,
+      "score": 0.7737,
+      "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Dual Max \u203a Running cost",
+      "page_start": 182,
+      "page_end": 182,
+      "text": "Rivian R1T Dual Max (pickup truck) running cost: about $850 a year for electricity, the EPA's estimate for 15,000 miles (average), joint 88th most expensive to run of 231 cars and joint cheapest to run among pickup trucks.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 182,
+       "item": "Rivian R1T Dual Max",
+       "make": "Rivian",
+       "class": "Pickup",
+       "drive": "AWD",
+       "facet": "cost",
+       "stats": {
+        "mpge": 87,
+        "range_mi": 420,
+        "range_hwy_mi": 386,
+        "charge_240v_h": 15.0,
+        "kwh_per_100mi": 38.8,
+        "range_city_mi": 448,
+        "annual_cost_usd": 850
+       }
+      }
+     },
+     {
+      "chunk_id": 8164,
+      "score": 0.7506,
+      "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Dual Standard \u203a Running cost",
+      "page_start": 183,
+      "page_end": 183,
+      "text": "Rivian R1T Dual Standard (pickup truck) running cost: about $900 a year for electricity, the EPA's estimate for 15,000 miles (expensive), joint 54th most expensive to run of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 183,
+       "item": "Rivian R1T Dual Standard",
+       "make": "Rivian",
+       "class": "Pickup",
+       "drive": "AWD",
+       "facet": "cost",
+       "stats": {
+        "mpge": 85,
+        "range_mi": 270,
+        "range_hwy_mi": 244,
+        "charge_240v_h": 9.5,
+        "kwh_per_100mi": 39.9,
+        "range_city_mi": 291,
+        "annual_cost_usd": 900
+       }
+      }
+     },
+     {
+      "chunk_id": 8174,
+      "score": 0.7486,
+      "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Performance Dual Large Plus \u203a Running cost",
+      "page_start": 185,
+      "page_end": 185,
+      "text": "Rivian R1T Performance Dual Large Plus (pickup truck) running cost: about $900 a year for electricity, the EPA's estimate for 15,000 miles (expensive), joint 54th most expensive to run of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 185,
+       "item": "Rivian R1T Performance Dual Large Plus",
+       "make": "Rivian",
+       "class": "Pickup",
+       "drive": "AWD",
+       "facet": "cost",
+       "stats": {
+        "mpge": 82,
+        "range_mi": 330,
+        "range_hwy_mi": 300,
+        "charge_240v_h": 12.0,
+        "kwh_per_100mi": 40.9,
+        "range_city_mi": 354,
+        "annual_cost_usd": 900
+       }
+      }
+     },
+     {
+      "chunk_id": 8154,
+      "score": 0.7462,
+      "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Dual Large Plus \u203a Running cost",
+      "page_start": 181,
+      "page_end": 181,
+      "text": "Rivian R1T Dual Large Plus (pickup truck) running cost: about $900 a year for electricity, the EPA's estimate for 15,000 miles (expensive), joint 54th most expensive to run of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 181,
+       "item": "Rivian R1T Dual Large Plus",
+       "make": "Rivian",
+       "class": "Pickup",
+       "drive": "AWD",
+       "facet": "cost",
+       "stats": {
+        "mpge": 82,
+        "range_mi": 330,
+        "range_hwy_mi": 300,
+        "charge_240v_h": 12.0,
+        "kwh_per_100mi": 40.9,
+        "range_city_mi": 354,
+        "annual_cost_usd": 900
+       }
+      }
+     }
+    ]
+   },
+   "rank": {
+    "understood": "pickup \u00b7 running cost \u00b7 cheapest",
+    "applied": true,
+    "candidates": 200,
+    "stat": "cost",
+    "item_class": "pickup",
+    "make": null,
+    "drive": null,
+    "direction": "cheapest",
+    "column": "annual_cost_usd",
+    "items": [
+     {
+      "item": "Rivian R1T Performance Dual Max",
+      "value": 850,
+      "unit": "$ a year",
+      "chunk_id": 8179
+     },
+     {
+      "item": "Rivian R1T Dual Max",
+      "value": 850,
+      "unit": "$ a year",
+      "chunk_id": 8159
+     },
+     {
+      "item": "Rivian R1T Dual Standard",
+      "value": 900,
+      "unit": "$ a year",
+      "chunk_id": 8164
+     },
+     {
+      "item": "Rivian R1T Performance Dual Large Plus",
+      "value": 900,
+      "unit": "$ a year",
+      "chunk_id": 8174
+     },
+     {
+      "item": "Rivian R1T Dual Large Plus",
+      "value": 900,
+      "unit": "$ a year",
+      "chunk_id": 8154
+     }
+    ],
+    "before": [
+     {
+      "chunk_id": 7544,
+      "item": "GMC SIERRA EV Std Range",
+      "facet": "cost",
+      "score": 0.777
+     },
+     {
+      "chunk_id": 7439,
+      "item": "Chevrolet Silverado EV Ext Range",
+      "facet": "cost",
+      "score": 0.7764
+     },
+     {
+      "chunk_id": 8179,
+      "item": "Rivian R1T Performance Dual Max",
+      "facet": "cost",
+      "score": 0.7738
+     },
+     {
+      "chunk_id": 8159,
+      "item": "Rivian R1T Dual Max",
+      "facet": "cost",
+      "score": 0.7737
+     },
+     {
+      "chunk_id": 7539,
+      "item": "GMC SIERRA EV Ext Range",
+      "facet": "cost",
+      "score": 0.7724
+     },
+     {
+      "chunk_id": 7454,
+      "item": "Chevrolet Silverado EV Std Range",
+      "facet": "cost",
+      "score": 0.7724
+     },
+     {
+      "chunk_id": 7459,
+      "item": "Chevrolet Silverado EV Std Range WT",
+      "facet": "cost",
+      "score": 0.7713
+     },
+     {
+      "chunk_id": 7444,
+      "item": "Chevrolet Silverado EV Ext Range WT",
+      "facet": "cost",
+      "score": 0.7699
+     },
+     {
+      "chunk_id": 7449,
+      "item": "Chevrolet Silverado EV Max Range WT",
+      "facet": "cost",
+      "score": 0.7674
+     },
+     {
+      "chunk_id": 8234,
+      "item": "Tesla Cybertruck Dual Motor AWD",
+      "facet": "cost",
+      "score": 0.7648
+     },
+     {
+      "chunk_id": 7434,
+      "item": "Chevrolet Equinox EV FWD",
+      "facet": "cost",
+      "score": 0.764
+     },
+     {
+      "chunk_id": 7934,
+      "item": "Porsche Macan 4 Electric",
+      "facet": "cost",
+      "score": 0.7624
+     },
+     {
+      "chunk_id": 8239,
+      "item": "Tesla Cybertruck Long Range",
+      "facet": "cost",
+      "score": 0.7615
+     },
+     {
+      "chunk_id": 7889,
+      "item": "Porsche Cayenne Coupe Electric Range Setup",
+      "facet": "cost",
+      "score": 0.7615
+     },
+     {
+      "chunk_id": 8229,
+      "item": "Tesla Cybertruck AWD",
+      "facet": "cost",
+      "score": 0.759
+     },
+     {
+      "chunk_id": 7944,
+      "item": "Porsche Macan Electric",
+      "facet": "cost",
+      "score": 0.7585
+     },
+     {
+      "chunk_id": 7424,
+      "item": "Chevrolet Blazer EV FWD",
+      "facet": "cost",
+      "score": 0.7585
+     },
+     {
+      "chunk_id": 7754,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "cost",
+      "score": 0.7574
+     },
+     {
+      "chunk_id": 7909,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "cost",
+      "score": 0.7567
+     },
+     {
+      "chunk_id": 8184,
+      "item": "Rivian R1T Quad Max",
+      "facet": "cost",
+      "score": 0.7562
+     },
+     {
+      "chunk_id": 7919,
+      "item": "Porsche Cayenne S Electric Range Setup",
+      "facet": "cost",
+      "score": 0.7561
+     },
+     {
+      "chunk_id": 8189,
+      "item": "Rivian R1T Tri Max",
+      "facet": "cost",
+      "score": 0.7558
+     },
+     {
+      "chunk_id": 7359,
+      "item": "BMW iX xDrive60",
+      "facet": "cost",
+      "score": 0.7556
+     },
+     {
+      "chunk_id": 7899,
+      "item": "Porsche Cayenne Electric Range Setup",
+      "facet": "cost",
+      "score": 0.7556
+     },
+     {
+      "chunk_id": 7634,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "cost",
+      "score": 0.7555
+     },
+     {
+      "chunk_id": 7629,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "cost",
+      "score": 0.7547
+     },
+     {
+      "chunk_id": 7429,
+      "item": "Chevrolet Equinox EV AWD",
+      "facet": "cost",
+      "score": 0.7536
+     },
+     {
+      "chunk_id": 7354,
+      "item": "BMW iX xDrive45",
+      "facet": "cost",
+      "score": 0.753
+     },
+     {
+      "chunk_id": 7319,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "cost",
+      "score": 0.7528
+     },
+     {
+      "chunk_id": 7759,
+      "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+      "facet": "cost",
+      "score": 0.7524
+     },
+     {
+      "chunk_id": 8164,
+      "item": "Rivian R1T Dual Standard",
+      "facet": "cost",
+      "score": 0.7506
+     },
+     {
+      "chunk_id": 7584,
+      "item": "Hyundai Ioniq 5 RWD",
+      "facet": "cost",
+      "score": 0.7505
+     },
+     {
+      "chunk_id": 8144,
+      "item": "Rivian R1T All-Terrain Tri Max",
+      "facet": "cost",
+      "score": 0.7503
+     },
+     {
+      "chunk_id": 8119,
+      "item": "Rivian R1T All-Terrain Dual Large Plus",
+      "facet": "cost",
+      "score": 0.7493
+     },
+     {
+      "chunk_id": 8139,
+      "item": "Rivian R1T All-Terrain Performance Dual Max",
+      "facet": "cost",
+      "score": 0.7492
+     },
+     {
+      "chunk_id": 7534,
+      "item": "Genesis GV60 RWD",
+      "facet": "cost",
+      "score": 0.7489
+     },
+     {
+      "chunk_id": 7329,
+      "item": "BMW i5 xDrive40 Sedan",
+      "facet": "cost",
+      "score": 0.7487
+     },
+     {
+      "chunk_id": 8174,
+      "item": "Rivian R1T Performance Dual Large Plus",
+      "facet": "cost",
+      "score": 0.7486
+     },
+     {
+      "chunk_id": 8134,
+      "item": "Rivian R1T All-Terrain Performance Dual Large Plus",
+      "facet": "cost",
+      "score": 0.7475
+     },
+     {
+      "chunk_id": 7414,
+      "item": "Chevrolet Blazer EV AWD",
+      "facet": "cost",
+      "score": 0.7475
+     },
+     {
+      "chunk_id": 8154,
+      "item": "Rivian R1T Dual Large Plus",
+      "facet": "cost",
+      "score": 0.7462
+     },
+     {
+      "chunk_id": 7304,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "cost",
+      "score": 0.7461
+     },
+     {
+      "chunk_id": 7884,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "cost",
+      "score": 0.7457
+     },
+     {
+      "chunk_id": 7589,
+      "item": "Hyundai Ioniq 5 Standard range",
+      "facet": "cost",
+      "score": 0.7455
+     },
+     {
+      "chunk_id": 8124,
+      "item": "Rivian R1T All-Terrain Dual Max",
+      "facet": "cost",
+      "score": 0.7455
+     },
+     {
+      "chunk_id": 7664,
+      "item": "Kia Niro Electric",
+      "facet": "cost",
+      "score": 0.7452
+     },
+     {
+      "chunk_id": 7624,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "cost",
+      "score": 0.7451
+     },
+     {
+      "chunk_id": 7864,
+      "item": "Polestar 3 Long Range Single Motor",
+      "facet": "cost",
+      "score": 0.7448
+     },
+     {
+      "chunk_id": 7438,
+      "item": "Chevrolet Silverado EV Ext Range",
+      "facet": "efficiency",
+      "score": 0.7444
+     },
+     {
+      "chunk_id": 7564,
+      "item": "Hyundai Ioniq 5 AWD",
+      "facet": "cost",
+      "score": 0.7442
+     },
+     {
+      "chunk_id": 7879,
+      "item": "Polestar 4 Long Range Single Motor",
+      "facet": "cost",
+      "score": 0.7442
+     },
+     {
+      "chunk_id": 7519,
+      "item": "Genesis GV60 AWD",
+      "facet": "cost",
+      "score": 0.7437
+     },
+     {
+      "chunk_id": 7524,
+      "item": "Genesis GV60 AWD Advanced",
+      "facet": "cost",
+      "score": 0.7436
+     },
+     {
+      "chunk_id": 8169,
+      "item": "Rivian R1T Performance Dual Large",
+      "facet": "cost",
+      "score": 0.7435
+     },
+     {
+      "chunk_id": 7499,
+      "item": "Ford Mustang Mach-E RWD",
+      "facet": "cost",
+      "score": 0.7435
+     },
+     {
+      "chunk_id": 7324,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "cost",
+      "score": 0.7431
+     },
+     {
+      "chunk_id": 8379,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "cost",
+      "score": 0.7429
+     },
+     {
+      "chunk_id": 7299,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "cost",
+      "score": 0.7427
+     },
+     {
+      "chunk_id": 8114,
+      "item": "Rivian R1T All-Terrain Dual Large",
+      "facet": "cost",
+      "score": 0.7426
+     },
+     {
+      "chunk_id": 8149,
+      "item": "Rivian R1T Dual Large",
+      "facet": "cost",
+      "score": 0.7426
+     },
+     {
+      "chunk_id": 8129,
+      "item": "Rivian R1T All-Terrain Performance Dual Large",
+      "facet": "cost",
+      "score": 0.7424
+     },
+     {
+      "chunk_id": 7543,
+      "item": "GMC SIERRA EV Std Range",
+      "facet": "efficiency",
+      "score": 0.7409
+     },
+     {
+      "chunk_id": 7514,
+      "item": "Genesis Electrified GV70 AWD",
+      "facet": "cost",
+      "score": 0.7396
+     },
+     {
+      "chunk_id": 7314,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "cost",
+      "score": 0.7394
+     },
+     {
+      "chunk_id": 7274,
+      "item": "Audi Q4 45 e-tron",
+      "facet": "cost",
+      "score": 0.739
+     },
+     {
+      "chunk_id": 8214,
+      "item": "Subaru Trailseeker AWD",
+      "facet": "cost",
+      "score": 0.7389
+     },
+     {
+      "chunk_id": 7309,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "cost",
+      "score": 0.7385
+     },
+     {
+      "chunk_id": 7819,
+      "item": "MINI Countryman SE ALL4",
+      "facet": "cost",
+      "score": 0.7384
+     },
+     {
+      "chunk_id": 7464,
+      "item": "Dodge Charger Daytona R/T AWD",
+      "facet": "cost",
+      "score": 0.7382
+     },
+     {
+      "chunk_id": 7479,
+      "item": "Ford Mustang Mach-E AWD",
+      "facet": "cost",
+      "score": 0.7375
+     },
+     {
+      "chunk_id": 7504,
+      "item": "Ford Mustang Mach-E RWD Extended",
+      "facet": "cost",
+      "score": 0.7374
+     },
+     {
+      "chunk_id": 7453,
+      "item": "Chevrolet Silverado EV Std Range",
+      "facet": "efficiency",
+      "score": 0.7371
+     },
+     {
+      "chunk_id": 8294,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "cost",
+      "score": 0.7369
+     },
+     {
+      "chunk_id": 7443,
+      "item": "Chevrolet Silverado EV Ext Range WT",
+      "facet": "efficiency",
+      "score": 0.7364
+     },
+     {
+      "chunk_id": 7939,
+      "item": "Porsche Macan 4S Electric",
+      "facet": "cost",
+      "score": 0.7364
+     },
+     {
+      "chunk_id": 7538,
+      "item": "GMC SIERRA EV Ext Range",
+      "facet": "efficiency",
+      "score": 0.736
+     },
+     {
+      "chunk_id": 8204,
+      "item": "Subaru Solterra 20 AWD",
+      "facet": "cost",
+      "score": 0.7357
+     },
+     {
+      "chunk_id": 7949,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "cost",
+      "score": 0.7346
+     },
+     {
+      "chunk_id": 7458,
+      "item": "Chevrolet Silverado EV Std Range WT",
+      "facet": "efficiency",
+      "score": 0.7344
+     },
+     {
+      "chunk_id": 7404,
+      "item": "Cadillac OPTIQ RWD",
+      "facet": "cost",
+      "score": 0.734
+     },
+     {
+      "chunk_id": 8344,
+      "item": "Toyota bZ Woodland AWD",
+      "facet": "cost",
+      "score": 0.7338
+     },
+     {
+      "chunk_id": 7609,
+      "item": "Jeep Recon MOAB 4WD",
+      "facet": "cost",
+      "score": 0.7338
+     },
+     {
+      "chunk_id": 7779,
+      "item": "Mercedes-Benz EQE 320 Plus (SUV)",
+      "facet": "cost",
+      "score": 0.7337
+     },
+     {
+      "chunk_id": 8389,
+      "item": "Volvo EX40",
+      "facet": "cost",
+      "score": 0.7333
+     },
+     {
+      "chunk_id": 8224,
+      "item": "Subaru Uncharted AWD",
+      "facet": "cost",
+      "score": 0.7328
+     },
+     {
+      "chunk_id": 8289,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "cost",
+      "score": 0.7327
+     },
+     {
+      "chunk_id": 7448,
+      "item": "Chevrolet Silverado EV Max Range WT",
+      "facet": "efficiency",
+      "score": 0.7324
+     },
+     {
+      "chunk_id": 8309,
+      "item": "Tesla Model Y Standard RWD",
+      "facet": "cost",
+      "score": 0.7322
+     },
+     {
+      "chunk_id": 8359,
+      "item": "Volkswagen ID.4 AWD",
+      "facet": "cost",
+      "score": 0.7318
+     },
+     {
+      "chunk_id": 7614,
+      "item": "Jeep Wagoneer S AWD",
+      "facet": "cost",
+      "score": 0.7313
+     },
+     {
+      "chunk_id": 7484,
+      "item": "Ford Mustang Mach-E AWD Extended",
+      "facet": "cost",
+      "score": 0.7313
+     },
+     {
+      "chunk_id": 8354,
+      "item": "Volkswagen ID.4",
+      "facet": "cost",
+      "score": 0.7313
+     },
+     {
+      "chunk_id": 8384,
+      "item": "Volvo EX30 Twin Performance",
+      "facet": "cost",
+      "score": 0.7312
+     },
+     {
+      "chunk_id": 8299,
+      "item": "Tesla Model Y Performance AWD",
+      "facet": "cost",
+      "score": 0.7305
+     },
+     {
+      "chunk_id": 8304,
+      "item": "Tesla Model Y Standard AWD",
+      "facet": "cost",
+      "score": 0.7304
+     },
+     {
+      "chunk_id": 7509,
+      "item": "Genesis Electrified G80",
+      "facet": "cost",
+      "score": 0.7302
+     },
+     {
+      "chunk_id": 8364,
+      "item": "Volvo EC40",
+      "facet": "cost",
+      "score": 0.7286
+     },
+     {
+      "chunk_id": 8209,
+      "item": "Subaru Solterra AWD",
+      "facet": "cost",
+      "score": 0.7285
+     },
+     {
+      "chunk_id": 8394,
+      "item": "Volvo EX40 Twin",
+      "facet": "cost",
+      "score": 0.7283
+     },
+     {
+      "chunk_id": 8233,
+      "item": "Tesla Cybertruck Dual Motor AWD",
+      "facet": "efficiency",
+      "score": 0.7276
+     },
+     {
+      "chunk_id": 8374,
+      "item": "Volvo EX30 Cross Country",
+      "facet": "cost",
+      "score": 0.7274
+     },
+     {
+      "chunk_id": 8329,
+      "item": "Toyota bZ AWD LIMITED",
+      "facet": "cost",
+      "score": 0.7272
+     },
+     {
+      "chunk_id": 8324,
+      "item": "Toyota bZ AWD",
+      "facet": "cost",
+      "score": 0.7271
+     },
+     {
+      "chunk_id": 7394,
+      "item": "Cadillac OPTIQ AWD",
+      "facet": "cost",
+      "score": 0.7266
+     },
+     {
+      "chunk_id": 7699,
+      "item": "Lucid Air Pure RWD",
+      "facet": "cost",
+      "score": 0.7265
+     },
+     {
+      "chunk_id": 7579,
+      "item": "Hyundai Ioniq 5 Robo taxi",
+      "facet": "cost",
+      "score": 0.7259
+     },
+     {
+      "chunk_id": 8369,
+      "item": "Volvo EC40 Twin",
+      "facet": "cost",
+      "score": 0.7257
+     },
+     {
+      "chunk_id": 8219,
+      "item": "Subaru Uncharted",
+      "facet": "cost",
+      "score": 0.7254
+     },
+     {
+      "chunk_id": 7694,
+      "item": "Lucid Air G Touring XR AWD",
+      "facet": "cost",
+      "score": 0.7252
+     },
+     {
+      "chunk_id": 7804,
+      "item": "Mercedes-Benz EQS 580 4matic",
+      "facet": "cost",
+      "score": 0.7248
+     },
+     {
+      "chunk_id": 7964,
+      "item": "Porsche Taycan 4 Perf Battery Plus",
+      "facet": "cost",
+      "score": 0.7244
+     },
+     {
+      "chunk_id": 7774,
+      "item": "Mercedes-Benz EQE 320 Plus",
+      "facet": "cost",
+      "score": 0.7241
+     },
+     {
+      "chunk_id": 8264,
+      "item": "Tesla Model 3 Standard RWD",
+      "facet": "cost",
+      "score": 0.7241
+     },
+     {
+      "chunk_id": 7399,
+      "item": "Cadillac OPTIQ AWD V SERIES",
+      "facet": "cost",
+      "score": 0.7239
+     },
+     {
+      "chunk_id": 7569,
+      "item": "Hyundai Ioniq 5 AWD XRT",
+      "facet": "cost",
+      "score": 0.7237
+     },
+     {
+      "chunk_id": 8284,
+      "item": "Tesla Model X Plaid",
+      "facet": "cost",
+      "score": 0.7229
+     },
+     {
+      "chunk_id": 7794,
+      "item": "Mercedes-Benz EQS 450 Plus",
+      "facet": "cost",
+      "score": 0.7224
+     },
+     {
+      "chunk_id": 8349,
+      "item": "Toyota C-HR AWD",
+      "facet": "cost",
+      "score": 0.7214
+     },
+     {
+      "chunk_id": 7979,
+      "item": "Porsche Taycan 4S Perf Battery Plus",
+      "facet": "cost",
+      "score": 0.7214
+     },
+     {
+      "chunk_id": 7679,
+      "item": "Lexus RZ 350e FWD",
+      "facet": "cost",
+      "score": 0.7212
+     },
+     {
+      "chunk_id": 7904,
+      "item": "Porsche Cayenne S Coupe Electric",
+      "facet": "cost",
+      "score": 0.7208
+     },
+     {
+      "chunk_id": 8249,
+      "item": "Tesla Model 3 Performance AWD",
+      "facet": "cost",
+      "score": 0.7195
+     },
+     {
+      "chunk_id": 7719,
+      "item": "Lucid Gravity GT",
+      "facet": "cost",
+      "score": 0.7195
+     },
+     {
+      "chunk_id": 8399,
+      "item": "Volvo EX90",
+      "facet": "cost",
+      "score": 0.7193
+     },
+     {
+      "chunk_id": 7529,
+      "item": "Genesis GV60 AWD Performance",
+      "facet": "cost",
+      "score": 0.7191
+     },
+     {
+      "chunk_id": 8259,
+      "item": "Tesla Model 3 Premium RWD",
+      "facet": "cost",
+      "score": 0.719
+     },
+     {
+      "chunk_id": 8228,
+      "item": "Tesla Cybertruck AWD",
+      "facet": "efficiency",
+      "score": 0.7189
+     },
+     {
+      "chunk_id": 7384,
+      "item": "Cadillac LYRIQ PAWD",
+      "facet": "cost",
+      "score": 0.7187
+     },
+     {
+      "chunk_id": 7824,
+      "item": "Nissan ARIYA e-4ORCE 63kWh",
+      "facet": "cost",
+      "score": 0.7174
+     },
+     {
+      "chunk_id": 7894,
+      "item": "Porsche Cayenne Electric",
+      "facet": "cost",
+      "score": 0.7174
+     },
+     {
+      "chunk_id": 7724,
+      "item": "Lucid Gravity Touring",
+      "facet": "cost",
+      "score": 0.7165
+     },
+     {
+      "chunk_id": 7954,
+      "item": "Porsche Macan Turbo Electric",
+      "facet": "cost",
+      "score": 0.7162
+     },
+     {
+      "chunk_id": 7559,
+      "item": "Honda Prologue FWD",
+      "facet": "cost",
+      "score": 0.7162
+     },
+     {
+      "chunk_id": 7854,
+      "item": "Polestar 3 Long Range Dual Motor",
+      "facet": "cost",
+      "score": 0.7158
+     },
+     {
+      "chunk_id": 7829,
+      "item": "Nissan ARIYA e-4ORCE 87kWh",
+      "facet": "cost",
+      "score": 0.7157
+     },
+     {
+      "chunk_id": 8254,
+      "item": "Tesla Model 3 Premium AWD",
+      "facet": "cost",
+      "score": 0.7155
+     },
+     {
+      "chunk_id": 7674,
+      "item": "Lexus ES 500e AWD",
+      "facet": "cost",
+      "score": 0.7155
+     },
+     {
+      "chunk_id": 7914,
+      "item": "Porsche Cayenne S Electric",
+      "facet": "cost",
+      "score": 0.7153
+     },
+     {
+      "chunk_id": 7659,
+      "item": "Kia EV9 Standard Range RWD",
+      "facet": "cost",
+      "score": 0.7152
+     },
+     {
+      "chunk_id": 7494,
+      "item": "Ford Mustang Mach-E Rally",
+      "facet": "cost",
+      "score": 0.7151
+     },
+     {
+      "chunk_id": 8158,
+      "item": "Rivian R1T Dual Max",
+      "facet": "efficiency",
+      "score": 0.715
+     },
+     {
+      "chunk_id": 8244,
+      "item": "Tesla Model 3 Performance",
+      "facet": "cost",
+      "score": 0.7149
+     },
+     {
+      "chunk_id": 7784,
+      "item": "Mercedes-Benz EQS 400 4matic (SUV)",
+      "facet": "cost",
+      "score": 0.7147
+     },
+     {
+      "chunk_id": 7814,
+      "item": "Mercedes-Benz G 580 with EQ Technology",
+      "facet": "cost",
+      "score": 0.7144
+     },
+     {
+      "chunk_id": 7654,
+      "item": "Kia EV9 Long Range RWD",
+      "facet": "cost",
+      "score": 0.7144
+     },
+     {
+      "chunk_id": 8314,
+      "item": "Toyota bZ (energy capacity 191 Ah)",
+      "facet": "cost",
+      "score": 0.7143
+     },
+     {
+      "chunk_id": 7549,
+      "item": "Honda Prologue AWD Elite",
+      "facet": "cost",
+      "score": 0.7142
+     },
+     {
+      "chunk_id": 7689,
+      "item": "Lexus RZ 550e AWD",
+      "facet": "cost",
+      "score": 0.7139
+     },
+     {
+      "chunk_id": 8238,
+      "item": "Tesla Cybertruck Long Range",
+      "facet": "efficiency",
+      "score": 0.7138
+     },
+     {
+      "chunk_id": 7294,
+      "item": "Audi S e-tron GT",
+      "facet": "cost",
+      "score": 0.7135
+     },
+     {
+      "chunk_id": 7389,
+      "item": "Cadillac LYRIQ PAWD V SERIES",
+      "facet": "cost",
+      "score": 0.7135
+     },
+     {
+      "chunk_id": 7419,
+      "item": "Chevrolet Blazer EV AWD SS",
+      "facet": "cost",
+      "score": 0.7131
+     },
+     {
+      "chunk_id": 8319,
+      "item": "Toyota bZ (energy capacity 200 Ah)",
+      "facet": "cost",
+      "score": 0.713
+     },
+     {
+      "chunk_id": 8274,
+      "item": "Tesla Model S Plaid",
+      "facet": "cost",
+      "score": 0.7123
+     },
+     {
+      "chunk_id": 8339,
+      "item": "Toyota bZ LIMITED (energy capacity 200 Ah)",
+      "facet": "cost",
+      "score": 0.7115
+     },
+     {
+      "chunk_id": 7374,
+      "item": "Cadillac LYRIQ",
+      "facet": "cost",
+      "score": 0.7112
+     },
+     {
+      "chunk_id": 7619,
+      "item": "Kia EV6 AWD GT",
+      "facet": "cost",
+      "score": 0.711
+     },
+     {
+      "chunk_id": 7684,
+      "item": "Lexus RZ 450e AWD",
+      "facet": "cost",
+      "score": 0.7107
+     },
+     {
+      "chunk_id": 8334,
+      "item": "Toyota bZ LIMITED (energy capacity 191 Ah)",
+      "facet": "cost",
+      "score": 0.7107
+     },
+     {
+      "chunk_id": 8178,
+      "item": "Rivian R1T Performance Dual Max",
+      "facet": "efficiency",
+      "score": 0.7105
+     },
+     {
+      "chunk_id": 7574,
+      "item": "Hyundai Ioniq 5 N",
+      "facet": "cost",
+      "score": 0.7103
+     },
+     {
+      "chunk_id": 7834,
+      "item": "Nissan ARIYA FWD 63kWh",
+      "facet": "cost",
+      "score": 0.7103
+     },
+     {
+      "chunk_id": 7709,
+      "item": "Lucid Air Touring AWD",
+      "facet": "cost",
+      "score": 0.71
+     },
+     {
+      "chunk_id": 7474,
+      "item": "Fiat 500e",
+      "facet": "cost",
+      "score": 0.7093
+     },
+     {
+      "chunk_id": 7669,
+      "item": "Lexus ES 350e",
+      "facet": "cost",
+      "score": 0.7092
+     },
+     {
+      "chunk_id": 7604,
+      "item": "Hyundai Ioniq 9 RWD",
+      "facet": "cost",
+      "score": 0.7089
+     },
+     {
+      "chunk_id": 7489,
+      "item": "Ford Mustang Mach-E GT",
+      "facet": "cost",
+      "score": 0.7089
+     },
+     {
+      "chunk_id": 7924,
+      "item": "Porsche Cayenne Turbo Coupe Electric",
+      "facet": "cost",
+      "score": 0.7088
+     },
+     {
+      "chunk_id": 7436,
+      "item": "Chevrolet Silverado EV Ext Range",
+      "facet": "overview",
+      "score": 0.7087
+     },
+     {
+      "chunk_id": 8183,
+      "item": "Rivian R1T Quad Max",
+      "facet": "efficiency",
+      "score": 0.7086
+     },
+     {
+      "chunk_id": 7839,
+      "item": "Nissan ARIYA FWD 87kWh",
+      "facet": "cost",
+      "score": 0.7085
+     },
+     {
+      "chunk_id": 7799,
+      "item": "Mercedes-Benz EQS 550 4matic (SUV)",
+      "facet": "cost",
+      "score": 0.7083
+     },
+     {
+      "chunk_id": 7869,
+      "item": "Polestar 4 Long Range Dual Motor",
+      "facet": "cost",
+      "score": 0.7083
+     },
+     {
+      "chunk_id": 7849,
+      "item": "Nissan LEAF 75kWh",
+      "facet": "cost",
+      "score": 0.7077
+     },
+     {
+      "chunk_id": 7874,
+      "item": "Polestar 4 Long Range Dual Motor Performance",
+      "facet": "cost",
+      "score": 0.7074
+     },
+     {
+      "chunk_id": 8404,
+      "item": "Volvo EX90 Twin Motor",
+      "facet": "cost",
+      "score": 0.7073
+     },
+     {
+      "chunk_id": 7289,
+      "item": "Audi RS e-tron GT Performance",
+      "facet": "cost",
+      "score": 0.7073
+     },
+     {
+      "chunk_id": 7279,
+      "item": "Audi Q4 55 e-tron quattro",
+      "facet": "cost",
+      "score": 0.7069
+     },
+     {
+      "chunk_id": 7284,
+      "item": "Audi Q4 Sportback 55 e-tron quattro",
+      "facet": "cost",
+      "score": 0.7067
+     },
+     {
+      "chunk_id": 8188,
+      "item": "Rivian R1T Tri Max",
+      "facet": "efficiency",
+      "score": 0.7061
+     },
+     {
+      "chunk_id": 7704,
+      "item": "Lucid Air Sapphire AWD",
+      "facet": "cost",
+      "score": 0.7061
+     },
+     {
+      "chunk_id": 8409,
+      "item": "Volvo EX90 Twin Motor Performance",
+      "facet": "cost",
+      "score": 0.7059
+     },
+     {
+      "chunk_id": 8163,
+      "item": "Rivian R1T Dual Standard",
+      "facet": "efficiency",
+      "score": 0.7059
+     },
+     {
+      "chunk_id": 7379,
+      "item": "Cadillac LYRIQ AWD",
+      "facet": "cost",
+      "score": 0.7058
+     },
+     {
+      "chunk_id": 7644,
+      "item": "Kia EV9 Long Range AWD",
+      "facet": "cost",
+      "score": 0.7054
+     },
+     {
+      "chunk_id": 7349,
+      "item": "BMW iX M70",
+      "facet": "cost",
+      "score": 0.7053
+     },
+     {
+      "chunk_id": 7469,
+      "item": "Dodge Charger Daytona Scat Pack AWD",
+      "facet": "cost",
+      "score": 0.7052
+     },
+     {
+      "chunk_id": 8279,
+      "item": "Tesla Model X",
+      "facet": "cost",
+      "score": 0.7051
+     },
+     {
+      "chunk_id": 7594,
+      "item": "Hyundai Ioniq 9 AWD",
+      "facet": "cost",
+      "score": 0.7049
+     },
+     {
+      "chunk_id": 7809,
+      "item": "Mercedes-Benz EQS 680 4matic Maybach (SUV)",
+      "facet": "cost",
+      "score": 0.7046
+     },
+     {
+      "chunk_id": 7969,
+      "item": "Porsche Taycan 4 Performance Battery",
+      "facet": "cost",
+      "score": 0.7041
+     },
+     {
+      "chunk_id": 7649,
+      "item": "Kia EV9 Long Range AWD GT-Line",
+      "facet": "cost",
+      "score": 0.7039
+     },
+     {
+      "chunk_id": 7859,
+      "item": "Polestar 3 Long Range Dual Motor Performance Pack",
+      "facet": "cost",
+      "score": 0.7038
+     },
+     {
+      "chunk_id": 7769,
+      "item": "Mercedes-Benz EQE 320 4matic (SUV)",
+      "facet": "cost",
+      "score": 0.7032
+     },
+     {
+      "chunk_id": 7554,
+      "item": "Honda Prologue AWD Touring",
+      "facet": "cost",
+      "score": 0.7029
+     },
+     {
+      "chunk_id": 7451,
+      "item": "Chevrolet Silverado EV Std Range",
+      "facet": "overview",
+      "score": 0.7023
+     },
+     {
+      "chunk_id": 7999,
+      "item": "Porsche Taycan Performance Battery",
+      "facet": "cost",
+      "score": 0.7019
+     },
+     {
+      "chunk_id": 7984,
+      "item": "Porsche Taycan 4S Performance Battery",
+      "facet": "cost",
+      "score": 0.7016
+     },
+     {
+      "chunk_id": 7749,
+      "item": "Mercedes-Benz AMG EQE 4matic Plus (SUV)",
+      "facet": "cost",
+      "score": 0.7009
+     },
+     {
+      "chunk_id": 7714,
+      "item": "Lucid Gravity Dream",
+      "facet": "cost",
+      "score": 0.7003
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "S1",
+     "chunk_id": 8179,
+     "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Performance Dual Max \u203a Running cost",
+     "pages": "row 186",
+     "text": "Rivian R1T Performance Dual Max (pickup truck) running cost: about $850 a year for electricity, the EPA's estimate for 15,000 miles (average), joint 88th most expensive to run of 231 cars and joint cheapest to run among pickup trucks.",
+     "score": 0.7738
+    },
+    {
+     "label": "S2",
+     "chunk_id": 8159,
+     "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Dual Max \u203a Running cost",
+     "pages": "row 182",
+     "text": "Rivian R1T Dual Max (pickup truck) running cost: about $850 a year for electricity, the EPA's estimate for 15,000 miles (average), joint 88th most expensive to run of 231 cars and joint cheapest to run among pickup trucks.",
+     "score": 0.7737
+    },
+    {
+     "label": "S3",
+     "chunk_id": 8164,
+     "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Dual Standard \u203a Running cost",
+     "pages": "row 183",
+     "text": "Rivian R1T Dual Standard (pickup truck) running cost: about $900 a year for electricity, the EPA's estimate for 15,000 miles (expensive), joint 54th most expensive to run of 231 cars.",
+     "score": 0.7506
+    },
+    {
+     "label": "S4",
+     "chunk_id": 8174,
+     "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Performance Dual Large Plus \u203a Running cost",
+     "pages": "row 185",
+     "text": "Rivian R1T Performance Dual Large Plus (pickup truck) running cost: about $900 a year for electricity, the EPA's estimate for 15,000 miles (expensive), joint 54th most expensive to run of 231 cars.",
+     "score": 0.7486
+    },
+    {
+     "label": "S5",
+     "chunk_id": 8154,
+     "breadcrumb": "Electric cars \u203a Pickup \u203a Rivian R1T Dual Large Plus \u203a Running cost",
+     "pages": "row 181",
+     "text": "Rivian R1T Dual Large Plus (pickup truck) running cost: about $900 a year for electricity, the EPA's estimate for 15,000 miles (expensive), joint 54th most expensive to run of 231 cars.",
+     "score": 0.7462
+    }
+   ],
+   "dropped": [],
+   "answer": "Two Rivian pickups tie as the cheapest to run, at about $850 a year for electricity [S1][S2].\n\n1. Rivian R1T Performance Dual Max: about $850 a year [S1]\n2. Rivian R1T Dual Max: about $850 a year [S2]",
+   "generation": {
+    "answer": "Two Rivian pickups tie as the cheapest to run, at about $850 a year for electricity [S1][S2].\n\n1. Rivian R1T Performance Dual Max: about $850 a year [S1]\n2. Rivian R1T Dual Max: about $850 a year [S2]",
+    "model": "claude-haiku-5-5",
+    "input_tokens": 1009,
+    "output_tokens": 376
+   },
+   "check": {
+    "passed": true,
+    "problems": [],
+    "cited": [
+     "S1",
+     "S2"
+    ]
+   }
+  },
+  {
+   "trace_id": "1655217a-7909-41f4-b06a-5ee038466310",
+   "question": "a small electric car for city driving",
+   "library": "ev",
+   "stages": [
+    {
+     "id": "query",
+     "label": "Turn it into numbers",
+     "duration_ms": 14,
+     "detail": "384 numbers from BAAI/bge-small-en-v1.5"
+    },
+    {
+     "id": "retrieve",
+     "label": "Find the closest",
+     "duration_ms": 10,
+     "detail": "top 200 from the ev library (cards/0)"
+    },
+    {
+     "id": "rank",
+     "label": "Sort by the stat asked for",
+     "duration_ms": 1,
+     "detail": "no stat to sort by: kept the order search gave"
+    },
+    {
+     "id": "assemble",
+     "label": "Pick what the AI reads",
+     "duration_ms": 1,
+     "detail": "5 kept, 0 dropped"
+    },
+    {
+     "id": "generate",
+     "label": "Write the answer",
+     "duration_ms": 4556,
+     "detail": "964 tokens from claude-haiku-5-5"
+    },
+    {
+     "id": "check",
+     "label": "Check the citations",
+     "duration_ms": 1,
+     "detail": "passed"
+    },
+    {
+     "id": "log",
+     "label": "Log the trace",
+     "duration_ms": 10,
+     "detail": "saved"
+    }
+   ],
+   "retrieval": {
+    "query_vector": [
+     0.0001,
+     0.0026,
+     0.0494,
+     -0.0254,
+     -0.0309,
+     0.0713,
+     -0.011,
+     0.0393,
+     -0.0221,
+     0.0291,
+     -0.0033,
+     -0.0013,
+     0.007,
+     -0.0151,
+     0.0314,
+     -0.0138,
+     0.0415,
+     -0.0582,
+     0.0191,
+     -0.0018,
+     0.0473,
+     -0.0401,
+     -0.0308,
+     -0.0432,
+     -0.028,
+     0.0404,
+     0.0706,
+     0.0367,
+     -0.0584,
+     -0.1489,
+     -0.0324,
+     -0.015,
+     0.054,
+     0.0505,
+     -0.064,
+     -0.0181,
+     -0.0344,
+     -0.0039,
+     -0.049,
+     -0.062,
+     0.0503,
+     -0.0161,
+     -0.0015,
+     -0.014,
+     -0.0187,
+     -0.0443,
+     0.0349,
+     -0.0036,
+     0.0473,
+     -0.0542,
+     -0.0214,
+     0.0065,
+     0.0215,
+     -0.026,
+     -0.0311,
+     0.0501,
+     -0.0052,
+     0.0118,
+     0.0601,
+     -0.0283,
+     -0.0289,
+     0.0803,
+     -0.1352,
+     0.0051,
+     0.0463,
+     -0.0337,
+     -0.0129,
+     -0.0118,
+     0.0135,
+     0.0056,
+     0.0216,
+     -0.0263,
+     0.0027,
+     0.0576,
+     -0.0531,
+     -0.0398,
+     -0.055,
+     0.0164,
+     -0.0505,
+     -0.018,
+     -0.0321,
+     -0.0472,
+     -0.051,
+     0.0147,
+     -0.0306,
+     -0.0337,
+     0.0153,
+     -0.0277,
+     -0.0028,
+     -0.0063,
+     -0.0809,
+     0.0252,
+     -0.0229,
+     -0.0067,
+     -0.0124,
+     -0.0195,
+     0.0112,
+     -0.0379,
+     -0.0303,
+     0.3452,
+     0.0206,
+     0.0471,
+     0.0521,
+     -0.0635,
+     -0.0339,
+     0.0128,
+     -0.0149,
+     -0.0156,
+     -0.0427,
+     0.0151,
+     0.0212,
+     -0.0321,
+     -0.0295,
+     0.0096,
+     0.0131,
+     -0.0043,
+     0.0181,
+     0.0722,
+     -0.0032,
+     0.0603,
+     -0.0751,
+     0.0175,
+     -0.004,
+     -0.014,
+     0.0661,
+     -0.0592,
+     0.0606,
+     0.0343,
+     -0.0079,
+     0.0821,
+     -0.0077,
+     -0.0349,
+     0.017,
+     0.0051,
+     0.0193,
+     -0.0535,
+     -0.0067,
+     0.075,
+     -0.027,
+     0.0028,
+     -0.0259,
+     -0.0282,
+     -0.0152,
+     -0.0972,
+     -0.006,
+     -0.0423,
+     0.0398,
+     -0.0359,
+     0.0039,
+     -0.0076,
+     0.0317,
+     0.0261,
+     0.027,
+     -0.0505,
+     0.0616,
+     0.0389,
+     0.0614,
+     0.0327,
+     0.0212,
+     0.0518,
+     -0.007,
+     0.0214,
+     -0.0314,
+     0.0488,
+     0.0372,
+     -0.1276,
+     -0.0155,
+     0.0243,
+     -0.0283,
+     -0.0276,
+     -0.0327,
+     0.0598,
+     -0.0165,
+     0.0519,
+     0.0497,
+     0.0313,
+     -0.0635,
+     0.0341,
+     -0.0483,
+     0.0445,
+     -0.0381,
+     0.0103,
+     -0.0126,
+     0.0144,
+     0.0016,
+     0.067,
+     -0.0309,
+     -0.0332,
+     -0.0466,
+     0.0491,
+     -0.0061,
+     0.0539,
+     0.0347,
+     0.0756,
+     -0.0432,
+     -0.0502,
+     -0.041,
+     -0.0552,
+     0.0004,
+     -0.0173,
+     -0.0066,
+     -0.0375,
+     0.0219,
+     0.0723,
+     0.0131,
+     -0.0432,
+     -0.0055,
+     -0.0108,
+     0.0313,
+     0.0242,
+     0.0339,
+     0.0057,
+     0.1408,
+     -0.0217,
+     -0.0214,
+     0.0125,
+     -0.0757,
+     0.0037,
+     0.0532,
+     -0.0167,
+     -0.0203,
+     0.0288,
+     -0.007,
+     -0.2795,
+     0.0165,
+     -0.0849,
+     0.0034,
+     -0.0035,
+     -0.0739,
+     0.0281,
+     -0.0373,
+     0.0605,
+     -0.0358,
+     0.0817,
+     -0.0714,
+     -0.0008,
+     0.1177,
+     -0.0248,
+     0.0758,
+     -0.0227,
+     -0.0259,
+     -0.0236,
+     0.0233,
+     0.048,
+     0.0484,
+     0.011,
+     -0.0,
+     0.0653,
+     -0.0331,
+     0.1895,
+     -0.0748,
+     0.0501,
+     -0.0393,
+     0.043,
+     -0.0036,
+     0.0246,
+     0.0284,
+     0.0093,
+     -0.0002,
+     0.0383,
+     0.0159,
+     -0.0841,
+     -0.005,
+     -0.0226,
+     -0.0224,
+     -0.0505,
+     -0.0421,
+     -0.0183,
+     -0.0137,
+     -0.0018,
+     0.0232,
+     -0.0001,
+     0.005,
+     0.0267,
+     -0.025,
+     -0.0199,
+     -0.0308,
+     0.0569,
+     -0.0331,
+     -0.0225,
+     0.0384,
+     0.0264,
+     -0.0642,
+     -0.0325,
+     0.0198,
+     -0.0214,
+     -0.0698,
+     0.0111,
+     -0.001,
+     -0.0613,
+     -0.0711,
+     0.0003,
+     0.0273,
+     -0.0039,
+     0.0429,
+     0.0433,
+     0.0094,
+     0.0283,
+     -0.0348,
+     0.0552,
+     0.0692,
+     0.0452,
+     -0.011,
+     0.0068,
+     0.0225,
+     0.0441,
+     0.0402,
+     0.0502,
+     0.0119,
+     0.057,
+     -0.042,
+     -0.0124,
+     -0.0106,
+     0.0451,
+     0.0559,
+     0.0516,
+     -0.0191,
+     0.0826,
+     -0.0333,
+     -0.2825,
+     -0.0073,
+     -0.0062,
+     0.009,
+     -0.0591,
+     -0.0051,
+     -0.0221,
+     -0.0161,
+     -0.0263,
+     -0.0084,
+     -0.0376,
+     -0.0156,
+     0.0446,
+     0.0478,
+     0.0672,
+     -0.045,
+     -0.0061,
+     -0.019,
+     -0.016,
+     -0.0121,
+     0.0433,
+     0.0428,
+     0.1385,
+     -0.0521,
+     0.0429,
+     0.0562,
+     -0.0433,
+     -0.0117,
+     0.0491,
+     -0.0104,
+     -0.0239,
+     0.0317,
+     0.0534,
+     -0.023,
+     0.0106,
+     0.0098,
+     -0.0811,
+     -0.0002,
+     0.0012,
+     0.0235,
+     -0.0265,
+     0.1162,
+     -0.0225,
+     -0.0605,
+     0.0698,
+     -0.0602,
+     -0.0331,
+     -0.066,
+     -0.0284,
+     0.0313,
+     0.0669,
+     -0.0269,
+     -0.0386,
+     -0.0312,
+     0.0967,
+     -0.0066,
+     -0.0562,
+     -0.0276,
+     0.0453,
+     -0.0634,
+     0.0461,
+     -0.0056,
+     0.0551,
+     0.0082,
+     0.084
+    ],
+    "hits": [
+     {
+      "chunk_id": 7308,
+      "score": 0.7505,
+      "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 M60 xDrive Gran Coupe \u203a Efficiency",
+      "page_start": 12,
+      "page_end": 12,
+      "text": "BMW i4 M60 xDrive Gran Coupe (small car) efficiency: 98 MPGe, using 34.4 kWh of electricity per 100 miles (efficient), joint 79th most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 12,
+       "item": "BMW i4 M60 xDrive Gran Coupe",
+       "make": "BMW",
+       "class": "Small car",
+       "drive": "AWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 98,
+        "range_mi": 278,
+        "range_hwy_mi": 273,
+        "charge_240v_h": 9.0,
+        "kwh_per_100mi": 34.4,
+        "range_city_mi": 282,
+        "annual_cost_usd": 750
+       }
+      }
+     },
+     {
+      "chunk_id": 7313,
+      "score": 0.748,
+      "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 xDrive40 Gran Coupe \u203a Efficiency",
+      "page_start": 13,
+      "page_end": 13,
+      "text": "BMW i4 xDrive40 Gran Coupe (small car) efficiency: 101 MPGe, using 33.4 kWh of electricity per 100 miles (efficient), joint 69th most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 13,
+       "item": "BMW i4 xDrive40 Gran Coupe",
+       "make": "BMW",
+       "class": "Small car",
+       "drive": "AWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 101,
+        "range_mi": 287,
+        "range_hwy_mi": 293,
+        "charge_240v_h": 8.0,
+        "kwh_per_100mi": 33.4,
+        "range_city_mi": 282,
+        "annual_cost_usd": 750
+       }
+      }
+     },
+     {
+      "chunk_id": 7578,
+      "score": 0.7449,
+      "breadcrumb": "Electric cars \u203a Small SUV \u203a Hyundai Ioniq 5 Robo taxi \u203a Efficiency",
+      "page_start": 66,
+      "page_end": 66,
+      "text": "Hyundai Ioniq 5 Robo taxi (small SUV) efficiency: 71 MPGe, using 47.5 kWh of electricity per 100 miles (very inefficient), joint 13th least efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 66,
+       "item": "Hyundai Ioniq 5 Robo taxi",
+       "make": "Hyundai",
+       "class": "Small SUV",
+       "drive": "RWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 71,
+        "range_mi": 168,
+        "range_hwy_mi": 163,
+        "charge_240v_h": 10.3,
+        "kwh_per_100mi": 47.5,
+        "range_city_mi": 172,
+        "annual_cost_usd": 1050
+       }
+      }
+     },
+     {
+      "chunk_id": 7309,
+      "score": 0.7435,
+      "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 M60 xDrive Gran Coupe \u203a Running cost",
+      "page_start": 12,
+      "page_end": 12,
+      "text": "BMW i4 M60 xDrive Gran Coupe (small car) running cost: about $750 a year for electricity, the EPA's estimate for 15,000 miles (cheap), joint 63rd cheapest to run of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 12,
+       "item": "BMW i4 M60 xDrive Gran Coupe",
+       "make": "BMW",
+       "class": "Small car",
+       "drive": "AWD",
+       "facet": "cost",
+       "stats": {
+        "mpge": 98,
+        "range_mi": 278,
+        "range_hwy_mi": 273,
+        "charge_240v_h": 9.0,
+        "kwh_per_100mi": 34.4,
+        "range_city_mi": 282,
+        "annual_cost_usd": 750
+       }
+      }
+     },
+     {
+      "chunk_id": 7303,
+      "score": 0.743,
+      "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 eDrive40 Gran Coupe \u203a Efficiency",
+      "page_start": 11,
+      "page_end": 11,
+      "text": "BMW i4 eDrive40 Gran Coupe (small car) efficiency: 118 MPGe, using 28.5 kWh of electricity per 100 miles (very efficient), joint 23rd most efficient of 231 cars.",
+      "project_id": "ev",
+      "doc_type": "stat_sheet",
+      "meta": {
+       "row": 11,
+       "item": "BMW i4 eDrive40 Gran Coupe",
+       "make": "BMW",
+       "class": "Small car",
+       "drive": "RWD",
+       "facet": "efficiency",
+       "stats": {
+        "mpge": 118,
+        "range_mi": 333,
+        "range_hwy_mi": 323,
+        "charge_240v_h": 9.0,
+        "kwh_per_100mi": 28.5,
+        "range_city_mi": 341,
+        "annual_cost_usd": 650
+       }
+      }
+     }
+    ]
+   },
+   "rank": {
+    "understood": "no stat to sort by",
+    "applied": false,
+    "candidates": 200,
+    "stat": null,
+    "item_class": "small car",
+    "make": null,
+    "drive": null,
+    "direction": null,
+    "column": null,
+    "items": [],
+    "before": [
+     {
+      "chunk_id": 7308,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.7505
+     },
+     {
+      "chunk_id": 7313,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.748
+     },
+     {
+      "chunk_id": 7578,
+      "item": "Hyundai Ioniq 5 Robo taxi",
+      "facet": "efficiency",
+      "score": 0.7449
+     },
+     {
+      "chunk_id": 7309,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "cost",
+      "score": 0.7435
+     },
+     {
+      "chunk_id": 7303,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.743
+     },
+     {
+      "chunk_id": 7298,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "efficiency",
+      "score": 0.7428
+     },
+     {
+      "chunk_id": 7754,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "cost",
+      "score": 0.7423
+     },
+     {
+      "chunk_id": 7304,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "cost",
+      "score": 0.74
+     },
+     {
+      "chunk_id": 7314,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "cost",
+      "score": 0.7395
+     },
+     {
+      "chunk_id": 7324,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "cost",
+      "score": 0.737
+     },
+     {
+      "chunk_id": 7299,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "cost",
+      "score": 0.7368
+     },
+     {
+      "chunk_id": 7307,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "range",
+      "score": 0.7367
+     },
+     {
+      "chunk_id": 7319,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "cost",
+      "score": 0.7359
+     },
+     {
+      "chunk_id": 7753,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "efficiency",
+      "score": 0.7356
+     },
+     {
+      "chunk_id": 7318,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "efficiency",
+      "score": 0.7356
+     },
+     {
+      "chunk_id": 7329,
+      "item": "BMW i5 xDrive40 Sedan",
+      "facet": "cost",
+      "score": 0.735
+     },
+     {
+      "chunk_id": 7323,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "efficiency",
+      "score": 0.7348
+     },
+     {
+      "chunk_id": 7944,
+      "item": "Porsche Macan Electric",
+      "facet": "cost",
+      "score": 0.7341
+     },
+     {
+      "chunk_id": 7297,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "range",
+      "score": 0.7332
+     },
+     {
+      "chunk_id": 7312,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "range",
+      "score": 0.7331
+     },
+     {
+      "chunk_id": 7328,
+      "item": "BMW i5 xDrive40 Sedan",
+      "facet": "efficiency",
+      "score": 0.7302
+     },
+     {
+      "chunk_id": 7759,
+      "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+      "facet": "cost",
+      "score": 0.7293
+     },
+     {
+      "chunk_id": 7964,
+      "item": "Porsche Taycan 4 Perf Battery Plus",
+      "facet": "cost",
+      "score": 0.7286
+     },
+     {
+      "chunk_id": 7934,
+      "item": "Porsche Macan 4 Electric",
+      "facet": "cost",
+      "score": 0.728
+     },
+     {
+      "chunk_id": 7943,
+      "item": "Porsche Macan Electric",
+      "facet": "efficiency",
+      "score": 0.7276
+     },
+     {
+      "chunk_id": 8308,
+      "item": "Tesla Model Y Standard RWD",
+      "facet": "efficiency",
+      "score": 0.7276
+     },
+     {
+      "chunk_id": 7818,
+      "item": "MINI Countryman SE ALL4",
+      "facet": "efficiency",
+      "score": 0.7275
+     },
+     {
+      "chunk_id": 7733,
+      "item": "Maserati Granturismo Folgore",
+      "facet": "efficiency",
+      "score": 0.727
+     },
+     {
+      "chunk_id": 7388,
+      "item": "Cadillac LYRIQ PAWD V SERIES",
+      "facet": "efficiency",
+      "score": 0.7268
+     },
+     {
+      "chunk_id": 7952,
+      "item": "Porsche Macan Turbo Electric",
+      "facet": "range",
+      "score": 0.7267
+     },
+     {
+      "chunk_id": 7947,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "range",
+      "score": 0.7267
+     },
+     {
+      "chunk_id": 7933,
+      "item": "Porsche Macan 4 Electric",
+      "facet": "efficiency",
+      "score": 0.7265
+     },
+     {
+      "chunk_id": 7583,
+      "item": "Hyundai Ioniq 5 RWD",
+      "facet": "efficiency",
+      "score": 0.7253
+     },
+     {
+      "chunk_id": 7563,
+      "item": "Hyundai Ioniq 5 AWD",
+      "facet": "efficiency",
+      "score": 0.7242
+     },
+     {
+      "chunk_id": 7618,
+      "item": "Kia EV6 AWD GT",
+      "facet": "efficiency",
+      "score": 0.7242
+     },
+     {
+      "chunk_id": 7738,
+      "item": "Maserati Grecale Folgore",
+      "facet": "efficiency",
+      "score": 0.7237
+     },
+     {
+      "chunk_id": 7293,
+      "item": "Audi S e-tron GT",
+      "facet": "efficiency",
+      "score": 0.7233
+     },
+     {
+      "chunk_id": 7979,
+      "item": "Porsche Taycan 4S Perf Battery Plus",
+      "facet": "cost",
+      "score": 0.7233
+     },
+     {
+      "chunk_id": 7662,
+      "item": "Kia Niro Electric",
+      "facet": "range",
+      "score": 0.7231
+     },
+     {
+      "chunk_id": 7728,
+      "item": "Maserati Grancabrio Folgore",
+      "facet": "efficiency",
+      "score": 0.7231
+     },
+     {
+      "chunk_id": 7518,
+      "item": "Genesis GV60 AWD",
+      "facet": "efficiency",
+      "score": 0.7222
+     },
+     {
+      "chunk_id": 7428,
+      "item": "Chevrolet Equinox EV AWD",
+      "facet": "efficiency",
+      "score": 0.7221
+     },
+     {
+      "chunk_id": 7963,
+      "item": "Porsche Taycan 4 Perf Battery Plus",
+      "facet": "efficiency",
+      "score": 0.7216
+     },
+     {
+      "chunk_id": 7533,
+      "item": "Genesis GV60 RWD",
+      "facet": "efficiency",
+      "score": 0.7213
+     },
+     {
+      "chunk_id": 7378,
+      "item": "Cadillac LYRIQ AWD",
+      "facet": "efficiency",
+      "score": 0.7213
+     },
+     {
+      "chunk_id": 7327,
+      "item": "BMW i5 xDrive40 Sedan",
+      "facet": "range",
+      "score": 0.7212
+     },
+     {
+      "chunk_id": 7819,
+      "item": "MINI Countryman SE ALL4",
+      "facet": "cost",
+      "score": 0.7208
+     },
+     {
+      "chunk_id": 7523,
+      "item": "Genesis GV60 AWD Advanced",
+      "facet": "efficiency",
+      "score": 0.7207
+     },
+     {
+      "chunk_id": 7568,
+      "item": "Hyundai Ioniq 5 AWD XRT",
+      "facet": "efficiency",
+      "score": 0.7198
+     },
+     {
+      "chunk_id": 7968,
+      "item": "Porsche Taycan 4 Performance Battery",
+      "facet": "efficiency",
+      "score": 0.7197
+     },
+     {
+      "chunk_id": 8354,
+      "item": "Volkswagen ID.4",
+      "facet": "cost",
+      "score": 0.7194
+     },
+     {
+      "chunk_id": 7937,
+      "item": "Porsche Macan 4S Electric",
+      "facet": "range",
+      "score": 0.7193
+     },
+     {
+      "chunk_id": 7306,
+      "item": "BMW i4 M60 xDrive Gran Coupe",
+      "facet": "overview",
+      "score": 0.7191
+     },
+     {
+      "chunk_id": 7988,
+      "item": "Porsche Taycan GTS",
+      "facet": "efficiency",
+      "score": 0.7189
+     },
+     {
+      "chunk_id": 7584,
+      "item": "Hyundai Ioniq 5 RWD",
+      "facet": "cost",
+      "score": 0.7188
+     },
+     {
+      "chunk_id": 7573,
+      "item": "Hyundai Ioniq 5 N",
+      "facet": "efficiency",
+      "score": 0.7186
+     },
+     {
+      "chunk_id": 7316,
+      "item": "BMW i5 eDrive40 Sedan",
+      "facet": "overview",
+      "score": 0.7185
+     },
+     {
+      "chunk_id": 7418,
+      "item": "Chevrolet Blazer EV AWD SS",
+      "facet": "efficiency",
+      "score": 0.7184
+     },
+     {
+      "chunk_id": 7948,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "efficiency",
+      "score": 0.7179
+     },
+     {
+      "chunk_id": 7383,
+      "item": "Cadillac LYRIQ PAWD",
+      "facet": "efficiency",
+      "score": 0.7178
+     },
+     {
+      "chunk_id": 7433,
+      "item": "Chevrolet Equinox EV FWD",
+      "facet": "efficiency",
+      "score": 0.7175
+     },
+     {
+      "chunk_id": 7322,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "range",
+      "score": 0.7175
+     },
+     {
+      "chunk_id": 7998,
+      "item": "Porsche Taycan Performance Battery",
+      "facet": "efficiency",
+      "score": 0.7174
+     },
+     {
+      "chunk_id": 7321,
+      "item": "BMW i5 M60 xDrive Sedan",
+      "facet": "overview",
+      "score": 0.717
+     },
+     {
+      "chunk_id": 7311,
+      "item": "BMW i4 xDrive40 Gran Coupe",
+      "facet": "overview",
+      "score": 0.7163
+     },
+     {
+      "chunk_id": 7997,
+      "item": "Porsche Taycan Performance Battery",
+      "facet": "range",
+      "score": 0.7163
+     },
+     {
+      "chunk_id": 7288,
+      "item": "Audi RS e-tron GT Performance",
+      "facet": "efficiency",
+      "score": 0.7163
+     },
+     {
+      "chunk_id": 7534,
+      "item": "Genesis GV60 RWD",
+      "facet": "cost",
+      "score": 0.7157
+     },
+     {
+      "chunk_id": 7423,
+      "item": "Chevrolet Blazer EV FWD",
+      "facet": "efficiency",
+      "score": 0.7154
+     },
+     {
+      "chunk_id": 7564,
+      "item": "Hyundai Ioniq 5 AWD",
+      "facet": "cost",
+      "score": 0.7154
+     },
+     {
+      "chunk_id": 7474,
+      "item": "Fiat 500e",
+      "facet": "cost",
+      "score": 0.715
+     },
+     {
+      "chunk_id": 7623,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.715
+     },
+     {
+      "chunk_id": 7434,
+      "item": "Chevrolet Equinox EV FWD",
+      "facet": "cost",
+      "score": 0.7149
+     },
+     {
+      "chunk_id": 7326,
+      "item": "BMW i5 xDrive40 Sedan",
+      "facet": "overview",
+      "score": 0.7148
+     },
+     {
+      "chunk_id": 8389,
+      "item": "Volvo EX40",
+      "facet": "cost",
+      "score": 0.7146
+     },
+     {
+      "chunk_id": 7528,
+      "item": "Genesis GV60 AWD Performance",
+      "facet": "efficiency",
+      "score": 0.7146
+     },
+     {
+      "chunk_id": 8364,
+      "item": "Volvo EC40",
+      "facet": "cost",
+      "score": 0.7146
+     },
+     {
+      "chunk_id": 7413,
+      "item": "Chevrolet Blazer EV AWD",
+      "facet": "efficiency",
+      "score": 0.7145
+     },
+     {
+      "chunk_id": 7588,
+      "item": "Hyundai Ioniq 5 Standard range",
+      "facet": "efficiency",
+      "score": 0.7143
+     },
+     {
+      "chunk_id": 7628,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.7142
+     },
+     {
+      "chunk_id": 7953,
+      "item": "Porsche Macan Turbo Electric",
+      "facet": "efficiency",
+      "score": 0.7141
+     },
+     {
+      "chunk_id": 8388,
+      "item": "Volvo EX40",
+      "facet": "efficiency",
+      "score": 0.7139
+     },
+     {
+      "chunk_id": 7967,
+      "item": "Porsche Taycan 4 Performance Battery",
+      "facet": "range",
+      "score": 0.7139
+     },
+     {
+      "chunk_id": 7663,
+      "item": "Kia Niro Electric",
+      "facet": "efficiency",
+      "score": 0.7137
+     },
+     {
+      "chunk_id": 8363,
+      "item": "Volvo EC40",
+      "facet": "efficiency",
+      "score": 0.7137
+     },
+     {
+      "chunk_id": 8378,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "efficiency",
+      "score": 0.7137
+     },
+     {
+      "chunk_id": 8303,
+      "item": "Tesla Model Y Standard AWD",
+      "facet": "efficiency",
+      "score": 0.7135
+     },
+     {
+      "chunk_id": 7758,
+      "item": "Mercedes-Benz CLA350 4matic with EQ Tech",
+      "facet": "efficiency",
+      "score": 0.713
+     },
+     {
+      "chunk_id": 8288,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "efficiency",
+      "score": 0.7128
+     },
+     {
+      "chunk_id": 7978,
+      "item": "Porsche Taycan 4S Perf Battery Plus",
+      "facet": "efficiency",
+      "score": 0.7128
+     },
+     {
+      "chunk_id": 7664,
+      "item": "Kia Niro Electric",
+      "facet": "cost",
+      "score": 0.7127
+     },
+     {
+      "chunk_id": 7938,
+      "item": "Porsche Macan 4S Electric",
+      "facet": "efficiency",
+      "score": 0.7127
+     },
+     {
+      "chunk_id": 7589,
+      "item": "Hyundai Ioniq 5 Standard range",
+      "facet": "cost",
+      "score": 0.7127
+     },
+     {
+      "chunk_id": 7633,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "efficiency",
+      "score": 0.7124
+     },
+     {
+      "chunk_id": 8293,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "efficiency",
+      "score": 0.7119
+     },
+     {
+      "chunk_id": 7424,
+      "item": "Chevrolet Blazer EV FWD",
+      "facet": "cost",
+      "score": 0.7118
+     },
+     {
+      "chunk_id": 7519,
+      "item": "Genesis GV60 AWD",
+      "facet": "cost",
+      "score": 0.7115
+     },
+     {
+      "chunk_id": 8309,
+      "item": "Tesla Model Y Standard RWD",
+      "facet": "cost",
+      "score": 0.7114
+     },
+     {
+      "chunk_id": 8359,
+      "item": "Volkswagen ID.4 AWD",
+      "facet": "cost",
+      "score": 0.7108
+     },
+     {
+      "chunk_id": 7983,
+      "item": "Porsche Taycan 4S Performance Battery",
+      "facet": "efficiency",
+      "score": 0.7107
+     },
+     {
+      "chunk_id": 8003,
+      "item": "Porsche Taycan Turbo",
+      "facet": "efficiency",
+      "score": 0.7107
+     },
+     {
+      "chunk_id": 8379,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "cost",
+      "score": 0.7107
+     },
+     {
+      "chunk_id": 8198,
+      "item": "Rolls-Royce Spectre Black Badge",
+      "facet": "efficiency",
+      "score": 0.7099
+     },
+     {
+      "chunk_id": 8369,
+      "item": "Volvo EC40 Twin",
+      "facet": "cost",
+      "score": 0.7097
+     },
+     {
+      "chunk_id": 8384,
+      "item": "Volvo EX30 Twin Performance",
+      "facet": "cost",
+      "score": 0.7094
+     },
+     {
+      "chunk_id": 8013,
+      "item": "Porsche Taycan Turbo GT",
+      "facet": "efficiency",
+      "score": 0.7092
+     },
+     {
+      "chunk_id": 8394,
+      "item": "Volvo EX40 Twin",
+      "facet": "cost",
+      "score": 0.7091
+     },
+     {
+      "chunk_id": 7473,
+      "item": "Fiat 500e",
+      "facet": "efficiency",
+      "score": 0.709
+     },
+     {
+      "chunk_id": 8294,
+      "item": "Tesla Model Y Long Range RWD",
+      "facet": "cost",
+      "score": 0.709
+     },
+     {
+      "chunk_id": 7373,
+      "item": "Cadillac LYRIQ",
+      "facet": "efficiency",
+      "score": 0.7084
+     },
+     {
+      "chunk_id": 8304,
+      "item": "Tesla Model Y Standard AWD",
+      "facet": "cost",
+      "score": 0.7082
+     },
+     {
+      "chunk_id": 8203,
+      "item": "Subaru Solterra 20 AWD",
+      "facet": "efficiency",
+      "score": 0.7081
+     },
+     {
+      "chunk_id": 7429,
+      "item": "Chevrolet Equinox EV AWD",
+      "facet": "cost",
+      "score": 0.708
+     },
+     {
+      "chunk_id": 7884,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "cost",
+      "score": 0.7076
+     },
+     {
+      "chunk_id": 7301,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "overview",
+      "score": 0.7072
+     },
+     {
+      "chunk_id": 7608,
+      "item": "Jeep Recon MOAB 4WD",
+      "facet": "efficiency",
+      "score": 0.7071
+     },
+     {
+      "chunk_id": 8374,
+      "item": "Volvo EX30 Cross Country",
+      "facet": "cost",
+      "score": 0.707
+     },
+     {
+      "chunk_id": 8358,
+      "item": "Volkswagen ID.4 AWD",
+      "facet": "efficiency",
+      "score": 0.7057
+     },
+     {
+      "chunk_id": 7999,
+      "item": "Porsche Taycan Performance Battery",
+      "facet": "cost",
+      "score": 0.7052
+     },
+     {
+      "chunk_id": 8193,
+      "item": "Rolls-Royce Spectre",
+      "facet": "efficiency",
+      "score": 0.7052
+     },
+     {
+      "chunk_id": 8298,
+      "item": "Tesla Model Y Performance AWD",
+      "facet": "efficiency",
+      "score": 0.705
+     },
+     {
+      "chunk_id": 7524,
+      "item": "Genesis GV60 AWD Advanced",
+      "facet": "cost",
+      "score": 0.705
+     },
+     {
+      "chunk_id": 7942,
+      "item": "Porsche Macan Electric",
+      "facet": "range",
+      "score": 0.7046
+     },
+     {
+      "chunk_id": 8289,
+      "item": "Tesla Model Y Long Range AWD",
+      "facet": "cost",
+      "score": 0.7045
+     },
+     {
+      "chunk_id": 7412,
+      "item": "Chevrolet Blazer EV AWD",
+      "facet": "range",
+      "score": 0.7044
+     },
+     {
+      "chunk_id": 7296,
+      "item": "BMW i4 eDrive35 Gran Coupe",
+      "facet": "overview",
+      "score": 0.7043
+     },
+     {
+      "chunk_id": 7688,
+      "item": "Lexus RZ 550e AWD",
+      "facet": "efficiency",
+      "score": 0.7043
+     },
+     {
+      "chunk_id": 7569,
+      "item": "Hyundai Ioniq 5 AWD XRT",
+      "facet": "cost",
+      "score": 0.7041
+     },
+     {
+      "chunk_id": 7982,
+      "item": "Porsche Taycan 4S Performance Battery",
+      "facet": "range",
+      "score": 0.7041
+     },
+     {
+      "chunk_id": 7287,
+      "item": "Audi RS e-tron GT Performance",
+      "facet": "range",
+      "score": 0.7037
+     },
+     {
+      "chunk_id": 8023,
+      "item": "Porsche Taycan Turbo S",
+      "facet": "efficiency",
+      "score": 0.7035
+     },
+     {
+      "chunk_id": 8299,
+      "item": "Tesla Model Y Performance AWD",
+      "facet": "cost",
+      "score": 0.7033
+     },
+     {
+      "chunk_id": 7678,
+      "item": "Lexus RZ 350e FWD",
+      "facet": "efficiency",
+      "score": 0.7031
+     },
+     {
+      "chunk_id": 8208,
+      "item": "Subaru Solterra AWD",
+      "facet": "efficiency",
+      "score": 0.7029
+     },
+     {
+      "chunk_id": 7414,
+      "item": "Chevrolet Blazer EV AWD",
+      "facet": "cost",
+      "score": 0.7024
+     },
+     {
+      "chunk_id": 8368,
+      "item": "Volvo EC40 Twin",
+      "facet": "efficiency",
+      "score": 0.702
+     },
+     {
+      "chunk_id": 8353,
+      "item": "Volkswagen ID.4",
+      "facet": "efficiency",
+      "score": 0.7019
+     },
+     {
+      "chunk_id": 7683,
+      "item": "Lexus RZ 450e AWD",
+      "facet": "efficiency",
+      "score": 0.7015
+     },
+     {
+      "chunk_id": 8333,
+      "item": "Toyota bZ LIMITED (energy capacity 191 Ah)",
+      "facet": "efficiency",
+      "score": 0.7014
+     },
+     {
+      "chunk_id": 7949,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "cost",
+      "score": 0.7013
+     },
+     {
+      "chunk_id": 8328,
+      "item": "Toyota bZ AWD LIMITED",
+      "facet": "efficiency",
+      "score": 0.7011
+     },
+     {
+      "chunk_id": 8373,
+      "item": "Volvo EX30 Cross Country",
+      "facet": "efficiency",
+      "score": 0.701
+     },
+     {
+      "chunk_id": 7969,
+      "item": "Porsche Taycan 4 Performance Battery",
+      "facet": "cost",
+      "score": 0.7008
+     },
+     {
+      "chunk_id": 7624,
+      "item": "Kia EV6 Long Range AWD",
+      "facet": "cost",
+      "score": 0.7008
+     },
+     {
+      "chunk_id": 7359,
+      "item": "BMW iX xDrive60",
+      "facet": "cost",
+      "score": 0.7006
+     },
+     {
+      "chunk_id": 8393,
+      "item": "Volvo EX40 Twin",
+      "facet": "efficiency",
+      "score": 0.7004
+     },
+     {
+      "chunk_id": 8323,
+      "item": "Toyota bZ AWD",
+      "facet": "efficiency",
+      "score": 0.7
+     },
+     {
+      "chunk_id": 8338,
+      "item": "Toyota bZ LIMITED (energy capacity 200 Ah)",
+      "facet": "efficiency",
+      "score": 0.7
+     },
+     {
+      "chunk_id": 7634,
+      "item": "Kia EV6 Standard Range RWD",
+      "facet": "cost",
+      "score": 0.6997
+     },
+     {
+      "chunk_id": 7752,
+      "item": "Mercedes-Benz CLA250 Plus with EQ Tech",
+      "facet": "range",
+      "score": 0.6996
+     },
+     {
+      "chunk_id": 7931,
+      "item": "Porsche Macan 4 Electric",
+      "facet": "overview",
+      "score": 0.6995
+     },
+     {
+      "chunk_id": 7903,
+      "item": "Porsche Cayenne S Coupe Electric",
+      "facet": "efficiency",
+      "score": 0.6995
+     },
+     {
+      "chunk_id": 8383,
+      "item": "Volvo EX30 Twin Performance",
+      "facet": "efficiency",
+      "score": 0.6993
+     },
+     {
+      "chunk_id": 7808,
+      "item": "Mercedes-Benz EQS 680 4matic Maybach (SUV)",
+      "facet": "efficiency",
+      "score": 0.6993
+     },
+     {
+      "chunk_id": 7629,
+      "item": "Kia EV6 Long Range RWD",
+      "facet": "cost",
+      "score": 0.6992
+     },
+     {
+      "chunk_id": 7881,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "overview",
+      "score": 0.6991
+     },
+     {
+      "chunk_id": 7941,
+      "item": "Porsche Macan Electric",
+      "facet": "overview",
+      "score": 0.6989
+     },
+     {
+      "chunk_id": 7302,
+      "item": "BMW i4 eDrive40 Gran Coupe",
+      "facet": "range",
+      "score": 0.6987
+     },
+     {
+      "chunk_id": 7939,
+      "item": "Porsche Macan 4S Electric",
+      "facet": "cost",
+      "score": 0.6986
+     },
+     {
+      "chunk_id": 7901,
+      "item": "Porsche Cayenne S Coupe Electric",
+      "facet": "overview",
+      "score": 0.6986
+     },
+     {
+      "chunk_id": 7883,
+      "item": "Porsche Cayenne Coupe Electric",
+      "facet": "efficiency",
+      "score": 0.6984
+     },
+     {
+      "chunk_id": 7517,
+      "item": "Genesis GV60 AWD",
+      "facet": "range",
+      "score": 0.6983
+     },
+     {
+      "chunk_id": 8313,
+      "item": "Toyota bZ (energy capacity 191 Ah)",
+      "facet": "efficiency",
+      "score": 0.6983
+     },
+     {
+      "chunk_id": 7472,
+      "item": "Fiat 500e",
+      "facet": "range",
+      "score": 0.6981
+     },
+     {
+      "chunk_id": 8343,
+      "item": "Toyota bZ Woodland AWD",
+      "facet": "efficiency",
+      "score": 0.6981
+     },
+     {
+      "chunk_id": 7954,
+      "item": "Porsche Macan Turbo Electric",
+      "facet": "cost",
+      "score": 0.6981
+     },
+     {
+      "chunk_id": 8344,
+      "item": "Toyota bZ Woodland AWD",
+      "facet": "cost",
+      "score": 0.698
+     },
+     {
+      "chunk_id": 8314,
+      "item": "Toyota bZ (energy capacity 191 Ah)",
+      "facet": "cost",
+      "score": 0.6979
+     },
+     {
+      "chunk_id": 8018,
+      "item": "Porsche Taycan Turbo GT with Weissach Package",
+      "facet": "efficiency",
+      "score": 0.6979
+     },
+     {
+      "chunk_id": 8329,
+      "item": "Toyota bZ AWD LIMITED",
+      "facet": "cost",
+      "score": 0.6978
+     },
+     {
+      "chunk_id": 7909,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "cost",
+      "score": 0.6974
+     },
+     {
+      "chunk_id": 7732,
+      "item": "Maserati Granturismo Folgore",
+      "facet": "range",
+      "score": 0.6973
+     },
+     {
+      "chunk_id": 7497,
+      "item": "Ford Mustang Mach-E RWD",
+      "facet": "range",
+      "score": 0.6973
+     },
+     {
+      "chunk_id": 7617,
+      "item": "Kia EV6 AWD GT",
+      "facet": "range",
+      "score": 0.6968
+     },
+     {
+      "chunk_id": 7923,
+      "item": "Porsche Cayenne Turbo Coupe Electric",
+      "facet": "efficiency",
+      "score": 0.6968
+     },
+     {
+      "chunk_id": 7913,
+      "item": "Porsche Cayenne S Electric",
+      "facet": "efficiency",
+      "score": 0.6967
+     },
+     {
+      "chunk_id": 7577,
+      "item": "Hyundai Ioniq 5 Robo taxi",
+      "facet": "range",
+      "score": 0.6967
+     },
+     {
+      "chunk_id": 7493,
+      "item": "Ford Mustang Mach-E Rally",
+      "facet": "efficiency",
+      "score": 0.6962
+     },
+     {
+      "chunk_id": 7679,
+      "item": "Lexus RZ 350e FWD",
+      "facet": "cost",
+      "score": 0.6961
+     },
+     {
+      "chunk_id": 8318,
+      "item": "Toyota bZ (energy capacity 200 Ah)",
+      "facet": "efficiency",
+      "score": 0.696
+     },
+     {
+      "chunk_id": 7499,
+      "item": "Ford Mustang Mach-E RWD",
+      "facet": "cost",
+      "score": 0.6959
+     },
+     {
+      "chunk_id": 7908,
+      "item": "Porsche Cayenne S Coupe Electric Range Setup",
+      "facet": "efficiency",
+      "score": 0.6958
+     },
+     {
+      "chunk_id": 8348,
+      "item": "Toyota C-HR AWD",
+      "facet": "efficiency",
+      "score": 0.6957
+     },
+     {
+      "chunk_id": 7946,
+      "item": "Porsche Macan GTS Electric",
+      "facet": "overview",
+      "score": 0.6957
+     },
+     {
+      "chunk_id": 7368,
+      "item": "Cadillac CELESTIQ",
+      "facet": "efficiency",
+      "score": 0.6957
+     },
+     {
+      "chunk_id": 7294,
+      "item": "Audi S e-tron GT",
+      "facet": "cost",
+      "score": 0.6955
+     },
+     {
+      "chunk_id": 7343,
+      "item": "BMW i7 xDrive60 Sedan",
+      "facet": "efficiency",
+      "score": 0.6955
+     },
+     {
+      "chunk_id": 7354,
+      "item": "BMW iX xDrive45",
+      "facet": "cost",
+      "score": 0.6954
+     },
+     {
+      "chunk_id": 8377,
+      "item": "Volvo EX30 Single motor extended range",
+      "facet": "range",
+      "score": 0.6954
+     },
+     {
+      "chunk_id": 7358,
+      "item": "BMW iX xDrive60",
+      "facet": "efficiency",
+      "score": 0.6953
+     },
+     {
+      "chunk_id": 7893,
+      "item": "Porsche Cayenne Electric",
+      "facet": "efficiency",
+      "score": 0.6953
+     },
+     {
+      "chunk_id": 7579,
+      "item": "Hyundai Ioniq 5 Robo taxi",
+      "facet": "cost",
+      "score": 0.6951
+     },
+     {
+      "chunk_id": 7289,
+      "item": "Audi RS e-tron GT Performance",
+      "facet": "cost",
+      "score": 0.6951
+     },
+     {
+      "chunk_id": 7945,
+      "item": "Porsche Macan Electric",
+      "facet": "charging",
+      "score": 0.6951
+     },
+     {
+      "chunk_id": 7889,
+      "item": "Porsche Cayenne Coupe Electric Range Setup",
+      "facet": "cost",
+      "score": 0.6949
+     },
+     {
+      "chunk_id": 8223,
+      "item": "Subaru Uncharted AWD",
+      "facet": "efficiency",
+      "score": 0.6949
+     },
+     {
+      "chunk_id": 7984,
+      "item": "Porsche Taycan 4S Performance Battery",
+      "facet": "cost",
+      "score": 0.6948
+     },
+     {
+      "chunk_id": 8324,
+      "item": "Toyota bZ AWD",
+      "facet": "cost",
+      "score": 0.6947
+     },
+     {
+      "chunk_id": 7522,
+      "item": "Genesis GV60 AWD Advanced",
+      "facet": "range",
+      "score": 0.6946
+     },
+     {
+      "chunk_id": 7661,
+      "item": "Kia Niro Electric",
+      "facet": "overview",
+      "score": 0.6945
+     }
+    ]
+   },
+   "sources": [
+    {
+     "label": "S1",
+     "chunk_id": 7308,
+     "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 M60 xDrive Gran Coupe \u203a Efficiency",
+     "pages": "row 12",
+     "text": "BMW i4 M60 xDrive Gran Coupe (small car) efficiency: 98 MPGe, using 34.4 kWh of electricity per 100 miles (efficient), joint 79th most efficient of 231 cars.",
+     "score": 0.7505
+    },
+    {
+     "label": "S2",
+     "chunk_id": 7313,
+     "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 xDrive40 Gran Coupe \u203a Efficiency",
+     "pages": "row 13",
+     "text": "BMW i4 xDrive40 Gran Coupe (small car) efficiency: 101 MPGe, using 33.4 kWh of electricity per 100 miles (efficient), joint 69th most efficient of 231 cars.",
+     "score": 0.748
+    },
+    {
+     "label": "S3",
+     "chunk_id": 7578,
+     "breadcrumb": "Electric cars \u203a Small SUV \u203a Hyundai Ioniq 5 Robo taxi \u203a Efficiency",
+     "pages": "row 66",
+     "text": "Hyundai Ioniq 5 Robo taxi (small SUV) efficiency: 71 MPGe, using 47.5 kWh of electricity per 100 miles (very inefficient), joint 13th least efficient of 231 cars.",
+     "score": 0.7449
+    },
+    {
+     "label": "S4",
+     "chunk_id": 7309,
+     "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 M60 xDrive Gran Coupe \u203a Running cost",
+     "pages": "row 12",
+     "text": "BMW i4 M60 xDrive Gran Coupe (small car) running cost: about $750 a year for electricity, the EPA's estimate for 15,000 miles (cheap), joint 63rd cheapest to run of 231 cars.",
+     "score": 0.7435
+    },
+    {
+     "label": "S5",
+     "chunk_id": 7303,
+     "breadcrumb": "Electric cars \u203a Small car \u203a BMW i4 eDrive40 Gran Coupe \u203a Efficiency",
+     "pages": "row 11",
+     "text": "BMW i4 eDrive40 Gran Coupe (small car) efficiency: 118 MPGe, using 28.5 kWh of electricity per 100 miles (very efficient), joint 23rd most efficient of 231 cars.",
+     "score": 0.743
+    }
+   ],
+   "dropped": [],
+   "answer": "For city driving, efficiency matters most. Among the small cars in the sources, these are ranked by efficiency:\n\n1. BMW i4 eDrive40 Gran Coupe: 118 MPGe, using 28.5 kWh per 100 miles [S5]\n2. BMW i4 xDrive40 Gran Coupe: 101 MPGe, using 33.4 kWh per 100 miles [S2]\n3. BMW i4 M60 xDrive Gran Coupe: 98 MPGe, using 34.4 kWh per 100 miles [S1]\n\nThe M60 costs about $750 a year to run on electricity, based on 15,000 miles [S4]. The Hyundai Ioniq 5 Robo taxi is a small SUV rated very inefficient, so it is a weaker choice [S3].",
+   "generation": {
+    "answer": "For city driving, efficiency matters most. Among the small cars in the sources, these are ranked by efficiency:\n\n1. BMW i4 eDrive40 Gran Coupe: 118 MPGe, using 28.5 kWh per 100 miles [S5]\n2. BMW i4 xDrive40 Gran Coupe: 101 MPGe, using 33.4 kWh per 100 miles [S2]\n3. BMW i4 M60 xDrive Gran Coupe: 98 MPGe, using 34.4 kWh per 100 miles [S1]\n\nThe M60 costs about $750 a year to run on electricity, based on 15,000 miles [S4]. The Hyundai Ioniq 5 Robo taxi is a small SUV rated very inefficient, so it is a weaker choice [S3].",
+    "model": "claude-haiku-5-5",
+    "input_tokens": 987,
+    "output_tokens": 964
+   },
+   "check": {
+    "passed": true,
+    "problems": [],
+    "cited": [
+     "S1",
+     "S2",
+     "S3",
+     "S4",
+     "S5"
+    ]
+   }
+  }
+ ]
+}
