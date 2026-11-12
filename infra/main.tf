@@ -99,7 +99,7 @@ resource "azurerm_key_vault_secret" "anthropic" {
   key_vault_id = azurerm_key_vault.main.id
   depends_on   = [azurerm_role_assignment.me_kv_admin]
   lifecycle {
-    ignore_changes = [value] # the real key is set outside Terraform: leave it alone
+    ignore_changes = [value, tags, content_type] # the real key is set outside Terraform: leave it, and the labels the Azure tool adds, alone
   }
 }
 

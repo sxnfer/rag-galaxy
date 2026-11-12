@@ -46,8 +46,14 @@ az keyvault secret set --vault-name "$(terraform output -raw key_vault_name)" \
   --name anthropic-api-key --value "$(grep '^ANTHROPIC_API_KEY=' ../.env | cut -d= -f2-)" --output none
 ```
 
-Without the key the site still works: the example questions replay, and new questions show what
-was retrieved without a written answer.
+The API read the old value when it started, and Azure keeps a copy. Make it read the new one, then restart it:
+
+```bash
+terraform apply -replace='azurerm_container_app.api[0]'
+```
+
+(Changing the key later is the same two steps.) Without the key the site still works: the example
+questions replay, and new questions show what was retrieved without a written answer.
 
 ## Loading the data
 
