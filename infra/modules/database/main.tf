@@ -80,6 +80,11 @@ resource "azurerm_postgresql_flexible_server_active_directory_administrator" "me
   principal_name      = var.admin_principal_name
   principal_type      = "User"
   depends_on          = [azurerm_postgresql_flexible_server_active_directory_administrator.app]
+
+  lifecycle {
+    # Postgres cuts role names off at 63 characters, so a long sign-in name comes back shortened. That is not a change.
+    ignore_changes = [principal_name]
+  }
 }
 
 # 5. Let other Azure services reach the server (the API runs in Azure Container Apps).

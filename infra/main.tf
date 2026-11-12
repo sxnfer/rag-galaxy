@@ -124,6 +124,12 @@ resource "azurerm_container_app_environment" "main" {
   location                   = var.location
   log_analytics_workspace_id = azurerm_log_analytics_workspace.main.id
   tags                       = local.tags
+
+  # "Consumption" is the pay-only-while-running plan: nothing reserved, nothing billed while asleep.
+  workload_profile {
+    name                  = "Consumption"
+    workload_profile_type = "Consumption"
+  }
 }
 
 locals {
@@ -142,6 +148,7 @@ resource "azurerm_container_app" "api" {
   resource_group_name          = azurerm_resource_group.main.name
   container_app_environment_id = azurerm_container_app_environment.main.id
   revision_mode                = "Single"
+  workload_profile_name        = "Consumption"
   tags                         = local.tags
 
   identity {
@@ -196,4 +203,9 @@ resource "azurerm_static_web_app" "frontend" {
   sku_tier            = "Free"
   sku_size            = "Free"
   tags                = local.tags
+
+  lifecycle {
+    # GitHub's publish step (.github/workflows/site.yml) records which repository the files came from. Leave that alone.
+    ignore_changes = [repository_url, repository_branch]
+  }
 }
