@@ -127,3 +127,55 @@ def test_baked_from_another_run_is_ignored(tmp_path, monkeypatch):
 def test_each_library_reads_its_own_baked_file(tmp_path, monkeypatch):
     _write(tmp_path, monkeypatch, ("ev", "cards", 0, "m"), [1])
     assert baked.load(("other", "cards", 0, "m"), FakeGalaxy([1])) == {}  # tmp_path has no other.json
+
+
+class FakeLedger:
+    """The database's part of the limits, as a dictionary: what survives a restart."""
+
+    def __init__(self):
+        self.rows = {}
+
+    @staticmethod
+    def who(day, visitor):
+        return f"v:{visitor}"
+
+    def counts(self, day, visitor):
+        return self.rows.get((day, "site"), 0), self.rows.get((day, self.who(day, visitor)), 0)
+
+    def add(self, day, who):
+        self.rows[(day, who)] = self.rows.get((day, who), 0) + 1
+
+
+def test_per_day_limit_survives_a_restart():
+    ledger, now = FakeLedger(), [1000.0]
+    clock = lambda: now[0]  # noqa: E731
+    g = Guard(per_minute=100, per_day=3, daily_budget=100, clock=clock, ledger=ledger)
+    for _ in range(3):
+        g.check("1.2.3.4")
+    # The server sleeps and starts again: a new Guard with nothing in memory, but the same ledger.
+    g = Guard(per_minute=100, per_day=3, daily_budget=100, clock=clock, ledger=ledger)
+    with pytest.raises(Limited):
+        g.check("1.2.3.4")
+    g.check("5.6.7.8")  # someone else is not affected
+    assert g.left("5.6.7.8")["today"] == 2
+
+
+def test_site_budget_survives_a_restart_and_resets_next_day():
+    ledger, now = FakeLedger(), [1000.0]
+    clock = lambda: now[0]  # noqa: E731
+    g = Guard(per_minute=100, per_day=100, daily_budget=2, clock=clock, ledger=ledger)
+    g.check("a"); g.spend()
+    g.check("b"); g.spend()
+    g = Guard(per_minute=100, per_day=100, daily_budget=2, clock=clock, ledger=ledger)  # restarted
+    with pytest.raises(Limited):
+        g.check("c")
+    now[0] += 86400  # the next day
+    g.check("c")
+
+
+def test_ledger_never_stores_the_address_itself():
+    from app.guard import Ledger
+
+    who = Ledger.who(20000, "203.0.113.7")
+    assert "203.0.113.7" not in who and len(who) == 32
+    assert who != Ledger.who(20001, "203.0.113.7")  # a different fingerprint each day

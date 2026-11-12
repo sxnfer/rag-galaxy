@@ -18,6 +18,8 @@ Public-demo protection (see guard.py and baked.py):
   - a repeated question is served from memory;
   - everything else is rate limited per visitor, with a daily cap on AI calls.
     The limits are shared across libraries: switching library doesn't reset them.
+  - every request of any kind is size-limited and rate limited (shield.py), and the
+    developer pages FastAPI normally serves (/docs, /openapi.json) are switched off.
 """
 
 import os
@@ -27,6 +29,7 @@ from contextlib import asynccontextmanager
 import numpy as np
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
@@ -37,7 +40,8 @@ from pipeline.libraries import LIBRARIES, ORDER, run_of
 from . import baked
 from .embedder import load_embedder
 from .galaxy import Galaxy
-from .guard import AnswerCache, Guard, Limited, visitor_id
+from .guard import AnswerCache, Guard, Ledger, Limited, visitor_id
+from .shield import BodyLimit, RequestRate, SecurityHeaders
 
 MAX_QUESTION_CHARS = 300
 MAX_LIBRARY_CHARS = 40  # a library id is one short word; anything longer is not worth reading
@@ -71,7 +75,7 @@ async def lifespan(app: FastAPI):
     t = time.perf_counter()
     state["embedder"] = load_embedder()
     state["libraries"] = {lib: load_library(lib, state["embedder"]) for lib in ORDER}
-    state["guard"] = Guard()       # shared by every library
+    state["guard"] = Guard(ledger=Ledger(connect))  # shared by every library; per-day counts are kept in the database
     state["cache"] = AnswerCache()
     for lib, s in state["libraries"].items():
         print(f"[{lib}] {len(s['galaxy'].rows)} chunks for run {s['run'][1:3]}")
@@ -79,7 +83,15 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="RAG Galaxy", lifespan=lifespan)
+# The public server has no use for FastAPI's built-in documentation pages, so they are switched off:
+# they would only tell a stranger what to try.
+app = FastAPI(title="RAG Galaxy", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
+# Middleware is wrapped around the app like layers of an onion, and the LAST one added is the
+# outermost: a request meets CORS first, then the three guards in shield.py, then compression.
+app.add_middleware(GZipMiddleware, minimum_size=1024)  # the passage map is 240 KB of text: send it compressed
+app.add_middleware(BodyLimit)
+app.add_middleware(RequestRate)
+app.add_middleware(SecurityHeaders)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()],

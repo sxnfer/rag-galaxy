@@ -13,4 +13,5 @@ EXPOSE 8000
 # Behind Azure's front door the visitor's real IP arrives in a header. The app reads it
 # itself (guard.visitor_id, switched on with TRUSTED_PROXIES=1), so uvicorn is NOT told to
 # trust proxy headers: that would let any visitor type their own "IP" and dodge the rate limit.
-CMD ["sh", "-c", "python -m pipeline init-db && uvicorn app.main:app --host 0.0.0.0 --port 8000 --no-proxy-headers"]
+# --no-server-header: replies don't announce which server software this is.
+CMD ["sh", "-c", "python -m pipeline init-db && uvicorn app.main:app --host 0.0.0.0 --port 8000 --no-proxy-headers --no-server-header"]

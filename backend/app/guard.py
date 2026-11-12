@@ -8,14 +8,19 @@ Every live question costs a little money (Claude Haiku) and some server time
   2. Per visitor, per day     - stops one person (or script) running all day.
   3. Whole site, per day      - a hard cap on paid AI calls, whatever happens.
 
-"Visitor" means IP address (see visitor_id). The counts live in this process's memory, so they
-reset when the server restarts and each replica counts on its own. That is
-fine for a single small container; a bigger deployment would keep them in a
-shared store such as Redis.
+"Visitor" means IP address (see visitor_id).
+
+Where the counts live matters. The live server sleeps when nobody is visiting
+and starts afresh for the next visitor, so counts kept only in its memory would
+go back to zero several times a day, and a daily limit would not be a daily
+limit. So the two per-day counts (each visitor's, and the whole site's) are
+also written to the database (see Ledger), which outlives the server. The
+per-minute count stays in memory: forgetting the last minute does no harm.
 
 The example questions are pre-computed (see baked.py) and never count.
 """
 
+import hashlib
 import ipaddress
 import os
 import threading
@@ -64,6 +69,40 @@ def visitor_id(peer: str | None, forwarded_for: str | None, proxies: int = TRUST
     return str(ipaddress.ip_network((address, 64), strict=False))
 
 
+SITE = "site"  # the ledger's name for the whole site's paid AI calls
+
+
+class Ledger:
+    """Today's counts, kept in the database so they survive the server sleeping or restarting.
+
+    One row per day and per "who": a visitor, or the whole site. A visitor is stored
+    as a fingerprint of their address for that day, never the address itself, and
+    rows from earlier days are deleted, so the table can't be used to follow anyone.
+    """
+
+    def __init__(self, connect) -> None:
+        self.connect = connect  # a function that opens a database connection (pipeline.db.connect)
+
+    @staticmethod
+    def who(day: int, visitor: str) -> str:
+        return hashlib.sha256(f"{day}:{visitor}".encode()).hexdigest()[:32]
+
+    def counts(self, day: int, visitor: str) -> tuple[int, int]:
+        """(the site's paid calls today, this visitor's questions today). Also clears earlier days."""
+        with self.connect() as conn:
+            conn.execute("delete from limits where day < %s", (day,))
+            rows = dict(conn.execute("select who, n from limits where day = %s and who = any(%s)",
+                                     (day, [SITE, self.who(day, visitor)])).fetchall())
+            conn.commit()
+        return rows.get(SITE, 0), rows.get(self.who(day, visitor), 0)
+
+    def add(self, day: int, who: str) -> None:
+        with self.connect() as conn:
+            conn.execute("""insert into limits (day, who, n) values (%s, %s, 1)
+                            on conflict (day, who) do update set n = limits.n + 1""", (day, who))
+            conn.commit()
+
+
 class Limited(Exception):
     def __init__(self, message: str, retry_after: int) -> None:
         super().__init__(message)
@@ -72,9 +111,11 @@ class Limited(Exception):
 
 class Guard:
     def __init__(self, per_minute: int = PER_MINUTE, per_day: int = PER_DAY,
-                 daily_budget: int = DAILY_AI_BUDGET, clock=time.time) -> None:
+                 daily_budget: int = DAILY_AI_BUDGET, clock=time.time, ledger: Ledger | None = None) -> None:
         self.per_minute, self.per_day, self.daily_budget = per_minute, per_day, daily_budget
         self.clock = clock
+        self.ledger = ledger                # None: counts live in memory only (tests, a laptop)
+        self.seen: dict[str, int] = {}      # visitor -> their questions today, as last read from the ledger
         self.hits: dict[str, deque] = defaultdict(deque)  # visitor -> times of their recent questions
         self.day = self._today()
         self.spent = 0
@@ -90,6 +131,7 @@ class Guard:
             if self._today() != self.day:  # a new day: everyone starts again
                 self.day, self.spent = self._today(), 0
                 self.hits.clear()
+                self.seen.clear()
             if self.spent >= self.daily_budget:
                 raise Limited("The live demo has reached today's limit. The example questions still work.",
                               retry_after=int(86400 - now % 86400))
@@ -103,6 +145,17 @@ class Guard:
             if len(recent) >= self.per_minute:
                 raise Limited("That's quick! Wait a few seconds before asking again.",
                               retry_after=max(1, int(60 - (now - recent[0])) + 1))
+            if self.ledger:  # the same two per-day limits again, from the counts that survive a restart
+                till_midnight = int(86400 - now % 86400)
+                site, mine = self.ledger.counts(self.day, visitor)
+                if site >= self.daily_budget:
+                    raise Limited("The live demo has reached today's limit. The example questions still work.",
+                                  retry_after=till_midnight)
+                if mine >= self.per_day:
+                    raise Limited("You've asked a lot of questions today. Try the examples, or come back tomorrow.",
+                                  retry_after=till_midnight)
+                self.ledger.add(self.day, self.ledger.who(self.day, visitor))
+                self.seen[visitor] = mine + 1
             q.append(now)
 
     def left(self, visitor: str) -> dict:
@@ -110,13 +163,16 @@ class Guard:
         with self.lock:
             now = self.clock()
             q = [t for t in self.hits.get(visitor, ()) if now - t <= 86400]
+            used = max(len(q), self.seen.get(visitor, 0))
             return {"this_minute": max(0, self.per_minute - sum(now - t < 60 for t in q)),
-                    "today": max(0, self.per_day - len(q))}
+                    "today": max(0, self.per_day - used)}
 
     def spend(self) -> None:
         """Count one paid AI call against the site-wide budget."""
         with self.lock:
             self.spent += 1
+            if self.ledger:
+                self.ledger.add(self._today(), SITE)
 
 
 class AnswerCache:

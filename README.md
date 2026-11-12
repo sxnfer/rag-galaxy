@@ -87,8 +87,16 @@ The live demo calls Claude for every new question, so it is protected:
   stale replays are ignored at startup until you bake again.
 - **Repeated questions** are served from memory (the last 256).
 - **New questions are rate limited** per visitor (`RATE_PER_MINUTE`, `RATE_PER_DAY`) with a site-wide
-  daily cap on AI calls (`DAILY_AI_BUDGET`). Counts live in memory per server process, so keep the API
-  at one replica (or move the counts to Redis) for the limits to mean what they say.
+  daily cap on AI calls (`DAILY_AI_BUDGET`). The per-day counts are kept in the database (`limits` table),
+  because the live server sleeps when idle and starts afresh: counts held only in memory would reset
+  several times a day. A visitor is stored as a one-day fingerprint of their address, never the address.
+- **Every request is guarded** (`backend/app/shield.py`): a message may be at most 8 KB, one visitor may
+  make at most `REQUESTS_PER_MINUTE` requests of any kind, and FastAPI's documentation pages are off.
+- **The browser is told to be strict**: the site sends a content security policy
+  (`frontend/public/staticwebapp.config.json`, which names the API's address: change it there if the
+  API moves), and neither the site nor the API may be shown inside another page.
+- **Set a spending limit in the Anthropic console too.** The caps above are the first line of defence;
+  that limit is the backstop if they are ever wrong.
 - **Claude failures** (rate limits, timeouts, outages) are shown in the trace; the visitor still sees the retrieval.
 
 Building the frontend for production: set `VITE_API_URL` (the API's address) and `VITE_SITE_URL`

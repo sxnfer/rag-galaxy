@@ -79,3 +79,12 @@ drop index if exists chunks_hnsw_structure_300;
 -- next to its words, e.g. {"item": "Kia Niro Electric", "facet": "range", "stats": {...}}.
 -- The rank stage sorts by them. Chunks cut from PDFs leave it null.
 alter table chunks add column if not exists meta jsonb;
+
+-- Today's question counts for the public demo's limits (app/guard.py, Ledger).
+-- "who" is either 'site' or a one-day fingerprint of a visitor's address. Rows from earlier days are deleted.
+create table if not exists limits (
+    day  integer not null,   -- days since 1970-01-01, UTC
+    who  text    not null,
+    n    integer not null default 0,
+    primary key (day, who)
+);
