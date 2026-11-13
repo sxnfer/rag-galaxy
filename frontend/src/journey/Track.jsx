@@ -24,10 +24,15 @@ const RISE = 0.5     // how far above the line the aside sits
 const DIST = 9       // how far away the camera stands
 const BRIGHT = new Color(INK).multiplyScalar(GLOW)
 
-// Where the light sits on screen, as shares of the window: a little right of
-// centre on a wide screen (the caption is bottom left), and near the top, so
-// what the question looks like can hang beneath it.
-export const lightAt = (w, h) => (w / h < 0.9 ? { x: 0.5, y: 0.17 } : { x: 0.56, y: 0.2 })
+// Where the light sits on screen, as shares of the window. Across, it is in
+// the middle. Down, it sits above the middle, so that the light together with
+// what hangs beneath it (what the question looks like) is centred in the frame.
+// A short window has less room above the caption, so there it sits higher.
+const ROOM = 610 // pixels kept below the light: the tallest picture, then the caption
+export function lightAt(w, h) {
+  if (w / h < 0.9) return { x: 0.5, y: 0.17 } // a phone held upright: near the top, the caption fills the lower half
+  return { x: 0.5, y: Math.max(0.2, Math.min(0.34, (h - ROOM) / h)) }
+}
 
 // Where each stop is. spots[0] is where the light waits before the first stop.
 function place(stops) {
