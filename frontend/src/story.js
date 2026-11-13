@@ -68,12 +68,10 @@ export const CHAPTERS = [
       if (trace.check?.not_found) return 'The passages don’t contain the answer, so the model says so instead of guessing. This is the generation.'
       return 'The model writes its answer, and every claim points to the passage it came from. This is the generation.'
     },
+    // Only said when something is wrong: a citation that points at no passage.
     note: ({ trace }) => {
       const c = trace.check
-      if (!trace.answer || !c || c.not_found) return null
-      if (!c.passed) return `A citation failed its check: ${c.problems.join('; ')}`
-      const n = c.cited.length
-      return `${n === 1 ? '1 citation' : `${n} citations`} checked against the evidence before you saw ${n === 1 ? 'it' : 'them'}.`
+      return trace.answer && c && !c.not_found && !c.passed ? `A citation failed its check: ${c.problems.join('; ')}` : null
     },
     link: { label: 'The same trip, told by the question', to: 'journey' }, // the journey (src/journey/)
   },

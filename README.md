@@ -14,7 +14,8 @@ Two shorter films branch off it, in the same dark frame:
 - **The search film** (`#hnsw`, from chapter 6): how a library of millions is searched without comparing the
   question with every passage. A point of light walks a small graph, first on one floor, then on three (HNSW).
 - **The journey** (`#journey`, from chapter 8): the same trip told by the question itself, stop by stop, with
-  what it looks like at each one (drawn from the real trace) and the code it is passing through.
+  what it looks like at each one (drawn from the real trace) and the function doing the work. It tells only the
+  stops that are part of RAG, not what the server does to protect itself (size checks, replays, rate limits).
 
 > Status (2026-11-12): the electric car library replaces the Arsenal and the carbon-project documents.
 > 231 cars, 1,155 cards; search + rank finds the expected cars for all 20 answerable golden questions
@@ -35,7 +36,7 @@ question ─▶ embed ─▶ search (exact or HNSW, 200 candidates) ─▶ rank 
 | --- | --- |
 | `backend/pipeline/` | collect, parse, chunk, evaluate, answer. `python -m pipeline --help` |
 | `backend/app/` | FastAPI: `/api/libraries`, `/api/stars`, `/api/examples`, `/api/ask`, `/api/health`; rate limits (`guard.py`), replays (`baked.py`) |
-| `frontend/` | The three films (React + React Three Fiber). `src/Site.jsx` picks the film from the address and fades between them. Main film: `src/App.jsx`, with `src/story.js` (every chapter's words), `src/timeline.js` (the one number that drives a film), `src/layout.js` (where things are and where the camera stands), `src/scene/` (the 3D picture) and `src/ui/` (the words on top). Search film: `src/hnsw/` (`graph.js` the toy graph and the walk, `story.js` the words, `Scene.jsx` the picture). Journey: `src/journey/` (`stops.js` the words and code references, `Look.jsx` what the question looks like at each stop, `Track.jsx` the picture). `code-lines.js` finds each referenced function's line when the site is built |
+| `frontend/` | The three films (React + React Three Fiber). `src/Site.jsx` picks the film from the address and fades between them. Main film: `src/App.jsx`, with `src/story.js` (every chapter's words), `src/timeline.js` (the one number that drives a film), `src/layout.js` (where things are and where the camera stands), `src/scene/` (the 3D picture) and `src/ui/` (the words on top). Search film: `src/hnsw/` (`graph.js` the toy graph and the walk, `story.js` the words, `Scene.jsx` the picture). Journey: `src/journey/` (`stops.js` the words and code references, `Look.jsx` what the question looks like at each stop, `Track.jsx` the picture). `code-lines.js` finds each referenced function's line when the site is built, and `saved-example.js` copies the first saved example in for the journey |
 | `scripts/` | `dev.sh` / `dev.ps1` (run everything), `build_ev_table.py` (EPA download -> `vehicles.csv`) |
 | `infra/` | Terraform for Azure: database, API, site, secrets, budget alert. `infra/README.md` has the steps |
 | `.github/workflows/` | `api-image.yml` builds the API's container image and puts it on GitHub's registry; `site.yml` builds the site and publishes it to Azure |
@@ -116,7 +117,8 @@ The two smaller films open from the start page ("How search stays fast", "The qu
 quiet link under chapter 6 ("What if there were millions?") and chapter 8 ("The same trip, told by the
 question"), or directly at `/#hnsw` and `/#journey`. They move the same way, and
 `Esc` or the name top left returns to the main film, exactly where it was left. With no question asked yet,
-the journey follows the first example question; with no server at all, it follows an illustration and says so.
+the journey follows the first saved example, which is copied into the site when it is built
+(`frontend/saved-example.js`), so it appears at once even while the server is asleep.
 
 ## Licence
 

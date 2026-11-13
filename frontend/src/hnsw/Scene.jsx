@@ -27,6 +27,7 @@ import { CHAPTERS, count } from './story.js'
 const SIZE = 8    // how wide a floor is
 const GAP = 2.5   // how far apart the floors are
 const BRIGHT = new Color(INK).multiplyScalar(GLOW)
+const LABEL_GAP = 20 // pixels between a point and its label (.tag span in styles.css)
 const ease = (t) => t * t * (3 - 2 * t)
 
 // Where the camera stands in each chapter. A phone held upright gets its own arrangement.
@@ -242,9 +243,12 @@ function Film({ graph, walks, clock }) {
     // ---- The words that follow the picture ----
     const { els } = clock
     pin(els.question, q.position, state, smooth(0.1, 0.3, p) * (1 - 0.6 * ending))
+    // Each floor's label hangs off its far right corner. An upright phone has no room there,
+    // so the label is tucked inside the left corner instead, where a floor has no passages.
+    const side = state.size.width / state.size.height < 0.9 ? -1 : 1
     for (let L = 0; L < FLOORS; L++) {
       const y = L * GAP * smoother(0, 1, lifting)
-      pin(els.floors?.[L], v[0].set(half, y, -half), state, smooth(3.7, 3.98, p) * (0.35 + 0.65 * em[L]))
+      pin(els.floors?.[L], v[0].set(side * half, y, -side * half), state, smooth(3.7, 3.98, p) * (0.35 + 0.65 * em[L]))
     }
     const el = els.count
     if (el) {
@@ -262,6 +266,9 @@ function Film({ graph, walks, clock }) {
     v[1].copy(point).project(state.camera)
     el.style.transform = `translate3d(${((v[1].x * 0.5 + 0.5) * state.size.width).toFixed(1)}px, ${((-v[1].y * 0.5 + 0.5) * state.size.height).toFixed(1)}px, 0)`
     el.style.opacity = opacity.toFixed(3)
+    // A label sits to the right of its point. Where that would run off the screen (a phone), it sits to the left.
+    const x = (v[1].x * 0.5 + 0.5) * state.size.width
+    el.classList.toggle('left', x + LABEL_GAP + el.firstChild.offsetWidth > state.size.width - 12)
   }
 
   return (

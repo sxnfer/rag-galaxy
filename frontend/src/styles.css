@@ -183,6 +183,8 @@ a.caption-link { text-decoration: none; }
   position: absolute; left: 50%; top: calc(var(--answer-top) + 38px); width: min(660px, calc(100% - var(--pad) * 2)); transform: translateX(-50%);
   max-height: calc(100% - var(--answer-top) - 38px - 230px); overflow-y: auto; touch-action: pan-y; scrollbar-width: none;
   user-select: text; -webkit-user-select: text;
+  /* A long answer scrolls. Its last lines fade out at the bottom edge, which says there is more below. */
+  padding-bottom: 22px; -webkit-mask-image: linear-gradient(#000 calc(100% - 22px), transparent); mask-image: linear-gradient(#000 calc(100% - 22px), transparent);
 }
 .answer::-webkit-scrollbar { display: none; }
 .app[data-ch="8"] .answer { pointer-events: auto; }
@@ -230,6 +232,9 @@ a.caption-link { text-decoration: none; }
 /* ---- The search film (#hnsw): small labels that follow points in the picture ---- */
 .tag { position: absolute; z-index: 3; left: 0; top: 0; pointer-events: none; opacity: 0; will-change: transform; }
 .tag span { position: absolute; left: 20px; top: 0; transform: translateY(-50%); white-space: nowrap; font-size: 10.5px; letter-spacing: 0.08em; color: var(--ink-3); }
+.tag.left span { left: auto; right: 20px; }
+/* Labels lie over dots and lines: a halo of the dark behind the letters keeps them readable. */
+.tag span { text-shadow: 0 0 3px var(--bg), 0 0 6px var(--bg), 0 0 10px var(--bg), 0 0 14px var(--bg); }
 .hnsw:is([data-at="4"], [data-at="5"], [data-at="6"], [data-at="7"]) .stage { cursor: grab; }
 .hnsw:is([data-at="4"], [data-at="5"], [data-at="6"], [data-at="7"]) .stage:active { cursor: grabbing; }
 /* The running count under the caption keeps its line even before the first number arrives. */
@@ -255,7 +260,7 @@ a.caption-link { text-decoration: none; }
 .nav-arrow:hover { color: var(--ink); }
 .nav-next { position: relative; border: 1px solid var(--ink-4); }
 .nav-next:not(:disabled):hover { border-color: var(--ink); background: rgba(237, 235, 230, 0.06); }
-.nav-next.again { padding: 0 20px; font-size: 14px; letter-spacing: -0.01em; }
+.nav-next.again { padding: 0 20px; font-size: 14px; letter-spacing: -0.01em; white-space: nowrap; }
 .nav-next:disabled { color: var(--ink-4); }
 /* While the server is working on the question, the button turns into a slow ring. */
 .nav-next.held svg { opacity: 0; }
@@ -294,9 +299,9 @@ a.caption-link { text-decoration: none; }
 .look-prose { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--ink); text-wrap: pretty; }
 .look-answer { display: inline-block; text-align: left; }
 .look-answer p { margin: 0 0 0.4em; font-size: 15.5px; line-height: 1.5; letter-spacing: -0.01em; }
-/* The code the question is passing through: one quiet line per function, each a link to it. */
-.code { margin: 16px 0 0; display: grid; gap: 3px; font-size: 10.5px; letter-spacing: 0.04em; text-transform: none; }
-.code a { pointer-events: auto; justify-self: start; color: var(--ink-3); text-decoration: none; transition: color 0.4s; }
+/* The code the question is passing through: one quiet line, a link to the function. */
+.code { margin: 16px 0 0; font-size: 10.5px; letter-spacing: 0.04em; text-transform: none; }
+.code a { pointer-events: auto; color: var(--ink-3); text-decoration: none; transition: color 0.4s; }
 .code a b { font-weight: 400; color: var(--ink-2); transition: color 0.4s; }
 .code a:hover, .code a:hover b { color: var(--ink); }
 .code a:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; border-radius: 3px; }

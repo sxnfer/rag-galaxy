@@ -1,10 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { codeLinesPlugin } from './code-lines.js'
+import { savedExamplePlugin } from './saved-example.js'
 
 export default defineConfig({
   // codeLinesPlugin: the Journey's links to the code get their line numbers when the site is built.
-  plugins: [react(), codeLinesPlugin()],
+  // savedExamplePlugin: the Journey gets a saved example to follow, so it never waits for the server.
+  plugins: [react(), codeLinesPlugin(), savedExamplePlugin()],
   server: {
     // Any call to /api/... is forwarded to the Python server.
     proxy: { '/api': 'http://localhost:8000' },
