@@ -17,9 +17,12 @@
 Ask about 231 electric cars (US EPA, 2026 models) and watch the question become a vector, find its nearest passages, and come back as an answer with citations you can check.
 
 ```
-question → embed → search → rank → Claude → citation check
-           bge-small   pgvector     by the stat
-           384 dims    HNSW         you asked for
+question
+  → embed     bge-small · 384 dims
+  → search    pgvector · HNSW
+  → rank      by the stat you asked for
+  → answer    Claude Haiku
+  → check     every citation verified
 ```
 
 | | Golden set (20 questions) |
